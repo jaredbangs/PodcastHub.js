@@ -1,0 +1,1564 @@
+
+> podcasthub.js@0.0.1 test /mnt/storage0/Projects/PodcastHub.js
+> mocha
+
+
+
+  Parser
+    1) "before all" hook
+
+
+  0 passing (239ms)
+  1 failing
+
+  1) Parser
+       "before all" hook:
+     Error: the object {
+  "author": "RedBoxChiliPepper"
+  "categories": [
+    "Comedy"
+    "Education"
+    "Technology"
+  ]
+  "description": {
+    "long": "home of The Snow Plow Show wacky morning podcast"
+    "short": "Prank phone calls and other wacky morning humor by the people at Phone Losers of America"
+  }
+  "episodes": [
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "This is a live show that happened on Sunday afternoon where me and Carlito climbed into the corporate PLA helicopter to fly around…"
+      "enclosure": {
+        "filesize": 69923821
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-10-14_TSPS504_Helicopter_Rides_With_Brad_and_Carlito_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=844"
+      "published": [Date: 2018-10-16T15:03:22.000Z]
+      "title": "TSPS Episode 504 – Helicopter Rides With Brad and Carlito"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "This live show of package deliveries is lovingly brought to you by Delorean Jackson, eyeCyou, Lion IX, MistaJohn, and Niekisch. Show art by Nik…"
+      "enclosure": {
+        "filesize": 46713294
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-10-12_TSPS503_Delivering_Packages_Live_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=840"
+      "published": [Date: 2018-10-12T21:26:01.000Z]
+      "title": "TSPS Episode 503 – Delivering Packages Live"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "A list from Vandershire inspires an entire show of telling people about problems with their package deliveries. This one is brought to you…"
+      "enclosure": {
+        "filesize": 42973186
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-10-09_TSPS502_Package_Delivery_Mishaps_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=835"
+      "published": [Date: 2018-10-10T04:13:11.000Z]
+      "title": "TSPS Episode 502 – Package Delivery Mishaps"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "Customers who’ve made online complaints against their local grocery stores get to deal with Mr. Dobalina’s horrible customer service skills as he fails to resolve their complaints, but at the same time causes them to look at things from a different perspective while teaching them a valuable life lesson. This show takes you through the […]"
+      "enclosure": {
+        "filesize": 28438238
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/10/world_of_prank_calls_021_grocery_store_complainers_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://worldofprankcalls.com/?p=440"
+      "published": [Date: 2018-10-08T05:41:48.000Z]
+      "title": "World of Prank Calls Episode 21 – Grocery Store Complainers"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today we do a few more Sorry I Dinged Your Car calls and talk to some apartment offices about our Raccoon Rescue. This…"
+      "enclosure": {
+        "filesize": 43287073
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-10-02_TSPS501_When_Dingtember_Ends_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=828"
+      "published": [Date: 2018-10-03T00:00:54.000Z]
+      "title": "TSPS Episode 501 – When Dingtember Ends"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s a best-of show for all the new listeners, containing 12 calls that were chosen by listeners. The greatest prank call hits of…"
+      "enclosure": {
+        "filesize": 45846656
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-09-29_TSPS500_The_Hits_So_Far_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=823"
+      "published": [Date: 2018-09-30T03:10:55.000Z]
+      "title": "TSPS Episode 500 – The Hits So Far"
+    }
+    {
+      "categories": [
+        "AUTOMATIC REDIAL"
+        "Snow Plow Show"
+      ]
+      "description": "I’m hitting the AUTOMATIC REDIAL button today and taking you back to a Dingtember show from 2016, brought to you by Elky. I’m…"
+      "enclosure": {
+        "filesize": 45963475
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-09-23_automatic_redial_303_elkys_big_dumb_dingtember_show_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=819"
+      "published": [Date: 2018-09-23T16:16:52.000Z]
+      "title": "AUTOMATIC REDIAL – Episode 303 – Elky’s Big Dumb Dingtember Show (2016)"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Thanks to Niekisch, Stantrucker, Cody NoName, Be-I-Eber_4life, and King Richard, there aren’t a lot of actual calls in this episode where I talk…"
+      "enclosure": {
+        "filesize": 26946541
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-09-17_TSPS499_Chicago_Meetup_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=812"
+      "published": [Date: 2018-09-18T04:46:11.000Z]
+      "title": "TSPS Episode 499 – Chicago Meetup"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Hey look, it’s a show with actual Dingtember calls in it, all thanks to Lion IX, Delorean Jackson, MistaJohn, eyeCyou, and iregretjumping. Show…"
+      "enclosure": {
+        "filesize": 35263720
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-09-14_TSPS498_The_Fourteenth_Day_Of_Dingtember_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=806"
+      "published": [Date: 2018-09-15T01:08:38.000Z]
+      "title": "TSPS Episode 498 – The Fourteenth Day Of Dingtember"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "The show’s hiatus is the fault of Jeff, JT, Robert S, Sean L, and Ty A. They are the five you can blame for…"
+      "enclosure": {
+        "filesize": 39374558
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-09-10_TSPS497_Stuck_On_The_Roof_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=803"
+      "published": [Date: 2018-09-11T05:25:29.000Z]
+      "title": "TSPS Episode 497 – Stuck On The Roof"
+    }
+    {
+      "categories": [
+        "Hobosodes"
+      ]
+      "description": "Teen Wolf Jesus is who you can blame for no shows happening in the past week because he’s the sponsor of today’s Hobosode.…"
+      "enclosure": {
+        "filesize": 25058411
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-09-08_Hobosode_130_Finally_A_Show_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=797"
+      "published": [Date: 2018-09-08T22:21:00.000Z]
+      "title": "Hobosode 130 – Finally A Show"
+    }
+    {
+      "categories": [
+        "AUTOMATIC REDIAL"
+        "Snow Plow Show"
+      ]
+      "description": "It’s time for an AUTOMATIC REDIAL episode, which is the thing I do when I don’t have time to do a regular show.…"
+      "enclosure": {
+        "filesize": 80951465
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-09-05_automatic_redial_17_home_alone.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=791"
+      "published": [Date: 2018-09-06T01:11:30.000Z]
+      "title": "AUTOMATIC REDIAL – Episode 17 – Home Alone (2013)"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "I call numbers from Alex’s list of bad tippers. This show is brought to you by Jason B, Miguel F, Random, Je55ical, and TokeusPocus.…"
+      "enclosure": {
+        "filesize": 23073731
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-09-01_TSPS496_Bad_Tippers_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=786"
+      "published": [Date: 2018-09-02T02:59:07.000Z]
+      "title": "TSPS Episode 496 – Bad Tippers"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "This episode is the exciting sequel to episode 19, where I called guests who’d recently stayed in a hotel to accuse them of various wacky things. Or maybe it’s more like a remake or a reboot, since it’s essentially the same plot but with slightly different situations. Either way, enjoy this one! If you like […]"
+      "enclosure": {
+        "filesize": 17252187
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/08/world_of_prank_calls_020_hotel_thieves_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://worldofprankcalls.com/?p=423"
+      "published": [Date: 2018-08-31T19:05:06.000Z]
+      "title": "World of Prank Calls Episode 20 – Hotel Thieves"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "In today’s show we call a list of hotel guests sent in by Snakey. This one is sponsored by High School Graduate, Jamie F, Serial…"
+      "enclosure": {
+        "filesize": 38278251
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-08-29_TSPS495_I_Dont_Have_Time_For_No_Bullcorn_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=781"
+      "published": [Date: 2018-08-30T07:43:38.000Z]
+      "title": "TSPS Episode 495 – I Don’t Have Time For No Bullcorn"
+    }
+    {
+      "categories": [
+        "Dial-A-Pay-Phone"
+        "PLA Call-in Show"
+        "PLA Stuff"
+      ]
+      "description": "The Dial-A-Payphone show is back in this special celebration for my six months and six days of sobriety. Shawn calls in to thank me for getting him fired a few years ago, Danielle gives me some life-changing facts about flamingo orgasms, Mob7 refuses to prank his baby, Matt Hillock calls..."
+      "duration": 7885
+      "enclosure": {
+        "filesize": 63083356
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/show/2018-08-27_PLA_Episode_10_Six_Month_Sobriety_Celebration_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6874"
+      "published": [Date: 2018-08-29T06:31:11.000Z]
+      "title": "PLA Episode 10 – Six Month Sobriety Celebration"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Because I’ve completely run out of ideas for shows and just do the same thing over and over, I’ve decided to do a…"
+      "enclosure": {
+        "filesize": 24014558
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-08-22_TSPS494_Holes_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=776"
+      "published": [Date: 2018-08-23T05:45:47.000Z]
+      "title": "TSPS Episode 494 – Holes"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "I didn’t plan to do a show today, but after hearing Choo Choo Stu play a short clip of the Wood Enthusiasts podcast,…"
+      "enclosure": {
+        "filesize": 38806551
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-08-20_TSPS493_Watering_Your_Trees_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=771"
+      "published": [Date: 2018-08-21T05:56:24.000Z]
+      "title": "TSPS Episode 493 – Watering Your Trees"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "This morning I did a live show using Jiad’s yard sale idea again that was sorta fun.  Half fun at least, since I…"
+      "enclosure": {
+        "filesize": 43402848
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-08-19_TSPS492_Another_Garage_Sale_Show_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=767"
+      "published": [Date: 2018-08-20T06:05:00.000Z]
+      "title": "TSPS Episode 492 – Another Garage Sale Show"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "Today’s episode has some angry hotel guests. Angry that they got caught stealing from us, angry that they got called out for peeing in the beds, angry that they can’t successfully scam us out of a fat stack of ones. You know, THOSE kinds of guests. If you like the calls you heard in this […]"
+      "enclosure": {
+        "filesize": 16503831
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/08/world_of_prank_calls_019_hotel_guests_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://worldofprankcalls.com/?p=411"
+      "published": [Date: 2018-08-17T07:05:09.000Z]
+      "title": "Mr. Dobalina’s Episode 18 – Hotel Guests"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today’s True Green Tuesday is brought to you by Lion IX, Niekisch, Stantrucker, Buster Casey, and Carol_Gerty666. Show art photo is Olga and King…"
+      "enclosure": {
+        "filesize": 39107691
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-08-15_TSPS491_True_Green_Tuesday_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=763"
+      "published": [Date: 2018-08-15T07:59:35.000Z]
+      "title": "TSPS Episode 491 – True Green Tuesday"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s a late night Sunday show brought to you by Andy, Be-I_Eber-4life, BoboBob the Hobobob, Brown Magic, and Bryan W. Show art by Nik…"
+      "enclosure": {
+        "filesize": 29813323
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-08-12_TSPS490_Nighttime_Neighborhood_Complaints_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=758"
+      "published": [Date: 2018-08-13T07:51:26.000Z]
+      "title": "TSPS Episode 490 – Nighttime Neighborhood Complaints"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "This episode introduces apartment managers to the latest YouTube craze – my channel where I flush insane things down the toilet, like Skittles and drywall mud. For some reason they have a problem with me living the dream, probably because they’re jealous. Visit the Weird Stuff YouTube channel Listen to the Will It Flush episode […]"
+      "enclosure": {
+        "filesize": 17063896
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/08/world_of_prank_calls_018_will_it_flush_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://worldofprankcalls.com/?p=402"
+      "published": [Date: 2018-08-09T16:22:31.000Z]
+      "title": "Mr. Dobalina’s Episode 18 – Will It Flush?"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today we’re educating homeowners about government spending. This episode is brought to you by toinetoine, Vaping Beard, Nickyd, Cody No Name, and Jennifer8cacti. Show…"
+      "enclosure": {
+        "filesize": 37684958
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-08-06_TSPS489_Government_Spending_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=743"
+      "published": [Date: 2018-08-07T03:46:21.000Z]
+      "title": "TSPS Episode 489 – Government Spending"
+    }
+    {
+      "categories": [
+        "Uncategorized"
+      ]
+      "description": "Today’s episode features more dream related calls, an intimate late-night pranking session with Mr. Biggs, and people getting mysterious letters from their past.…"
+      "enclosure": {
+        "filesize": 50970208
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-08-04_TSPS488_Dreams_Biggs_and_Russian_Nesting_Mail_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=740"
+      "published": [Date: 2018-08-04T22:58:51.000Z]
+      "title": "TSPS Episode 488 – Dreams, Biggs, and Russian Nesting Mail"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s a late night show where nobody wants to talk to me about my dreams. This one is brought to you by Jason B,…"
+      "enclosure": {
+        "filesize": 37652148
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-08-01_TSPS487_Late_Night_Dream_Show_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=734"
+      "published": [Date: 2018-08-03T00:40:55.000Z]
+      "title": "TSPS Episode 487 – Late Night Dream Show"
+    }
+    {
+      "categories": [
+        "PLA Show"
+      ]
+      "description": "Jack Helliquinn is an extremist clown musician, an animator, a talk show host, and most importantly I love his weird shit and was really happy to have him on the show. Jack has written a few songs for The Snow Plow Show, he tells ghost stories on his YouTube channel,..."
+      "duration": 3806
+      "enclosure": {
+        "filesize": 30457530
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/show/2018-07-28_PLA_Episode_9_Jack_Helliquinn_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6801"
+      "published": [Date: 2018-07-31T01:33:35.000Z]
+      "title": "PLA Episode 9 – Jack Helliquinn"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "It’s time to dust off an old idea of Jiad’s and call people who are in the middle of having yard sales to…"
+      "enclosure": {
+        "filesize": 35778855
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-07-29_TSPS486_Yard_Sale_Sunday_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=729"
+      "published": [Date: 2018-07-30T01:03:36.000Z]
+      "title": "TSPS Episode 486 – Yard Sale Sunday"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "You won’t believe how attached people get to something as insignificant as the name of their street. This makes less sense than when…"
+      "enclosure": {
+        "filesize": 34948579
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-07-26_TSPS485_Updated_Street_Signs_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=720"
+      "published": [Date: 2018-07-27T01:20:08.000Z]
+      "title": "TSPS 485 – Updated Street Signs"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today we’re stealing an idea from Miguel and telling stores that there are invisible security guards standing next to them. This show is…"
+      "enclosure": {
+        "filesize": 34553189
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-07-23_TSPS484_Invisible_Security_Guards_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=714"
+      "published": [Date: 2018-07-24T06:22:45.000Z]
+      "title": "TSPS Episode 484 – Invisible Security Guards"
+    }
+    {
+      "categories": [
+        "PLA Show"
+      ]
+      "description": "On today's PLA show we've got legendary podcasters Roger and Mr. Biggs from the Stick It With Mr. Biggs podcast, where they talk about the always interesting topic of glues and adhesives. I first came across these guys in 2009 when they were doing an 'AM radio show on K-Shine'..."
+      "duration": 5659
+      "enclosure": {
+        "filesize": 45284003
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/show/2018-07-21_PLA_Episode_8_Ask_Mr_Biggs_and_Roger_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6777"
+      "published": [Date: 2018-07-23T18:32:43.000Z]
+      "title": "PLA Episode 8 – Ask Mr. Biggs and Roger"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "On Tuesday night I did a live show where I talked to sleepy people about their dreams and mine. Here is that live…"
+      "enclosure": {
+        "filesize": 41837173
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-07-19_TSPS483_I_Have_A_Dream_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=710"
+      "published": [Date: 2018-07-19T19:51:38.000Z]
+      "title": "TSPS Episode 483 – I Have A Dream"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s a show full of corporate favors, brought to you by Jamie F, Brandon R, Kirstie T, Matt Z, and Dustin W. Intro…"
+      "enclosure": {
+        "filesize": 27908892
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-07-13_TSPS482_Important_Corporate_Meeting_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=706"
+      "published": [Date: 2018-07-14T04:56:28.000Z]
+      "title": "TSPS Episode 482 – Important Corporate Meeting"
+    }
+    {
+      "categories": [
+        "PLA Show"
+      ]
+      "description": "Today we're joined by Asterios Kokkinos, who is not only the president and CEO of Spite Inc., but he is also a member. Asterios produces more podcasts than I do, including Science Friction, Asterios Kills A Kid, Porg Chatter, Asterios Talks To Strangers, Waifu Wars, and so many others that..."
+      "duration": 5661
+      "enclosure": {
+        "filesize": 45304680
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/show/2018-07-12_PLA_Episode_7_Asterios_Kokkinos_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6758"
+      "published": [Date: 2018-07-13T16:57:21.000Z]
+      "title": "Phone Losers of America Episode 7 – Asterios Kokkinos"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "This show has absolutely nothing to do with free Slurpees. You can thank Niekisch for that. Today I do a bunch of miscellaneous prank…"
+      "enclosure": {
+        "filesize": 32791700
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-07-11_TSPS481_Free_Slurpee_Day_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=699"
+      "published": [Date: 2018-07-11T23:31:41.000Z]
+      "title": "TSPS Episode 481 – Free Slurpee Day"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "In this episode we wish many people a Happy Birthday in the best way that we know how, even though it’s not actually…"
+      "enclosure": {
+        "filesize": 33056478
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-07-09_TSPS480_Happy_Birthday_To_You_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=695"
+      "published": [Date: 2018-07-10T04:15:59.000Z]
+      "title": "TSPS Episode 480 – Happy Birthday To You"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "I call a radio tower list from Apocalypse, asking to rent them for sketchy things and removing the annoying blinking lights from them.…"
+      "enclosure": {
+        "filesize": 36661584
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-07-05_TSPS479_Radio_Towers_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=691"
+      "published": [Date: 2018-07-06T03:28:30.000Z]
+      "title": "TSPS Episode 479 – Radio Towers"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "I’m joined by a couple hundred listeners today, throwing cake ideas at me while I call bakeries. This one is sponsored by The…"
+      "enclosure": {
+        "filesize": 46610058
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-06-29_TSPS478_Live_Cake_Show_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=686"
+      "published": [Date: 2018-06-30T16:10:02.000Z]
+      "title": "TSPS Episode 478 – Live Cake Show"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "It’s time to revisit the time honored tradition of ordering inappropriate cakes from a bakery, just to see if they’ll do it. This…"
+      "enclosure": {
+        "filesize": 38300402
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-06-26_TSPS477_Cake_Day_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=680"
+      "published": [Date: 2018-06-27T07:07:33.000Z]
+      "title": "TSPS Episode 477 – Cake Day"
+    }
+    {
+      "categories": [
+        "PLA Show"
+      ]
+      "description": "Join me and Laugh Track \"Matt Albert\" Hillock for an hour of taking calls and learning more about Matt Fucking Hillock. Matt does a show called Party Time on the Prank Call Nation network machine. Usually they broadcast on the PCN MixLR but lately Matt has been streaming the show..."
+      "duration": 4670
+      "enclosure": {
+        "filesize": 37369730
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/show/2018-06-22_PLA_Episode_6_Laugh_Track_Matt_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6717"
+      "published": [Date: 2018-06-25T17:13:39.000Z]
+      "title": "Phone Losers of America Episode 6 – Laugh Track Matt"
+    }
+    {
+      "categories": [
+        "PLA Show"
+        "Podcast"
+      ]
+      "description": "NotBrad finally returns after a long hiatus to talk to callers about magic tricks and his brand new Patreon campaign. Opening music before the intro was Balling Out Of Control by Rappy McRapperson and The Bomb Listen to NotBrad flabbergast a pizza customer Here's the first Snow Plow Show that..."
+      "duration": 4401
+      "enclosure": {
+        "filesize": 35225018
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/show/2018-06-20_PLA_Episode_5_NotBrad_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6705"
+      "published": [Date: 2018-06-22T04:17:18.000Z]
+      "title": "Phone Losers of America Episode 5 – NotBrad"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today we make people question reality by rebooting their lives and moving them to a new server in this episode brought to you…"
+      "enclosure": {
+        "filesize": 31283495
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-06-20_TSPS476_Questioning_Existence_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=677"
+      "published": [Date: 2018-06-21T15:46:57.000Z]
+      "title": "TSPS Episode 476 – Questioning Existence"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "This is a short show brought to you by Robert S, Jason B, Wolfiten, David J, and King Richard. I only call three…"
+      "enclosure": {
+        "filesize": 17539534
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-06-19_TSPS475_Tough_Bananas_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=673"
+      "published": [Date: 2018-06-19T23:54:15.000Z]
+      "title": "TSPS Episode 475 – Tough Bananas"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s Friday’s live show, where we see what a few more apartment managers think of our Will It Flush YouTube channel. This episode…"
+      "enclosure": {
+        "filesize": 34638244
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-06-15_TSPS474_Flushface_Friday_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=669"
+      "published": [Date: 2018-06-16T04:16:58.000Z]
+      "title": "TSPS Episode 474 – Flushface Friday"
+    }
+    {
+      "categories": [
+        "Hobosode"
+      ]
+      "description": "With Simspeak's help we attempt to answer that age-old question - what exactly is a saxophone lesbian. We also try to donate to a boyscout troop and buy some drugs. Opening music by JayDee, background music is We've Been Had by The Walkmen, ending song is Poon by Saxophone Lesbian...."
+      "duration": 1040
+      "enclosure": {
+        "filesize": 8323116
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/hobosode/2018-03-12_Hobosode_90_Saxophone_Lesbian_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6690"
+      "published": [Date: 2018-06-15T02:07:55.000Z]
+      "title": "Hobosode 90 – Saxophone Lesbian"
+    }
+    {
+      "categories": [
+        "Hobosode"
+      ]
+      "description": "Thanks for bringing us all the way to Hobosode 100, WilliamK! Today we celebrate 100 Hobosodes by bringing you a bunch of mediocre phone calls to apartment complexes about water issues, pool tables and genetically modified stalks of corn. Opening song by The Lonely Island, background by Lemon Demon, ending..."
+      "duration": 2300
+      "enclosure": {
+        "filesize": 18398858
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/hobosode/2018-04-20_Hobosode_100_Fattening_The_Pipes_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6687"
+      "published": [Date: 2018-06-15T02:03:52.000Z]
+      "title": "Hobosode 100 – Fattening The Pipes"
+    }
+    {
+      "categories": [
+        "Hobosode"
+      ]
+      "description": "Thank you for sponsoring this show, Stantrucker! Russell sends in a list of numbers related to some after-prom fundraising and it turns into a Sensei Doug and underground tunnels show, just like they always do. Me and Clownsec both have voice BBSes set up on our Asterisk systems now. You..."
+      "duration": 2377
+      "enclosure": {
+        "filesize": 19015139
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/hobosode/2018-06-13_Hobosode_110_After_Prom_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6684"
+      "published": [Date: 2018-06-15T02:01:18.000Z]
+      "title": "Hobosode 110 – After Prom"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today we finish up the rest of those Craigslist calls all the way from New Bedford. This show is brought to you by…"
+      "enclosure": {
+        "filesize": 28880438
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-06-11_TSPS473_Subterranean_Apartment_Rentals_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=666"
+      "published": [Date: 2018-06-12T01:25:10.000Z]
+      "title": "TSPS Episode 473 – Subterranean Apartment Rentals"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "A listener placed a Craigslist ad for a home for rent and put my phone number on it, so in this show I…"
+      "enclosure": {
+        "filesize": 56806590
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-06-09_TSPS472_All_The_Way_In_New_Bedford_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=661"
+      "published": [Date: 2018-06-10T16:22:10.000Z]
+      "title": "TSPS Episode 472 – All The Way In New Bedford"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Every five years or so, Staci comes around and makes a bunch of phone calls with me. Today is one of those days!…"
+      "enclosure": {
+        "filesize": 55686878
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-06-07_TSPS471_Our_OOL_Has_No_P_In_It_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=656"
+      "published": [Date: 2018-06-08T02:21:51.000Z]
+      "title": "TSPS Episode 471 – Our OOL Has No P In It"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "Today’s episode dives back into the world of a homeowner’s association ruled by Frank, which you first heard call to back in episode 12. Pretty much all of these calls are centered around the previous night’s fireworks celebrations. The opening song is by Parry Gripp. The background music is Magic Fly by Space. Ending music is Hutzumi […]"
+      "enclosure": {
+        "filesize": 15633431
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/06/world_of_prank_calls_017_hoa_fireworks_celebration_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://worldofprankcalls.com/?p=363"
+      "published": [Date: 2018-06-06T03:57:01.000Z]
+      "title": "Mr. Dobalina’s Episode 17 – HoA Fireworks Celebration"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today I attempt to get rid of this list of Tim Riggi’s time capsule ideas that have been just looking at me for…"
+      "enclosure": {
+        "filesize": 39280099
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-06-04_TSPS470_Time_Capsule_Tunnels_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=651"
+      "published": [Date: 2018-06-05T05:43:56.000Z]
+      "title": "TSPS Episode 470 – Time Capsule Tunnels"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s a live show where I call about a bunch of free items on Craigslist. This episode is brought to you by Brandon R,…"
+      "enclosure": {
+        "filesize": 59515175
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-05-31_TSPS469_Katies_List_Of_Craigs_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=647"
+      "published": [Date: 2018-06-01T21:44:59.000Z]
+      "title": "TSPS Episode 469 – Katie’s List of Craigs"
+    }
+    {
+      "categories": [
+        "PLA Show"
+      ]
+      "description": "Carlito is the President and CEO of the longest running prank call show in prank call show history, the show known as Madhouse Live. For over ten years, Carlito has entertained the internets with weekly shows and wacky pranks. Madhouse Live was the very first show to join the Cacti..."
+      "duration": 6345
+      "enclosure": {
+        "filesize": 50764340
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/show/2018-05-28_PLA_Episode_4_Carlito_From_Madhouse_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6622"
+      "published": [Date: 2018-05-30T05:50:39.000Z]
+      "title": "Phone Losers of America Episode 4 – Carlito from Madhouse Live"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Brad couldn’t do a show today, so this is Carol putting together a quick episode from the kitchen on my iPhone. I hope…"
+      "enclosure": {
+        "filesize": 36477264
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-05-28_TSPS468_Carols_Memorial_Day_Special_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=642"
+      "published": [Date: 2018-05-29T17:11:27.000Z]
+      "title": "TSPS Episode 468 – Carol’s Memorial Day Special"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Many years ago Uncle Runkle sent me a paper list of adopt-a-road numbers and I did most of them, but I still had…"
+      "enclosure": {
+        "filesize": 51851266
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-05-25_TSPS467_The_Jerky_Roys_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=637"
+      "published": [Date: 2018-05-26T05:07:15.000Z]
+      "title": "TSPS Episode 467 – The Jerky Roys"
+    }
+    {
+      "categories": [
+        "PLA Show"
+      ]
+      "description": "Tonight's guest is Staci Stak, who was once a regular guest on The Phone Show and Rob The Hyena's Prank Show, and even did her own show called The Fun Show. I've known Staci since the early 2000's, when we both discovered the hilarity of Curtis Lee Jones together in..."
+      "duration": 4838
+      "enclosure": {
+        "filesize": 38710590
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/show/2018-05-23_PLA_Episode_3_Staci_Stak_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6606"
+      "published": [Date: 2018-05-25T16:09:21.000Z]
+      "title": "Phone Losers of America Episode 3 – Staci Stak"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Trailer Mobile home parks are brought back again, in hopes of finding some good sound clips to stick into a song.  I’m not…"
+      "enclosure": {
+        "filesize": 33343824
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-05-21_TSPS466_In_Search_of_Sound_Bites_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=632"
+      "published": [Date: 2018-05-22T05:13:10.000Z]
+      "title": "TSPS Episode 466 – In Search of Sound Bites"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s the show where we finish up iregretjumping’s painfully put together list of liquor stores with obscene names.  This show is brought to…"
+      "enclosure": {
+        "filesize": 34249960
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-05-16_TSPS465_Poor_Taste_Liquors_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=627"
+      "published": [Date: 2018-05-17T03:06:29.000Z]
+      "title": "TSPS Episode 465 – Poor Taste Liquors"
+    }
+    {
+      "categories": [
+        "PLA Show"
+      ]
+      "description": "It's time for another one of those shows that happen with very little notice and aren't planned out very well and only broadcast live on Facebook, just months after the #deletefacebook hysteria.  On today's show, JagTV joins us for an hour of hard-hitting questions like, \"How many fingers?\" JagTV has been..."
+      "duration": 3813
+      "enclosure": {
+        "filesize": 30508349
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/show/2018-05-14_PLA_Episode_2_JagTV_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6587"
+      "published": [Date: 2018-05-15T02:48:08.000Z]
+      "title": "Phone Losers of America Episode 2 – JagTV"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "In today’s show we finish up the donut list from earlier this week just so we can serve a few more floor donuts…"
+      "enclosure": {
+        "filesize": 29066639
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-05-12_TSPS464_Floor_Donuts_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=623"
+      "published": [Date: 2018-05-13T03:48:57.000Z]
+      "title": "TSPS Episode 464 – Floor Donuts"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Thanks, FOD87, for bringing us a show about donuts.  There aren’t enough Snow Plow Shows about donuts.  I guess Joey gets some of…"
+      "enclosure": {
+        "filesize": 115605297
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-05-09_TSPS463_Dozen_Mixed_Winners_HQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=619"
+      "published": [Date: 2018-05-10T17:19:25.000Z]
+      "title": "TSPS Episode 463 – Dozen Mixed Winners"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s round 2 of Will It Flush, brought to you by SixWeekTenure! Today’s show art was lovingly drawn by Nik Caesar from scary-art.com Intro…"
+      "enclosure": {
+        "filesize": 50915664
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-05-04_TSPS462_Will_It_Flush_2_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=613"
+      "published": [Date: 2018-05-04T20:59:34.000Z]
+      "title": "TSPS Episode 462 – Will It Flush 2"
+    }
+    {
+      "categories": [
+        "PLA Show"
+      ]
+      "description": "What's this?  A new show?  Or just a thing I'll do once and then never again because I don't feel like it?  Nobody knows for sure!  This is a call-in show, where I do whatever it is I feel like doing, as long as I'm taking calls while doing it. ..."
+      "duration": 4582
+      "enclosure": {
+        "filesize": 36662588
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.phonelosers.com/media/show/2018-05-03_PLA_Episode_1_JIAD_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6562"
+      "published": [Date: 2018-05-04T06:33:10.000Z]
+      "title": "Phone Losers of America Episode 1 – JIAD"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "A post by Joey on the PLA Facebook group leads to this Naglerr sponsored show where I flush the most ridiculous things possible…"
+      "enclosure": {
+        "filesize": 34194580
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-04-30_TSPS461_Will_It_Flush_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=609"
+      "published": [Date: 2018-04-30T23:10:51.000Z]
+      "title": "TSPS Episode 461 – Will It Flush?"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Phillip B. gives us this Friday morning preshow of Sensei Doug calls, using a list from Max Power.  Get ready to hear people…"
+      "enclosure": {
+        "filesize": 47391851
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-04-27_TSPS460_I_Notice_Youre_Still_Looking_At_Me_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=603"
+      "published": [Date: 2018-04-28T04:50:48.000Z]
+      "title": "TSPS Episode 460 – I Notice You’re Still Looking At Me"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s a live YouTube show from Sunday night, brought to you by Michael W.  In this one I call a bunch of homeowners…"
+      "enclosure": {
+        "filesize": 53200856
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-04-34_TSPS459_Sunday_Night_Homeowners_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=598"
+      "published": [Date: 2018-04-23T19:57:44.000Z]
+      "title": "TSPS Episode 459 – Sunday Night Homeowners"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "This is a live show from Sunday night where we started out talking to home owners, then moved on to talking to residents…"
+      "enclosure": {
+        "filesize": 39471733
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-04-16_TSPS458_Trailer_Parks_and_Liquor_Stores_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=592"
+      "published": [Date: 2018-04-17T06:20:56.000Z]
+      "title": "TSPS Episode 458 – Trailer Parks and Liquor Stores"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today, and by today I guess I mean yesterday, we call a list of numbers sent in by Ryan of his old neighbors…"
+      "enclosure": {
+        "filesize": 56455922
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-04-13_TSPS457_Landlords_From_Hell_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=588"
+      "published": [Date: 2018-04-13T23:50:34.000Z]
+      "title": "TSPS Episode 457 – Landlords From Hell"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "If you listened to yesterday’s Hobosode, then are you in for a disappointment because this show is just more of the same, only…"
+      "enclosure": {
+        "filesize": 47032615
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-04-11_TSPS456_Leaving_Things_Behind_At_Wawa_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=585"
+      "published": [Date: 2018-04-11T22:58:38.000Z]
+      "title": "TSPS Episode 456 – Leaving Things Behind at Wawa"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "This is mostly a live show that happened Sunday night, with calls to a Homeowner’s Association list that Crimson sent in, along with…"
+      "enclosure": {
+        "filesize": 57082861
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-04-09_TSPS455_Ive_Got_Him_Tagged_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=581"
+      "published": [Date: 2018-04-10T00:49:01.000Z]
+      "title": "TSPS Episode 455 – I’ve Got Him Tagged"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s a brand new live show with a list of liquor stores provided by Iregretjumping.  It turns out that liquor stores are not…"
+      "enclosure": {
+        "filesize": 52268389
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-04-04_TSPS454_Iregretjumpings_Painfully_Put_Together_Liquor_Store_List_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=576"
+      "published": [Date: 2018-04-06T03:18:50.000Z]
+      "title": "TSPS Episode #454 – Iregretjumping’s Painfully Put Together Liquor Store List"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "In today’s show I call unsuspecting improv partners to do skits about self-driving robot cars and space.  The opening song is by Parry Gripp.  The background music is Magic Fly by Space.  Ending music is Robot Parade by They Might Be Giants.  Be sure to watch today’s episode of Calls of Mass Confusion on YouTube […]"
+      "enclosure": {
+        "filesize": 13397140
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/04/world_of_prank_calls_016_robots_and_space_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://worldofprankcalls.com/?p=276"
+      "published": [Date: 2018-04-02T05:20:46.000Z]
+      "title": "Mr. Dobalina’s Episode 16 – Robots and Space"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s a half live show, half prerecorded show brought to you by Seth and Efin Reality. PLA show art nugs from Mike Support the…"
+      "enclosure": {
+        "filesize": 33520621
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-03-30_TSPS453_Heavy_Duty_Spray-on_Truck_Bed_Liners_From_Hell_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=573"
+      "published": [Date: 2018-03-31T03:19:25.000Z]
+      "title": "TSPS Episode 453 – Heavy Duty Spray-on Truck Bed Liners From Hell"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s a live show brought to you by Sean L.  It’s mostly a giant list of Craigslist calls, but we also attempt to…"
+      "enclosure": {
+        "filesize": 82743883
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-03-28_TSPS452_Bob_Murphy_Lives_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=568"
+      "published": [Date: 2018-03-29T22:33:33.000Z]
+      "title": "The Snow Plow Show Episode 452 – Bob Murphy Lives"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "In today’s episode we’ll be talking to owners of dogs who use a community dog park which I think is a part of a home owners association.  You’ll hear me ask dog owners to stop smelling their dog’s poop, demand that they like the dog park page on Facebook, and ask that age-old question: WHO’S […]"
+      "enclosure": {
+        "filesize": 17001411
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/03/world_of_prank_calls_015_the_dog_park_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://worldofprankcalls.com/?p=267"
+      "published": [Date: 2018-03-28T00:29:58.000Z]
+      "title": "Mr. Dobalina’s Episode 15 – The Dog Park"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "This is mostly a live show that happened this morning, then a few calls that happened after the live show.  All calls are…"
+      "enclosure": {
+        "filesize": 62715906
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-03-23_TSPS451_Free_Water_Is_Free_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=563"
+      "published": [Date: 2018-03-24T05:46:10.000Z]
+      "title": "The Snow Plow Show Episode 451 – Free Water is Free"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today’s show is all over the place, with Craigslist calls from Reggie, PBX phone numbers from Phreak Show, a few calls to closed…"
+      "enclosure": {
+        "filesize": 47166989
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-03-20_TSPS450_So_Full_Of_Doo_Doo_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=559"
+      "published": [Date: 2018-03-21T06:28:49.000Z]
+      "title": "The Snow Plow Show Episode 450 – So Full Of Doo Doo"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "David J. gives us the give of today’s short show with lists provided by Naglerr and Max Power.  Get ready for some roommate…"
+      "enclosure": {
+        "filesize": 23757722
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-03-16_TSPS449_Sexist_Roommates_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=554"
+      "published": [Date: 2018-03-17T06:02:07.000Z]
+      "title": "The Snow Plow Show Episode 449 – Sexist Roommates"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s a Tuesday afternoon live show, brought to you by Kuraz. These are classified ads posted on homeowners association Facebooks or websites, I…"
+      "enclosure": {
+        "filesize": 69136595
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-03-13_TSPS448_Max_Powers_HoA_Classifieds_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=549"
+      "published": [Date: 2018-03-14T21:12:29.000Z]
+      "title": "The Snow Plow Show Episode 448 – Max Power’s HoA Classifieds"
+    }
+    {
+      "categories": [
+        "Website Updates"
+      ]
+      "description": "If your PLA podcast feed or email alerts went crazy today, sooorrrrrry about that. I was setting up feed syndication for Brad's Cactus Shack and I told it not to syndicate YEARS worth of stuff but it disobeyed me. There's not really 25 new shows out today.  I did the&#46;&#46;&#46;"
+      "guid": "http://www.phonelosers.org/?p=6413"
+      "published": [Date: 2018-03-13T22:51:31.000Z]
+      "title": "Whoops, I’m dum"
+    }
+    {
+      "categories": [
+        "Dial-A-Pay-Phone"
+        "Podcasts"
+      ]
+      "description": "Here’s another hour of listeners calling my pay phone in a contest I like to call Who Can Saying The Weirdest Shit Possible To Me. During post editing I solved the mystery of daylight savings in Indiana. It wasn’t the Mandella effect after all. “From 1970 until 2006, most of Indiana in the Eastern Time Zone did not observe daylight"
+      "enclosure": {
+        "filesize": 35834652
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-03-12_Brads_Cactus_Shack_012_Dial-A-Pay-Phone_The_Couch_Gang_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.notla.com/?p=1610"
+      "published": [Date: 2018-03-13T21:39:39.000Z]
+      "title": "Brad’s Cactus Shack Episode 12 – Dial-A-Pay-Phone – The Couch Gang"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "The Real Krazy Kraz presents you with 90 minutes of phone calls and voicemails, mostly involving underground tunnels but sometimes Karrot Top instead.…"
+      "enclosure": {
+        "filesize": 134293088
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-03-10_TSPS447_Bunkers_and_Tunnels_HQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=546"
+      "published": [Date: 2018-03-11T02:30:27.000Z]
+      "title": "Episode 447 – Bunkers and Tunnels"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "BoboBob the HoboBob is fully to blame for making you sick of all these trailerpark calls. Thanks for the new PLA song, Reefer…"
+      "enclosure": {
+        "filesize": 41782838
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-03-06_TSPS446_Trailerpark_Tuesday_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=540"
+      "published": [Date: 2018-03-07T04:26:03.000Z]
+      "title": "Episode 446 – Trailerpark Tuesday"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "After playing a few random sound clips I found on my hard drive last night, we jump into the mysterious world of 1986 where we jam out to the Neutron Dance, where I say everything I type into the computer for the listening audience just like I was taught in movies, where I torment the teenagers that hang out in"
+      "enclosure": {
+        "filesize": 15585157
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.notla.com/wp-content/uploads/2018/03/2018-03-05_Brads_Cactus_Shack_011_TRS-80_Color_Computer_2_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.notla.com/?p=1601"
+      "published": [Date: 2018-03-06T07:18:10.000Z]
+      "title": "Brad’s Cactus Shack Episode 11 – TRS-80 Color Computer 2"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "I spend an hour or so today, finishing up that list of Trailerparks that Apokolypse sent to me.  This show is sponsored by Buster…"
+      "enclosure": {
+        "filesize": 40265229
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-03-02_TSPS445_Trailerparks_From_Hell_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=534"
+      "published": [Date: 2018-03-03T01:34:30.000Z]
+      "title": "Episode 445 – Trailerparks From Hell"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "In this show we turn our trailer into a church, we dig underground bunkers, we chop trailers in half with a plasma blaster,…"
+      "enclosure": {
+        "filesize": 63395717
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-02-28_TSPS444_Two_Trailerpark_Girls_Go_Round_The_Outside_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=530"
+      "published": [Date: 2018-03-01T07:49:51.000Z]
+      "title": "Episode 444 – Two Trailerpark Girls Go Round The Outside"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today’s live show is brought to you by Matt Z!  We tried doing a few homeowner calls but those didn’t work out, so…"
+      "enclosure": {
+        "filesize": 60989944
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-02-24_TSPS443_Matt_Zs_Saturday_Morning_Mall_Walk_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=524"
+      "published": [Date: 2018-02-25T04:44:24.000Z]
+      "title": "Episode 443 – Matt Z’s Saturday Morning Mall Walk"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Kirstie and Kabugula have put together a list of old outdated Craiglist ads to call, so that’s what’s happening on today’s show. Thanks…"
+      "enclosure": {
+        "filesize": 39646022
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-02-22_TSPS442_Kirsties_Arkansas_Craigslist_Show_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=520"
+      "published": [Date: 2018-02-23T00:36:39.000Z]
+      "title": "Episode 442 – Kirstie’s Arkansas Craigslist Show"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "Back in February I was surprised to find out that I was sentenced to 12 weeks of a drug and alcohol abuse class, even though I’ve never had an issue with drugs or alcohol. I know you guys think I pound the 4lokos 24/7, but really I might drink a couple beers per week, usually on separate nights with my"
+      "enclosure": {
+        "filesize": 9353385
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.notla.com/episodes/2018-02-21_Brads_Cactus_Shack_010b_Addiction_Counseling_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.notla.com/?p=1695"
+      "published": [Date: 2018-02-21T17:17:26.000Z]
+      "title": "Brad’s Cactus Shack Episode 10b – Addiction Counseling"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "Back in February I was surprised to find out that I was sentenced to 12 weeks of a drug and alcohol abuse class, even though I’ve never had an issue with drugs or alcohol. I know you guys think I pound the 4lokos 24/7, but really I might drink a couple beers per week, usually on separate nights with my"
+      "enclosure": {
+        "filesize": 9353385
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.notla.com/episodes/2018-02-21_Brads_Cactus_Shack_010b_Addiction_Counseling_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.notla.com/?p=1695"
+      "published": [Date: 2018-02-21T17:17:26.000Z]
+      "title": "Brad’s Cactus Shack Episode 10b – Addiction Counseling"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Here’s an episode with a couple of tenants from hell calls, and then a bunch of failed attempts at other calls.  You can…"
+      "duration": 4219
+      "enclosure": {
+        "filesize": 33751335
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-02-20_TSPS441_Stantruckers_Signals_From_Space_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=516"
+      "published": [Date: 2018-02-21T07:05:37.000Z]
+      "title": "Episode 441 – Stantrucker’s Signals From Space"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "Today’s episode features people still caring what their phone number is, even though nobody memorizes phone numbers anymore.  We tell a few people that we’re with the phone company and that we’ve given their phone number to someone more important than them. If you like the calls you heard in this episode, then you’ll probably […]"
+      "enclosure": {
+        "filesize": 13736105
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/02/world_of_prank_calls_014_new_phone_numbers_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://worldofprankcalls.com/?p=237"
+      "published": [Date: 2018-02-20T01:47:15.000Z]
+      "title": "Mr. Dobalina’s Episode 14 – New Phone Numbers"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "In this show we get to know residents of Celina, Ohio on a very personal level with some hard-hitting questions. Here’s a video of some destruction from Celina’s tornado, then a guy filming his television like a hobo Stealth camping in Celina More tornado footage Holy crap, Dollar General was actually destroyed Look at this guy acting like Wal-Mart should"
+      "enclosure": {
+        "filesize": 15413793
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.notla.com/wp-content/uploads/2018/02/2018-02-16_Brads_Cactus_Shack_010_Small_Talk_In_Celina_Ohio_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.notla.com/?p=1595"
+      "published": [Date: 2018-02-16T20:53:56.000Z]
+      "title": "Brad’s Cactus Shack Episode 10 – Small Talk in Celina Ohio"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "We’re doing requests today and they’re brought to you by FOD87.  We get to talk to 2 different trailer parks, a guy that…"
+      "duration": 3590
+      "enclosure": {
+        "filesize": 28718688
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-02-14_TSPS440_FOD87s_Hobo_Gypsy_Trailer_Park_Show_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://snowplowshow.com/?p=511"
+      "published": [Date: 2018-02-15T01:11:48.000Z]
+      "title": "The Snow Plow Show Episode 440 – FOD87’s Hobo Gypsy Trailer Park Show"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "Today’s episode contains nothing but calls to homeowners who live under the strict rule of their local homeowners association.  You’ll hear a lot of references to Frank, who was one of the big wigs at that HoA.  He probably had the most interesting week ever after our calls.   If you like the calls you […]"
+      "enclosure": {
+        "filesize": 16230277
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/02/world_of_prank_calls_013_sorry_i_dinged_your_car_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://worldofprankcalls.com/?p=233"
+      "published": [Date: 2018-02-13T23:48:37.000Z]
+      "title": "Episode 13 – Sorry I Dinged Your Car"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "I've been wanting to tell apartment managers for awhile now that I found dead animals under my floor, so I finally got to do that today, thanks to our sponsor I love Audis.  The show takes a slight turn when I start doing something that Simplex suggested.  We also find out..."
+      "duration": 6188
+      "enclosure": {
+        "filesize": 49507351
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-02-12_TSPS439_Holes_and_Mirror_Realities_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6272"
+      "published": [Date: 2018-02-13T05:32:05.000Z]
+      "title": "The Snow Plow Show Episode 439 – Holes and Mirror Realities"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Today's silent auction numbers were submitted by BOB MURPHY and the show is sponsored by Thunor. Join the Hijinks Discord chat to participate in Saturday night movies Watch the Indian version of Powder Ending song is Me And My Grandma Went To Prison Together by Rappy McRapperson   SUPPORT THE PLA:..."
+      "duration": 5803
+      "enclosure": {
+        "filesize": 46426156
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-02-09_TSPS438_Cow_Hides_and_Ram_Heads_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6268"
+      "published": [Date: 2018-02-10T08:35:42.000Z]
+      "title": "The Snow Plow Show Episode 438 – Cow Hides and Ram Heads"
+    }
+    {
+      "categories": [
+        "Snow Plow Show"
+      ]
+      "description": "Joey C. brings you over an hour of calls to businesses from everyone's favorite albino, Powder.  These calls are based on the 1995 blockbuster movie known as Powder.  If you haven't seen it, there's a link below to watch it for just $2.99 on YouTube, which is exactly what you..."
+      "duration": 6497
+      "enclosure": {
+        "filesize": 51976027
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-02-05_TSPS437_Powder_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.phonelosers.org/?p=6265"
+      "published": [Date: 2018-02-06T08:03:51.000Z]
+      "title": "The Snow Plow Show Episode 437 – Powder"
+    }
+    {
+      "categories": [
+        "Podcast"
+      ]
+      "description": "This episode of Brad’s Cactus Shack activates my old man story mode so I can tell stories about old men. Then I play some old 90’s Dino audio that can barely be heard, but it’s okay because I tell you small parts of what he probably said, then drone on and on about OCI for a bit. We wrap it"
+      "enclosure": {
+        "filesize": 16846976
+        "type": "audio/mpeg"
+        "url": "http://media.blubrry.com/phonelosers/www.notla.com/wp-content/uploads/2018/02/2018-02-03_brads_cactus_shack_009_Dino_and_OCI_LQ.mp3"
+      }
+      "explicit": true
+      "guid": "http://www.notla.com/?p=1587"
+      "published": [Date: 2018-02-04T00:06:42.000Z]
+      "title": "Brad’s Cactus Shack Episode 9 – Dino and OCI"
+    }
+  ]
+  "explicit": true
+  "image": "http://www.phonelosers.org/images/site_images/podcast_2018_art_3000x3000.jpg"
+  "language": "en-us"
+  "link": "http://www.phonelosers.org"
+  "owner": {
+    "email": "rbcp@phonelosers.org"
+    "name": "RedBoxChiliPepper"
+  }
+  "title": "Phone Losers of America"
+  "type": "episodic"
+  "uncaught": true
+  "updated": [Date: 2018-10-16T15:03:22.000Z]
+} was thrown, throw an Error :)
+      at process._fatalException (internal/bootstrap/node.js:491:27)
+
+
+
+npm ERR! Test failed.  See above for more details.
