@@ -7,7 +7,7 @@ var timezone_mock = require('timezone-mock');
 
 var parse = require('../parse');
 
-describe('Parse file', function () {
+describe('Parse sample feed', function () {
 
   var parsedFile;
 

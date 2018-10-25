@@ -7,7 +7,7 @@
     "lint": "./node_modules/.bin/eslint */*.js",
     "lintfix": "./node_modules/.bin/eslint */*.js --fix",
     "pretest": "npm run lint",
-    "test": "mocha"
+    "test": "NODE_ENV=test mocha"
   },
   "repository": {
     "type": "git",
@@ -33,7 +33,11 @@
     "timezone-mock": "^1.0.2"
   },
   "dependencies": {
+    "bluebird": "^3.5.2",
     "node-podcast-parser": "^2.3.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "sequelize": "^4.41.0",
+    "sequelize-cli": "^5.2.0",
+    "sqlite3": "^4.0.3"
   }
 }

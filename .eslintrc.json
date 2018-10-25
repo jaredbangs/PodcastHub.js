@@ -4,5 +4,32 @@
 		"mocha": true,
 		"node": true
 	},
-	"extends": "eslint:recommended"
+	"extends": "eslint:recommended",
+	"overrides": 
+	[
+		{
+			"files": [ "migrations/**/*.js" ],
+			"env": 
+			{
+				"es6": true
+			},
+			"rules": {
+				"no-unused-vars": 0
+			}
+		},
+		{
+			"files": [ "models/**/*.js" ],
+			"env": 
+			{
+				"es6": true
+			},
+			"rules": {
+				"no-unused-vars": 0
+			}
+		}
+	],
+	"rules": {
+		"no-console": 0,
+		"no-useless-escape": 0
+	}
 }
