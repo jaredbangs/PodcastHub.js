@@ -3,6 +3,33 @@ var parsePodcast = require('node-podcast-parser');
 var models = require('./models');
 var parseToJSON = require('./parseFeedDataToJSON');
 
+var addParsedEnclosureToEpisode = function (episode, parsedEnclosure) {
+
+	if (parsedEnclosure !== undefined) {
+		episode.enclosureType = parsedEnclosure.type;
+		episode.enclosureUrl = parsedEnclosure.url;
+		episode.fileSize = parsedEnclosure.filesize;
+	}
+}
+
+var addParsedEpisodeToPodcast = function (podcast, parsedEpisode) {
+
+	models.Episode.create({ 
+		description: parsedEpisode.description, 
+		duration: parsedEpisode.duration, 
+		guid: parsedEpisode.guid, 
+		image: parsedEpisode.image, 
+		published: parsedEpisode.published, 
+		title: parsedEpisode.title 
+		}).then(function (episode) {
+
+			addParsedEnclosureToEpisode(episode, parsedEpisode.enclosure);
+		
+			episode.setPodcast(podcast);
+			episode.save();
+	});
+}
+
 module.exports = function (data, callback) {
 	
   var self = this;
@@ -32,26 +59,7 @@ module.exports = function (data, callback) {
 					if (parsedData.episodes !== undefined) {
 			
 						parsedData.episodes.forEach(function (parsedEpisode) {
-
-							models.Episode.create({ 
-								description: parsedEpisode.description, 
-								duration: parsedEpisode.duration, 
-								guid: parsedEpisode.guid, 
-								image: parsedEpisode.image, 
-								published: parsedEpisode.published, 
-								title: parsedEpisode.title 
-								}).then(function (episode) {
-
-									if (parsedEpisode.enclosure !== undefined) {
-										episode.enclosureType = parsedEpisode.enclosure.type;
-										episode.enclosureUrl = parsedEpisode.enclosure.url;
-										episode.fileSize = parsedEpisode.enclosure.filesize;
-									}
-								
-									episode.setPodcast(podcast);
-									episode.save();
-							});
-
+							addParsedEpisodeToPodcast(podcast, parsedEpisode);
 						});
 					}
 
