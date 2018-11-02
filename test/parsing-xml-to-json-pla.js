@@ -7,21 +7,21 @@ var timezone_mock = require('timezone-mock');
 
 var parse = require('../parseFeedDataToJSON');
 
-describe('feed-parse-pla.json', function () {
+describe('parsing-xml-to-json-pla', function () {
 
   var parsedFile;
 
   before(function (done) {
 
-	fs.readFile(path.resolve(__dirname, './phonelosers.org.xml'), 'utf8', function (err, data) {
+		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', function (err, data) {
 
-		if (err) throw err;
-		parse(data, function (err, parsedData) {
 			if (err) throw err;
-			parsedFile = parsedData;
-			done();
+			parse(data, function (err, parsedData) {
+				if (err) throw err;
+				parsedFile = parsedData;
+				done();
+			});
 		});
-	});
   });
   
   it('author', function () {
@@ -109,8 +109,8 @@ describe('feed-parse-pla.json', function () {
   });
   
   it('updated', function () {
-	timezone_mock.register('UTC');
+		timezone_mock.register('UTC');
     assert.equalDate(parsedFile.updated, new Date("2018-10-16 15:03:22").d);
-	timezone_mock.unregister();
+		timezone_mock.unregister();
   });
 })

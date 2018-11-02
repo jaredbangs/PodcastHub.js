@@ -6,8 +6,8 @@
   },
   "test": {
     "dialect": "sqlite",
-    "logging": true,
-    "storage": "./db.development.sqlite"
+    "logging": false,
+    "storage": ":memory:"
   },
   "production": {
     "dialect": "sqlite",

@@ -9,7 +9,7 @@ var timezone_mock = require('timezone-mock');
 var models = require('../models');
 var parse = require('../parseFeedDataToPodcastModel');
 
-describe('feed-parse-pla.episode.model', function () {
+describe('parsing-xml-to-episode-models-pla', function () {
 	this.timeout(60000);
 
   var episodes, podcast;
@@ -19,10 +19,10 @@ describe('feed-parse-pla.episode.model', function () {
 		Bluebird.all([
 			models.sequelize.sync(),
 			models.Episode.destroy({ truncate: true }),
-			models.Podcast.destroy({ truncate: true }),
+			models.Podcast.destroy({ truncate: true })
 		]);
 
-		fs.readFile(path.resolve(__dirname, './phonelosers.org.xml'), 'utf8', function (err, data) {
+		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', function (err, data) {
 			if (err) throw err;
 			parse(data, function (err, podcastModel) {
 				if (err) throw err;

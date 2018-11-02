@@ -6,7 +6,7 @@ var path = require('path');
 var models = require('../models');
 var parse = require('../parseFeedDataToJSON');
 
-describe('podcast-model-create', function () {
+describe('parsing-caches-parsed-data', function () {
 
 	this.timeout(60000);
 
@@ -18,7 +18,7 @@ describe('podcast-model-create', function () {
 			models.sequelize.sync()
 		]);
 		
-		fs.readFile(path.resolve(__dirname, './phonelosers.org.xml'), 'utf8', function (err, data) {
+		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', function (err, data) {
 
 			if (err) throw err;
 			parse(data, function (err, parsedData) {
@@ -27,7 +27,7 @@ describe('podcast-model-create', function () {
 				Bluebird.all([
 					models.Episode.destroy({ truncate: true }),
 					models.Podcast.destroy({ truncate: true }),
-					models.Podcast.create({ title: 'podcast-model-create', RssUrl: 'http://www.phonelosers.org/feed/', ParsedFeedCache: parsedFile }),
+					models.Podcast.create({ title: 'parsing-caches-parsed-data', RssUrl: 'http://www.phonelosers.org/feed/', ParsedFeedCache: parsedFile }),
 					done()
 				]);
 			});
@@ -35,9 +35,7 @@ describe('podcast-model-create', function () {
   });
 	
 	it('creates a podcast', function () {
-		return models.Podcast.findOne({ where: { title: 'podcast-model-create' }}).then(function (podcast) {
-			assert.strictEqual(podcast.title, 'podcast-model-create');
-			assert.strictEqual(podcast.RssUrl, 'http://www.phonelosers.org/feed/');
+		return models.Podcast.findOne({ where: { title: 'parsing-caches-parsed-data' }}).then(function (podcast) {
 			assert.strictEqual(podcast.ParsedFeedCache.author, "RedBoxChiliPepper");
 		});
 	});

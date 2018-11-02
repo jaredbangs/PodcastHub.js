@@ -5,7 +5,7 @@ chai.use(require('chai-datetime'));
 
 var models = require('../models');
 
-describe('models-podcast-orm', function () {
+describe('orm-model-podcast', function () {
 
 	before(function () {
 		return Bluebird.all([

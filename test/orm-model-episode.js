@@ -3,7 +3,7 @@ var Bluebird = require('bluebird');
 
 var models = require('../models');
 
-describe('models-episode-orm', function () {
+describe('orm-model-episode', function () {
 
 	before(function () {
 		return Bluebird.all([
@@ -26,6 +26,12 @@ describe('models-episode-orm', function () {
 			})
 		]);
   });
+
+	it('createdAt', function () {
+		return models.Episode.findOne({ where: { title: 'Episode 1' }}).then(function (episode) {
+			assert.strictEqual(episode.createdAt.getHours(), new Date().getHours());
+		});
+	});
 
 	it('description', function () {
 		return models.Episode.findOne({ where: { title: 'Episode 1' }}).then(function (episode) {
@@ -75,27 +81,9 @@ describe('models-episode-orm', function () {
 		});
 	});
 
-	it('title', function () {
+	it('updatedAt', function () {
 		return models.Episode.findOne({ where: { title: 'Episode 1' }}).then(function (episode) {
-			assert.strictEqual(episode.title, 'Episode 1');
-		});
-	});
-
-	it('title', function () {
-		return models.Episode.findOne({ where: { title: 'Episode 1' }}).then(function (episode) {
-			assert.strictEqual(episode.title, 'Episode 1');
-		});
-	});
-
-	it('title', function () {
-		return models.Episode.findOne({ where: { title: 'Episode 1' }}).then(function (episode) {
-			assert.strictEqual(episode.title, 'Episode 1');
-		});
-	});
-
-	it('title', function () {
-		return models.Episode.findOne({ where: { title: 'Episode 1' }}).then(function (episode) {
-			assert.strictEqual(episode.title, 'Episode 1');
+			assert.strictEqual(episode.updatedAt.getHours(), new Date().getHours());
 		});
 	});
 

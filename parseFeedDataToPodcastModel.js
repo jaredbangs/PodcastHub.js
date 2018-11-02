@@ -14,7 +14,7 @@ var addParsedEnclosureToEpisode = function (episode, parsedEnclosure) {
 
 var addParsedEpisodeToPodcast = function (podcast, parsedEpisode) {
 
-	models.Episode.create({ 
+	podcast.createEpisode({ 
 		description: parsedEpisode.description, 
 		duration: parsedEpisode.duration, 
 		guid: parsedEpisode.guid, 
@@ -24,9 +24,7 @@ var addParsedEpisodeToPodcast = function (podcast, parsedEpisode) {
 		}).then(function (episode) {
 
 			addParsedEnclosureToEpisode(episode, parsedEpisode.enclosure);
-		
-			episode.setPodcast(podcast);
-			episode.save();
+			return episode.save();
 	});
 }
 
