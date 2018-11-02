@@ -5,8 +5,6 @@ var models = require('../models');
 
 describe('models/podcast', function () {
 
-	var allPodcasts;
-  
 	before(function () {
 		return Bluebird.all([
 			models.sequelize.sync()
@@ -15,6 +13,7 @@ describe('models/podcast', function () {
 
   beforeEach(function () {
 		return Bluebird.all([
+			models.Episode.destroy({ truncate: true }),
 			models.Podcast.destroy({ truncate: true }),
 			models.Podcast.create({ 
 				author: 'Jared', 
@@ -26,17 +25,16 @@ describe('models/podcast', function () {
 				title: 'Phone Losers of America', 
 				LastUpdated: new Date("2018-10-16 15:03:22")
 			}),
-			models.Podcast.create({ title: 'This American Life' }),
-			models.Podcast.findAll().then(function(podcasts) {
-				allPodcasts = podcasts;
-			})
+			models.Podcast.create({ title: 'This American Life' })
 		]);
   });
 
 	describe('read', function () {
 
 		it('count', function () {
-			assert.strictEqual(allPodcasts.length, 2);
+			return models.Podcast.findAll().then(function(podcasts) {
+				assert.strictEqual(podcasts.length, 2);
+			})
 		});
 
 		it('first entry author', function () {
