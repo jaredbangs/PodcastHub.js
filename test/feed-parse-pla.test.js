@@ -5,7 +5,7 @@ var fs = require('fs');
 var path = require('path');
 var timezone_mock = require('timezone-mock');
 
-var parse = require('../parse');
+var parse = require('../parseFeedDataToJSON');
 
 describe('Parse sample feed', function () {
 

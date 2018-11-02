@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 
 var models = require('../models');
-var parse = require('../parse');
+var parse = require('../parseFeedDataToJSON');
 
 describe('models/podcast', function () {
 
