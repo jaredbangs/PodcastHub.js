@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     guid: DataTypes.STRING,
     title: DataTypes.STRING,
     description: DataTypes.STRING,
-    filsizee: DataTypes.INTEGER,
+    fileSize: DataTypes.INTEGER,
     published: {
 			type: DataTypes.DATE,
 			defaultValue: DataTypes.NOW

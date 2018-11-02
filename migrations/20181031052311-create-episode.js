@@ -17,6 +17,9 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
+      fileSize: {
+        type: Sequelize.INTEGER
+      },
       imageUrl: {
         type: Sequelize.STRING
       },
