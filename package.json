@@ -1,13 +1,17 @@
 {
   "name": "podcasthub.js",
   "version": "0.0.1",
-  "description": "Podcast Downloader",
+  "description": "Podcast Manager",
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint */*.js",
     "lintfix": "./node_modules/.bin/eslint */*.js --fix",
     "pretest": "npm run lint",
     "test": "NODE_ENV=test mocha"
+  },
+  "bin": {
+    "podcasthub-list": "./list-podcasts.js",
+    "podcasthub-subscribe": "./subscribe.js"
   },
   "repository": {
     "type": "git",

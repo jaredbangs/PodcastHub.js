@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var request = require('request');
 
 var models = require('./models');
@@ -19,7 +20,7 @@ request(process.argv[2], function (err, res, data) {
 			return;
 		}
 
-		return models.Podcast.create({ title: 'Phone Losers of America', RssUrl: process.argv[2] }).bind(this).then(function (podcast) {
+		return models.Podcast.create({ title: 'Phone Losers of America', RssUrl: process.argv[2], ParsedFeedCache: parsedData }).bind(this).then(function (podcast) {
 			console.log("Subscribed to " + podcast.title);
 		});
 	});
