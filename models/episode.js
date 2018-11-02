@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Episode.associate = function(models) {
     // associations can be defined here
-		Episode.belongsTo(models.Podcast);
+		Episode.belongsTo(models.Podcast, { onDelete: 'cascade' });
   };
   return Episode;
 };

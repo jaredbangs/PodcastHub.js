@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Podcast.associate = function(models) {
     // associations can be defined here
-		Podcast.hasMany(models.Episode);
+		Podcast.hasMany(models.Episode, { onDelete: 'cascade', hooks: true });
   };
   return Podcast;
 };

@@ -3,34 +3,36 @@ var Bluebird = require('bluebird');
 
 var models = require('../models');
 
-describe('models/podcast with episode', function () {
+describe('podcast-with-episode-read', function () {
+
+	var podcastId;
 
 	before(function () {
-		Bluebird.all([
+		return Bluebird.all([
 			models.sequelize.sync()
 		]);
   });
 
   beforeEach(function () {
 		return Bluebird.all([
+			models.Episode.destroy({ truncate: true }),
 			models.Podcast.destroy({ truncate: true }),
-			models.Podcast.create({ title: 'Phone Losers of America', RssUrl: 'http://www.phonelosers.org/feed/' }).bind(this).then(function (podcast) {
-				models.Episode.create({ title: 'Episode 1' }).bind(this).then(function (episode) {
-					episode.setPodcast(podcast);
-				});
+			models.Podcast.create({ title: 'podcast-with-episode-read', RssUrl: 'http://www.phonelosers.org/feed/' }).bind(this).then(function (podcast) {
+
+				podcastId = podcast.id;
+
+				return podcast.createEpisode({ title: 'Episode 1' }); 
 			})
 		]);
   });
 
-	describe('read', function () {
-		it('reads a podcast with an episode', function () {
-			return models.Podcast.findOne({ where: { title: 'Phone Losers of America' }}).then(function (podcast) {
-				assert.strictEqual(podcast.title, 'Phone Losers of America');
-				assert.strictEqual(podcast.RssUrl, 'http://www.phonelosers.org/feed/');
-				return podcast.getEpisodes().then(function (episodes) {
-					assert.strictEqual(episodes.length, 1);
-					assert.strictEqual(episodes[0].title, 'Episode 1');
-				});
+	it('reads a podcast with an episode', function () {
+		return models.Podcast.findOne({ where: { id: podcastId }}).then(function (podcast) {
+			assert.strictEqual(podcast.title, 'podcast-with-episode-read');
+			assert.strictEqual(podcast.RssUrl, 'http://www.phonelosers.org/feed/');
+			return podcast.getEpisodes().then(function (episodes) {
+				assert.strictEqual(episodes.length, 1);
+				assert.strictEqual(episodes[0].title, 'Episode 1');
 			});
 		});
 	});

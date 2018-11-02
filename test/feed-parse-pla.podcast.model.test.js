@@ -9,7 +9,9 @@ var timezone_mock = require('timezone-mock');
 var models = require('../models');
 var parse = require('../parseFeedDataToPodcastModel');
 
-describe('Parse sample feed to model', function () {
+describe('feed-parse-pla.podcast.model', function () {
+	
+	this.timeout(30000);
 
   var podcast;
 

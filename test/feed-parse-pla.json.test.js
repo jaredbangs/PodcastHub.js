@@ -7,7 +7,7 @@ var timezone_mock = require('timezone-mock');
 
 var parse = require('../parseFeedDataToJSON');
 
-describe('Parse sample feed', function () {
+describe('feed-parse-pla.json', function () {
 
   var parsedFile;
 
@@ -89,7 +89,7 @@ describe('Parse sample feed', function () {
   });
 
   it('episode count', function () {
-    assert.strictEqual(parsedFile.episodes.length, 100);
+    assert.strictEqual(parsedFile.episodes.length, 5);
   });
 
   it('image', function () {
