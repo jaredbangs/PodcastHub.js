@@ -7,7 +7,7 @@ var path = require('path');
 var timezone_mock = require('timezone-mock');
 
 var models = require('../models');
-var parse = require('../parseFeedDataToPodcastModel');
+var parse = require('../parsing/parseFeedDataToPodcastModel');
 
 describe('parsing-xml-to-podcast-model-pla', function () {
 	

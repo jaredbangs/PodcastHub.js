@@ -1,6 +1,4 @@
-var parsePodcast = require('node-podcast-parser');
-
-var models = require('./models');
+var models = require('../models');
 var parseToJSON = require('./parseFeedDataToJSON');
 
 var addParsedEnclosureToEpisode = function (episode, parsedEnclosure) {
@@ -29,8 +27,6 @@ var addParsedEpisodeToPodcast = function (podcast, parsedEpisode) {
 }
 
 module.exports = function (data, callback) {
-	
-  var self = this;
 	
 	models.sequelize.sync();
 

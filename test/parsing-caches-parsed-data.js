@@ -4,7 +4,7 @@ var fs = require('fs');
 var path = require('path');
 
 var models = require('../models');
-var parse = require('../parseFeedDataToJSON');
+var parse = require('../parsing/parseFeedDataToJSON');
 
 describe('parsing-caches-parsed-data', function () {
 
