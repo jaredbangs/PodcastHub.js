@@ -8,25 +8,37 @@ var rssUrl = process.argv[2];
 
 models.sequelize.sync();
 
-console.log("Subscribing to " + rssUrl);
+models.Podcast.findOne({ where: { RssUrl: rssUrl }}).then(function (podcast) {
 
-request(rssUrl, function (err, res, data) {
-	if (err) {
-		console.error('Network error', err);
-		return;
-	}
+	if (podcast === undefined || podcast === null) {
 
-	parse(data, function (err, podcastModel) {
-		if (err) {
-			console.error('Parsing error', err);
-			return;
-		}
+		console.log("Fetching " + rssUrl);
+		request(rssUrl, function (err, res, data) {
+			if (err) {
+				console.error('Network error', err);
+				return;
+			}
 
-		podcastModel.RssUrl = rssUrl;
+			console.log("Parsing " + rssUrl);
+			parse(data, function (err, podcastModel) {
+				if (err) {
+					console.error('Parsing error', err);
+					return;
+				}
 
-		podcastModel.save().then(function () {
-			console.log("Subscribed to " + podcastModel.title);
+				podcastModel.RssUrl = rssUrl;
+
+				podcastModel.save().then(function () {
+					console.log("Subscribed to " + podcastModel.title);
+				});
+
+			});
 		});
 
-	});
+	} else {
+		console.log("Already subscribed to " + podcast.title + " - " + podcast.RssUrl);
+	}
+
+}, function (error) {
+	console.error(error);
 });
