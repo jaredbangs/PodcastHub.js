@@ -57,8 +57,8 @@ module.exports = function (data, callback) {
 						});
 					}
 
-					podcast.save().then(function () {
-						callback(null, podcast);
+					podcast.save().then(function (savedPodcast) {
+						callback(null, savedPodcast);
 					});
 			});
     }

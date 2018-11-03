@@ -1,4 +1,5 @@
 *.sqlite
+*.sqlite-journal
 
 # Logs
 logs
