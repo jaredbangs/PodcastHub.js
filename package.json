@@ -11,9 +11,9 @@
     "testsingle": "NODE_ENV=test mocha test/podcast-with-episode-read.test.js"
   },
   "bin": {
-    "podcasthub-import": "./import.js",
-    "podcasthub-list": "./list.js",
-    "podcasthub-subscribe": "./subscribe.js"
+    "pch-import": "./import.js",
+    "pch-list": "./list.js",
+    "pch-subscribe": "./subscribe.js"
   },
   "repository": {
     "type": "git",
