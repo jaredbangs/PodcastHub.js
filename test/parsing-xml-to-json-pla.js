@@ -3,7 +3,6 @@ var chai = require('chai');
 chai.use(require('chai-datetime'));
 var fs = require('fs');
 var path = require('path');
-var timezone_mock = require('timezone-mock');
 
 var parse = require('../parsing/parseFeedDataToJSON');
 
@@ -79,9 +78,7 @@ describe('parsing-xml-to-json-pla', function () {
   });
   
   it('episode 0 published', function () {
-	timezone_mock.register('UTC');
-    assert.equalDate(parsedFile.episodes[0].published, new Date("2018-10-16 15:03:22").d);
-	timezone_mock.unregister();
+    assert.equalDate(parsedFile.episodes[0].published, new Date("2018-10-16 15:03:22"));
   });
 
   it('episode 0 title', function () {
@@ -109,8 +106,6 @@ describe('parsing-xml-to-json-pla', function () {
   });
   
   it('updated', function () {
-		timezone_mock.register('UTC');
-    assert.equalDate(parsedFile.updated, new Date("2018-10-16 15:03:22").d);
-		timezone_mock.unregister();
+    assert.equalDate(parsedFile.updated, new Date("2018-10-16 15:03:22"));
   });
 })

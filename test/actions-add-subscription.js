@@ -2,11 +2,14 @@ var assert = require('chai').assert;
 var Bluebird = require('bluebird');
 var chai = require('chai');
 chai.use(require('chai-datetime'));
-var fs = require('fs');
-var path = require('path');
 
+var fetchRssFile = require('../actions/fetchRssFile');
 var models = require('../models');
-var parse = require('../parsing/parseFeedDataToPodcastModel');
+var addSubscription = require('../actions/addSubscription');
+
+var fetchRss = function (rssUrl, callback) {
+	fetchRssFile('data-pla.xml', callback);
+}
 
 describe('actions-add-subscription', function () {
 	
@@ -22,13 +25,10 @@ describe('actions-add-subscription', function () {
 			models.Podcast.destroy({ truncate: true }),
 		]);
 
-		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', function (err, data) {
+		addSubscription('http://www.phonelosers.org/feed/', { fetchRss: fetchRss }, function (err, podcastModel) {
 			if (err) throw err;
-			parse(data, function (err, podcastModel) {
-				if (err) throw err;
-				podcast = podcastModel;
-				done();
-			});
+			podcast = podcastModel;
+			done();
 		});
   });
   

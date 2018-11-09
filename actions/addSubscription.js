@@ -1,20 +1,22 @@
-var request = require('request');
-
 var models = require('../models');
 models.sequelize.sync();
 
+var fetchRss = require('./fetchRssLive');
 var parse = require('../parsing/parseFeedDataToPodcastModel');
 
-module.exports = function (rssUrl, callback) {
+module.exports = function (rssUrl, options, callback) {
 
 	models.Podcast.findOne({ where: { RssUrl: rssUrl }}).then(function (podcast) {
 
 		if (podcast === undefined || podcast === null) {
 
+			if (options.fetchRss !== undefined) {
+				fetchRss = options.fetchRss;
+			}
+
 			console.log("Fetching " + rssUrl);
-			request(rssUrl, function (err, res, data) {
+			fetchRss(rssUrl, function (err, data) {
 				if (err) {
-					console.error('Network error', err);
 					callback(err);
 				} else {
 

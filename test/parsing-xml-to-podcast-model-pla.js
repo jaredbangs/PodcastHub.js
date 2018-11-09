@@ -4,7 +4,6 @@ var chai = require('chai');
 chai.use(require('chai-datetime'));
 var fs = require('fs');
 var path = require('path');
-var timezone_mock = require('timezone-mock');
 
 var models = require('../models');
 var parse = require('../parsing/parseFeedDataToPodcastModel');
@@ -71,8 +70,6 @@ describe('parsing-xml-to-podcast-model-pla', function () {
   });
   
 	it('updated', function () {
-		timezone_mock.register('UTC');
-    assert.equalDate(podcast.LastUpdated, new Date("2018-10-16 15:03:22").d);
-		timezone_mock.unregister();
+    assert.equalDate(podcast.LastUpdated, new Date("2018-10-16 15:03:22"));
   });
 })

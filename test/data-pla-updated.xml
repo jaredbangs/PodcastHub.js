@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/" xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0" xmlns:georss="http://www.georss.org/georss" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" version="2.0">
+  <channel>
+    <title>Phone Losers of America</title>
+    <atom:link href="http://www.phonelosers.org/feed/" rel="self" type="application/rss+xml"/>
+    <link>http://www.phonelosers.org</link>
+    <description>home of The Snow Plow Show wacky morning podcast</description>
+    <lastBuildDate>Mon, 05 Nov 2018 02:01:20 +0000</lastBuildDate>
+    <language>en-US</language>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <generator>https://wordpress.org/?v=4.9.8</generator>
+    <!-- podcast_generator="Blubrry PowerPress/7.3" mode="advanced" feedslug="feed" Blubrry PowerPress Podcasting plugin for WordPress (https://www.blubrry.com/powerpress/) -->
+    <itunes:summary>The Phone Losers of America show features guests taking phone calls from our listeners. In the past we've featured beloved comedians Jiad from Calls of Mass Confusion, JagTV from the JagTV network, Staci from the Fun Show, and Carlito from Madhouse Live. A new show happens every week or so, and we take your phone calls live on the air at 845-470-0336. &lt;br /&gt;
+&lt;br /&gt;
+The Phone Losers of America have been producing content on the internets for over 20 years, usually in the form of regular podcasts featuring phone pranks, hax0ring, phone related news, and whatever else the Phone Losers of America happen to be up to. This podcast feed also syndicates other PLA-related shows, such as The Snow Plow Show, Mr. Dobalina's Wonderful World of Prank Calls, Hobosodes, and Brad's Cactus Shack.</itunes:summary>
+    <itunes:author>RedBoxChiliPepper</itunes:author>
+    <itunes:explicit>yes</itunes:explicit>
+    <itunes:image href="http://www.phonelosers.org/images/site_images/podcast_2018_art_3000x3000.jpg"/>
+    <itunes:type>episodic</itunes:type>
+    <itunes:owner>
+      <itunes:name>RedBoxChiliPepper</itunes:name>
+      <itunes:email>rbcp@phonelosers.org</itunes:email>
+    </itunes:owner>
+    <managingEditor>rbcp@phonelosers.org (RedBoxChiliPepper)</managingEditor>
+    <copyright>Psh, copyrights.  Steal all our material.  Do what you want.  Just give us credit somewhere.</copyright>
+    <itunes:subtitle>Prank phone calls and other wacky morning humor by the people at Phone Losers of America</itunes:subtitle>
+    <image>
+      <title>Phone Losers of America</title>
+      <url>http://www.phonelosers.org/images/site_images/podcast_2018_art_1400x1400.jpg</url>
+      <link>http://www.phonelosers.org</link>
+    </image>
+    <itunes:category text="Comedy">
+	</itunes:category>
+    <itunes:category text="Education">
+	</itunes:category>
+    <itunes:category text="Technology">
+	</itunes:category>
+    <googleplay:email>rbcp@phonelosers.org</googleplay:email>
+    <googleplay:explicit>Yes</googleplay:explicit>
+    <googleplay:category text="Comedy"/>
+    <googleplay:image href="http://www.phonelosers.org/images/site_images/podcast_2018_art_1400x1400.jpg"/>
+    <rawvoice:rating>TV-PG</rawvoice:rating>
+    <rawvoice:location>Roy, New Mexico</rawvoice:location>
+    <rawvoice:frequency>Twice a week</rawvoice:frequency>
+    <rawvoice:subscribe feed="http://www.phonelosers.org/feed/" itunes="https://pcr.apple.com/id912272324"/>
+    <site xmlns="com-wordpress:feed-additions:1">1223615</site>
+    <item>
+      <title>TSPS Episode 508 – Tunnels and Robots</title>
+      <link>http://snowplowshow.com/2018/11/04/tsps-episode-508-tunnels-and-robots/</link>
+      <pubDate>Sun, 04 Nov 2018 02:35:53 +0000</pubDate>
+      <dc:creator><![CDATA[rbcp]]></dc:creator>
+      <category><![CDATA[Snow Plow Show]]></category>
+      <guid isPermaLink="false">http://snowplowshow.com/?p=865</guid>
+      <description><![CDATA[Gordon Bombay sends in a list of neighborhood numbers and demands there be tunnels and sound effects so I do my best to&#8230;]]></description>
+      <content:encoded><![CDATA[<a href="http://www.phonelosers.org/wp-content/uploads/2018/11/mildred-monday-cake-from-Gloria.jpg"><img class="aligncenter size-large wp-image-6990" src="http://www.phonelosers.org/wp-content/uploads/2018/11/mildred-monday-cake-from-Gloria-1024x731.jpg" alt="" width="1024" height="731" /></a>
+
+Gordon Bombay sends in a list of neighborhood numbers and demands there be tunnels and sound effects so I do my best to make him happy. This one is sponsored by Random, Serial shitter, Naglerr, Buster Casey, and Nickyd.
+<ul>
+ 	<li>Show art by <a href="https://twitter.com/LordGloria1/status/1058478762742956033">Gloria</a></li>
+ 	<li>Intro song by Karterpiller</li>
+ 	<li><a href="https://www.youtube.com/watch?v=chJj8e8FiUo">Calls of Mass Confusion is back</a></li>
+ 	<li><a href="http://www.prankcallnation.com/node/1118/">Be sure to listen to 24 hours of prank calls during the anual Pranksgiving show</a></li>
+ 	<li><a href="https://twitter.com/therealjagtv">Listen to JagTV wherever the hell he posts his show archive</a></li>
+ 	<li><a href="http://www.phonelosers.org/2018/11/pla-episode-11-tim-henson-from-distorted-view/">Here’s the episode of The PLA Show with Tim Henson</a></li>
+ 	<li><a href="https://www.distortedview.com/show/">Listen to a few dozen episodes of Distorted View at distortedview.com</a></li>
+ 	<li><a href="https://herfinland.com/finnish-small-talk/">Small talk in Finland</a></li>
+ 	<li><a href="https://www.youtube.com/telepwned">Listen to Gloria’s prank call show</a></li>
+ 	<li><a href="https://player.fm/series/another-prank-call-show">Listen to Another Prank Call Show</a></li>
+ 	<li><a href="http://asepresents.com/prank-callers-guide-episode-203/">Listen to Riley Lux’s prank call show</a></li>
+</ul>
+&nbsp;
+
+<hr width="75%" />
+
+<strong>SUPPORT THE PLA:  </strong>Join <a href="http://www.patreon.com/phonelosers">PLA’s Patreon</a> to get extra weekly shows, live show archives, and other occasional perks. Get PLA stickers from <a href="http://zazzle.com/phonelosers">our Zazzle store</a>. Get PLA t-shirts in <a href="https://shop.spreadshirt.com/phonelosers/">our Spreadshirt store</a> or our <a href="https://www.teepublic.com/user/phonelosers">TeePublic store</a>.  You can find other merch on our <a href="https://phonelosers.bandcamp.com/merch">Bandcamp page</a> and on <a href="http://www.phonelosers.org/store/">our own store page</a>.   <a href="http://www.phonelosers.org/donate/">Make a donation</a>, shop on <a href="http://www.phonelosers.org/amazon/">Amazon through us</a>, take a look at <a href="https://www.amazon.com/gp/registry/wishlist/U9HUV1RK98MD">PLA’s wishlist</a> (or <a href="https://www.amazon.com/hz/wishlist/ls/RWO26B7KMOSS?&amp;sort=default">Brad’s</a>), or just support us by <a href="http://www.phonelosers.org/help/">helping out with promotion and reviews</a> and telling every last person you know about the show.
+
+<hr width="75%" />
+
+<strong>JOIN THE COMMUNITY:</strong> Add <a href="http://www.facebook.com/phonelosers">PLA on Facebook</a>, add<a href="http://www.facebook.com/snowplowshow"> Snow Plow Show on Facebook</a>, add <a href="http://www.twitter.com/phonelosers">PLA on Twitter</a>, add <a href="http://www.tumblr.com/blog/phonelosers">PLA on Tumblr</a>, add <a href="http://www.youtube.com/phonelosersofamerica">PLA on YouTube</a>, add <a href="http://www.youtube.com/phonelosersshows">PLA Shows on YouTube</a>, <a href="https://www.instagram.com/phonelosers/">PLA on Instagram</a>, join the <a href="https://discord.gg/qXqhTTa">PLA Discord</a>, the <a href="https://www.reddit.com/r/phonelosers/">PLA Reddit</a>, add <a href="http://instagram.com/bradbcp">RBCP on Instagram</a>, add <a href="http://www.twitter.com/rbcp">RBCP on Twitter</a>, add <a href="http://www.youtube.com/rbcp">RBCP on YouTube</a>, add <a href="https://vine.co/u/959585053392998400">RBCP on Vine</a>, leave a voice message for the show at 814-422-5309, call into live shows at 845-470-0336.
+
+<hr width="75%" />
+
+<strong>PLA FRIENDS AND STAFF:</strong> Nik Caesar from <a href="http://scary-art.com/">scary-art.com</a> is the unofficial PLA artist.  Buy PLA designs from <a href="https://shop.spreadshirt.com/scaryart/">Nik’s Spreadshirt store</a> and <a href="https://www.patreon.com/scaryart/">support him on Patreon</a>.  You might also like the cactus and PLA designs in <a href="https://shop.spreadshirt.com/laughtrackmatt/">Laugh Track Matt’s store</a>.  Olga &amp; Company do the <a href="https://www.patreon.com/olgadrawsdragons">PLA Corporate comic strip</a>. <a href="https://www.patreon.com/almosthenrik/">Henrik makes us music sometimes</a>. The <a href="https://discordapp.com/invite/pranks">Hijinks Hangout</a> is a Discord room for pranks. <a href="http://clownsec.com/">Clownsec</a> does a lot of <a href="http://ficklestheclown.bigcartel.com/">cool things</a> for PLA so go <a href="http://clownsec.com/">honk the PLAnet</a>.  Watch JIAD’s <a href="http://www.youtube.com/jesusinadumptruck">Calls of Mass Confusion</a> and listen to a few of the prank call shows over at <a href="http://www.prankcallnation.com/">Prank Call Nation</a> like <a href="http://www.madhouselive.com/">Madhouse Live</a>.]]></content:encoded>
+      <enclosure url="http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-11-03_TSPS508_Tunnels_And_Robots_LQ.mp3" length="40992060" type="audio/mpeg"/>
+      <itunes:subtitle>Gordon Bombay sends in a list of neighborhood numbers and demands there be tunnels and sound effects so I do my best to…</itunes:subtitle>
+      <itunes:summary>Gordon Bombay sends in a list of neighborhood numbers and demands there be tunnels and sound effects so I do my best to…</itunes:summary>
+      <itunes:author>RedBoxChiliPepper</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <post-id xmlns="com-wordpress:feed-additions:1">6988</post-id>
+    </item>
+    <item>
+      <title>PLA Episode 11 – Tim Henson from Distorted View</title>
+      <link>http://www.phonelosers.org/2018/11/pla-episode-11-tim-henson-from-distorted-view/</link>
+      <comments>http://www.phonelosers.org/2018/11/pla-episode-11-tim-henson-from-distorted-view/#respond</comments>
+      <pubDate>Thu, 01 Nov 2018 17:38:56 +0000</pubDate>
+      <dc:creator><![CDATA[rbcp]]></dc:creator>
+      <category><![CDATA[PLA Show]]></category>
+      <guid isPermaLink="false">http://www.phonelosers.org/?p=6981</guid>
+      <description><![CDATA[Tim Henson has been doing the Distorted View podcast for more than a decade, bringing us the weirdest news possible and playing clips that make listeners completely lose hope in humanity. In this show we talk with Tim about his show, his origins, his hopes and dreams and the freedom&#46;&#46;&#46;]]></description>
+      <content:encoded><![CDATA[<p><center><iframe src="https://www.youtube.com/embed/8ReNoejt_Mc" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>Tim Henson has been doing the <a href="http://www.distortedview.com">Distorted View podcast</a> for more than a decade, bringing us the weirdest news possible and playing clips that make listeners completely lose hope in humanity. In this show we talk with Tim about his show, his origins, his hopes and dreams and the freedom of home ownership. There's always been a large crossover of listeners between my show and Tim's, so if you like the kind of stuff I do then you should definitely listen to a few episodes of Distorted View to see if your stomach can handle it.</p>
+<ul>
+<li>Opening music is <a href="https://www.youtube.com/watch?v=w5Fgp-KihIA">Sunshine, Lollipops And Rainbows by Lesley Gore</a></li>
+<li>Theme song by <a href="http://mclars.com">MC Lars</a></li>
+<li>Visit Tim's website at <a href="http://distortedview.com">distortedview.com</a></li>
+<li>Tim also has a <a href="https://www.facebook.com/distortedviewshow/">Facebook</a>, a <a href="https://twitter.com/distortedview">Twtter</a>, a <a href="https://www.youtube.com/user/distortedviewshow">Youtube</a>, and a <a href="https://www.patreon.com/distortedview/overview">Patreon</a></li>
+</ul>
+<p>In case you're still concerned about my phone issues during the show, you can rest easy knowing it was just a dumb billing mistake on my part. I had to change my debit card in their system and I thought it would auto-renew, but it didn't. So I manually renewed it and I got all my phone numbers back. What a horrible time for them to cut off the service though.</p>
+<p>&nbsp;</p>
+<hr width="75%" />
+<p><strong>SUPPORT THE PLA:  </strong>Join <a href="http://www.patreon.com/phonelosers">PLA’s Patreon</a> to get extra weekly shows, live show archives, and other occasional perks. Get PLA stickers from <a href="http://zazzle.com/phonelosers">our Zazzle store</a>. Get PLA t-shirts in <a href="https://shop.spreadshirt.com/phonelosers/">our Spreadshirt store</a> or our <a href="https://www.teepublic.com/user/phonelosers">TeePublic store</a>.  You can find other merch on our <a href="https://phonelosers.bandcamp.com/merch">Bandcamp page</a> and on <a href="http://www.phonelosers.org/store/">our own store page</a>.   <a href="http://www.phonelosers.org/donate/">Make a donation</a>, shop on <a href="http://www.phonelosers.org/amazon/">Amazon through us</a>, take a look at <a href="https://www.amazon.com/gp/registry/wishlist/U9HUV1RK98MD">PLA’s wishlist</a> (or <a href="https://www.amazon.com/hz/wishlist/ls/RWO26B7KMOSS?&amp;sort=default">Brad’s</a>), or just support us by <a href="http://www.phonelosers.org/help/">helping out with promotion and reviews</a> and telling every last person you know about the show.</p>
+<hr width="75%" />
+<p><strong>JOIN THE COMMUNITY:</strong> Add <a href="http://www.facebook.com/phonelosers">PLA on Facebook</a>, add<a href="http://www.facebook.com/snowplowshow"> Snow Plow Show on Facebook</a>, add <a href="http://www.twitter.com/phonelosers">PLA on Twitter</a>, add <a href="http://www.tumblr.com/blog/phonelosers">PLA on Tumblr</a>, add <a href="http://www.youtube.com/phonelosersofamerica">PLA on YouTube</a>, add <a href="http://www.youtube.com/phonelosersshows">PLA Shows on YouTube</a>, <a href="https://www.instagram.com/phonelosers/">PLA on Instagram</a>, join the <a href="https://discord.gg/qXqhTTa">PLA Discord</a>, the <a href="https://www.reddit.com/r/phonelosers/">PLA Reddit</a>, add <a href="http://instagram.com/bradbcp">RBCP on Instagram</a>, add <a href="http://www.twitter.com/rbcp">RBCP on Twitter</a>, add <a href="http://www.youtube.com/rbcp">RBCP on YouTube</a>, add <a href="https://vine.co/u/959585053392998400">RBCP on Vine</a>, leave a voice message for the show at 814-422-5309, call into live shows at 845-470-0336.</p>
+<hr width="75%" />
+<p><strong>PLA FRIENDS AND STAFF:</strong> Nik Caesar from <a href="http://scary-art.com/">scary-art.com</a> is the unofficial PLA artist.  Buy PLA designs from <a href="https://shop.spreadshirt.com/scaryart/">Nik’s Spreadshirt store</a> and <a href="https://www.patreon.com/scaryart/">support him on Patreon</a>.  You might also like the cactus and PLA designs in <a href="https://shop.spreadshirt.com/laughtrackmatt/">Laugh Track Matt’s store</a>.  Olga &amp; Company do the <a href="https://www.patreon.com/olgadrawsdragons">PLA Corporate comic strip</a>. <a href="https://www.patreon.com/almosthenrik/">Henrik makes us music sometimes</a>. The <a href="https://discordapp.com/invite/pranks">Hijinks Hangout</a> is a Discord room for pranks. <a href="http://clownsec.com/">Clownsec</a> does a lot of <a href="http://ficklestheclown.bigcartel.com/">cool things</a> for PLA so go <a href="http://clownsec.com/">honk the PLAnet</a>.  Watch JIAD’s <a href="http://www.youtube.com/jesusinadumptruck">Calls of Mass Confusion</a> and listen to a few of the prank call shows over at <a href="http://www.prankcallnation.com/">Prank Call Nation</a> like <a href="http://www.madhouselive.com/">Madhouse Live</a>.</p>
+]]></content:encoded>
+      <wfw:commentRss>http://www.phonelosers.org/2018/11/pla-episode-11-tim-henson-from-distorted-view/feed/</wfw:commentRss>
+      <slash:comments>0</slash:comments>
+      <enclosure url="http://media.blubrry.com/phonelosers/phonelosers.com/media/show/2018-10-31_PLA_Episode_11_Tim_Henson_From_Distorted_View_LQ.mp3" length="40513468" type="audio/mpeg"/>
+      <itunes:subtitle>Tim Henson has been doing the Distorted View podcast for more than a decade, bringing us the weirdest news possible and playing clips that make listeners completely lose hope in humanity. In this show we talk with Tim about his show, his origins,</itunes:subtitle>
+      <itunes:summary>Tim Henson has been doing the Distorted View podcast for more than a decade, bringing us the weirdest news possible and playing clips that make listeners completely lose hope in humanity. In this show we talk with Tim about his show, his origins, his hopes and dreams and the freedom...</itunes:summary>
+      <itunes:author>RedBoxChiliPepper</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:duration>1:24:23</itunes:duration>
+      <post-id xmlns="com-wordpress:feed-additions:1">6981</post-id>
+    </item>
+    <item>
+      <title>TSPS Episode 507 – Halloween City Live</title>
+      <link>http://snowplowshow.com/2018/10/29/tsps-episode-507-halloween-city-live/</link>
+      <pubDate>Mon, 29 Oct 2018 22:25:11 +0000</pubDate>
+      <dc:creator><![CDATA[rbcp]]></dc:creator>
+      <category><![CDATA[Snow Plow Show]]></category>
+      <guid isPermaLink="false">http://snowplowshow.com/?p=859</guid>
+      <description><![CDATA[Sunday&#8217;s live show features a bunch of mediocre calls to neighborhoods and Halloween stores. It&#8217;s brought to you by&#160;DSKoopa, Carol_Gerty666, FOD87, Derek J,&#8230;]]></description>
+      <content:encoded><![CDATA[<p>Sunday&#8217;s live show features a bunch of mediocre calls to neighborhoods and Halloween stores. It&#8217;s brought to you by&nbsp;DSKoopa, Carol_Gerty666, FOD87, Derek J, and Efin Reality.<br />
+&nbsp;</p>
+<ul>
+<li>Today&#8217;s show art is by Nik Caesar from <a href="http://scary-art.com/">scary-art.com</a></li>
+<li>Intro song by Henrik</li>
+<li>Tim from <a href="https://www.distortedview.com/show/">Distorted View</a> will be on <a href="http://www.phonelosers.org/category/pla-show/">the PLA show</a>, Wednesday October 31st. Your homework until then is to <a href="https://www.distortedview.com/show/">listen to as much Distorted View as you possibly can</a></li>
+<li><a href="http://mixlr.com/buster_casey/showreel/devon-on-the-ones-and-twos">Buster Casey and Devon did a preshow which you can probably find here</a></li>
+<li>Mr. Biggs show can be found on his <a href="https://www.youtube.com/channel/UCSDC5PH5NGnGREi7mE-bMeQ/featured">YouTube</a> and his <a href="https://www.facebook.com/MrBiggsPodcast/">Facebook</a> and his <a href="https://www.patreon.com/MrBiggs/posts">Patreon</a></li>
+<li><a href="https://www.youtube.com/user/jesusinadumptruck/videos">Calls of Mass Confusion is back</a></li>
+<li>Ending song is Re Your Brains by Jonathan Coulton</li>
+</ul>
+<p>&nbsp;</p>
+<hr width="75%">
+<p><strong>SUPPORT THE PLA: &nbsp;</strong>Join&nbsp;<a href="http://www.patreon.com/phonelosers">PLA&#8217;s Patreon</a>&nbsp;to get extra weekly shows, live show archives, and other occasional perks. Get PLA stickers from <a href="http://zazzle.com/phonelosers">our Zazzle store</a>. Get PLA t-shirts in <a href="https://shop.spreadshirt.com/phonelosers/">our Spreadshirt store</a> or our <a href="https://www.teepublic.com/user/phonelosers">TeePublic store</a>. &nbsp;You can find other merch on our <a href="https://phonelosers.bandcamp.com/merch">Bandcamp page</a> and on <a href="http://www.phonelosers.org/store/">our own store page</a>. &nbsp; <a href="http://www.phonelosers.org/donate/">Make a donation</a>, shop on <a href="http://www.phonelosers.org/amazon/">Amazon through us</a>, take a look at <a href="https://www.amazon.com/gp/registry/wishlist/U9HUV1RK98MD">PLA&#8217;s wishlist</a>&nbsp;(or <a href="https://www.amazon.com/hz/wishlist/ls/RWO26B7KMOSS?&amp;sort=default">Brad&#8217;s</a>), or just support us by <a href="http://www.phonelosers.org/help/">helping out with promotion and reviews</a>&nbsp;and telling every last person you know about the show.</p>
+<hr width="75%">
+<p><strong>JOIN THE COMMUNITY:</strong> Add <a href="http://www.facebook.com/phonelosers">PLA on Facebook</a>, add<a href="http://www.facebook.com/snowplowshow"> Snow Plow Show on Facebook</a>, add <a href="http://www.twitter.com/phonelosers">PLA on Twitter</a>, add <a href="http://www.tumblr.com/blog/phonelosers">PLA on Tumblr</a>, add <a href="http://www.youtube.com/phonelosersofamerica">PLA on YouTube</a>, add <a href="http://www.youtube.com/phonelosersshows">PLA Shows on YouTube</a>, <a href="https://www.instagram.com/phonelosers/">PLA on Instagram</a>, join the <a href="https://discord.gg/qXqhTTa">PLA Discord</a>, the <a href="https://www.reddit.com/r/phonelosers/">PLA Reddit</a>, add <a href="http://instagram.com/bradbcp">RBCP on Instagram</a>, add <a href="http://www.twitter.com/rbcp">RBCP on Twitter</a>, add <a href="http://www.youtube.com/rbcp">RBCP on YouTube</a>, add <a href="https://vine.co/u/959585053392998400">RBCP on Vine</a>, leave a voice message for the show at 814-422-5309, call into live shows at 845-470-0336.</p>
+<hr width="75%">
+<p><strong>PLA FRIENDS AND STAFF:</strong>&nbsp;Nik Caesar from <a href="http://scary-art.com/">scary-art.com</a> is the unofficial PLA artist. &nbsp;Buy PLA designs from <a href="https://shop.spreadshirt.com/scaryart/">Nik&#8217;s Spreadshirt store</a> and <a href="https://www.patreon.com/scaryart/">support him on Patreon</a>. &nbsp;You might also like the cactus and PLA designs in <a href="https://shop.spreadshirt.com/laughtrackmatt/">Laugh Track Matt&#8217;s store</a>.&nbsp; Olga &amp; Company do the <a href="https://www.patreon.com/olgadrawsdragons">PLA Corporate comic strip</a>. <a href="https://www.patreon.com/almosthenrik/">Henrik makes us music sometimes</a>. The <a href="https://discordapp.com/invite/pranks">Hijinks Hangout</a> is a Discord room for pranks.&nbsp;<a href="http://clownsec.com/">Clownsec</a> does a lot of <a href="http://ficklestheclown.bigcartel.com/">cool things</a> for PLA so go <a href="http://clownsec.com/">honk the PLAnet</a>.&nbsp; Watch JIAD&#8217;s <a href="http://www.youtube.com/jesusinadumptruck">Calls of Mass Confusion</a>&nbsp;and listen to a few of the prank call shows over at <a href="http://www.prankcallnation.com/">Prank Call Nation</a> like <a href="http://www.madhouselive.com/">Madhouse Live</a>.</p>
+]]></content:encoded>
+      <enclosure url="http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-10-28_TSPS507_Halloween_City_Live_LQ.mp3" length="39443939" type="audio/mpeg"/>
+      <itunes:subtitle>Sunday’s live show features a bunch of mediocre calls to neighborhoods and Halloween stores. It’s brought to you by DSKoopa, Carol_Gerty666, FOD87, Derek J,…</itunes:subtitle>
+      <itunes:summary>Sunday’s live show features a bunch of mediocre calls to neighborhoods and Halloween stores. It’s brought to you by DSKoopa, Carol_Gerty666, FOD87, Derek J,…</itunes:summary>
+      <itunes:author>RedBoxChiliPepper</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <post-id xmlns="com-wordpress:feed-additions:1">6978</post-id>
+    </item>
+    <item>
+      <title>TSPS Episode 506 – More Toilet Issues</title>
+      <link>http://snowplowshow.com/2018/10/27/tsps-episode-506-more-toilet-issues/</link>
+      <pubDate>Sat, 27 Oct 2018 06:10:15 +0000</pubDate>
+      <dc:creator><![CDATA[rbcp]]></dc:creator>
+      <category><![CDATA[Snow Plow Show]]></category>
+      <guid isPermaLink="false">http://snowplowshow.com/?p=855</guid>
+      <description><![CDATA[Darkaegis sent me an updated toilet flushing sound effect, so of course I&#8217;ve got to test it out with another around of Will&#8230;]]></description>
+      <content:encoded><![CDATA[<a href="http://www.phonelosers.org/wp-content/uploads/2018/10/pla-tracer.png"><img class="aligncenter size-large wp-image-6976" src="http://www.phonelosers.org/wp-content/uploads/2018/10/pla-tracer-829x1024.png" alt="" width="829" height="1024" /></a>
+
+Darkaegis sent me an updated toilet flushing sound effect, so of course I’ve got to test it out with another around of Will It Flush calls to apartment managers. This episode was made possible by Teen Wolf Jesus, Simspeak, SixWeekTenure, The Anti Chris, and The Real Krazy Kraz.
+<ul>
+ 	<li>Show art by Nik Caesar at <a href="http://scary-art.com/">scary-art.com</a></li>
+ 	<li><a href="http://worldofprankcalls.com/2018/10/23/world-of-prank-calls-episode-22-happy-halloween/">Halloween episode of Mr. Dobalina’s Wonderful World of Prank Calls</a></li>
+ 	<li><a href="http://www.phonelosers.org/torrent/">Get all the PLA things on from the PLA torrent</a></li>
+ 	<li>Opening prank background music is Five Big Boners by Rappy McRapperson, monologue background is Roy Gherbil Rides The Metro by Steven Yucca, background during calls is by The Fish Who Saved The Planet, vocemail background is TheFatRat BobGmbH Impossible Piano Remix, Intro song is by Shiftypop</li>
+ 	<li><a href="https://www.youtube.com/watch?v=ROlv4IOGzn4">Here’s the video for Rappy’s new song</a></li>
+</ul>
+&nbsp;
+
+<hr width="75%" />
+
+<strong>SUPPORT THE PLA:  </strong>Join <a href="http://www.patreon.com/phonelosers">PLA’s Patreon</a> to get extra weekly shows, live show archives, and other occasional perks. Get PLA stickers from <a href="http://zazzle.com/phonelosers">our Zazzle store</a>. Get PLA t-shirts in <a href="https://shop.spreadshirt.com/phonelosers/">our Spreadshirt store</a> or our <a href="https://www.teepublic.com/user/phonelosers">TeePublic store</a>.  You can find other merch on our <a href="https://phonelosers.bandcamp.com/merch">Bandcamp page</a> and on <a href="http://www.phonelosers.org/store/">our own store page</a>.   <a href="http://www.phonelosers.org/donate/">Make a donation</a>, shop on <a href="http://www.phonelosers.org/amazon/">Amazon through us</a>, take a look at <a href="https://www.amazon.com/gp/registry/wishlist/U9HUV1RK98MD">PLA’s wishlist</a> (or <a href="https://www.amazon.com/hz/wishlist/ls/RWO26B7KMOSS?&amp;sort=default">Brad’s</a>), or just support us by <a href="http://www.phonelosers.org/help/">helping out with promotion and reviews</a> and telling every last person you know about the show.
+
+<hr width="75%" />
+
+<strong>JOIN THE COMMUNITY:</strong> Add <a href="http://www.facebook.com/phonelosers">PLA on Facebook</a>, add<a href="http://www.facebook.com/snowplowshow"> Snow Plow Show on Facebook</a>, add <a href="http://www.twitter.com/phonelosers">PLA on Twitter</a>, add <a href="http://www.tumblr.com/blog/phonelosers">PLA on Tumblr</a>, add <a href="http://www.youtube.com/phonelosersofamerica">PLA on YouTube</a>, add <a href="http://www.youtube.com/phonelosersshows">PLA Shows on YouTube</a>, <a href="https://www.instagram.com/phonelosers/">PLA on Instagram</a>, join the <a href="https://discord.gg/qXqhTTa">PLA Discord</a>, the <a href="https://www.reddit.com/r/phonelosers/">PLA Reddit</a>, add <a href="http://instagram.com/bradbcp">RBCP on Instagram</a>, add <a href="http://www.twitter.com/rbcp">RBCP on Twitter</a>, add <a href="http://www.youtube.com/rbcp">RBCP on YouTube</a>, add <a href="https://vine.co/u/959585053392998400">RBCP on Vine</a>, leave a voice message for the show at 814-422-5309, call into live shows at 845-470-0336.
+
+<hr width="75%" />
+
+<strong>PLA FRIENDS AND STAFF:</strong> Nik Caesar from <a href="http://scary-art.com/">scary-art.com</a> is the unofficial PLA artist.  Buy PLA designs from <a href="https://shop.spreadshirt.com/scaryart/">Nik’s Spreadshirt store</a> and <a href="https://www.patreon.com/scaryart/">support him on Patreon</a>.  You might also like the cactus and PLA designs in <a href="https://shop.spreadshirt.com/laughtrackmatt/">Laugh Track Matt’s store</a>.  Olga &amp; Company do the <a href="https://www.patreon.com/olgadrawsdragons">PLA Corporate comic strip</a>. <a href="https://www.patreon.com/almosthenrik/">Henrik makes us music sometimes</a>. The <a href="https://discordapp.com/invite/pranks">Hijinks Hangout</a> is a Discord room for pranks. <a href="http://clownsec.com/">Clownsec</a> does a lot of <a href="http://ficklestheclown.bigcartel.com/">cool things</a> for PLA so go <a href="http://clownsec.com/">honk the PLAnet</a>.  Watch JIAD’s <a href="http://www.youtube.com/jesusinadumptruck">Calls of Mass Confusion</a> and listen to a few of the prank call shows over at <a href="http://www.prankcallnation.com/">Prank Call Nation</a> like <a href="http://www.madhouselive.com/">Madhouse Live</a>.]]></content:encoded>
+      <enclosure url="http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-10-26_TSPS506_More_Toilet_Issues_LQ.mp3" length="29381989" type="audio/mpeg"/>
+      <itunes:subtitle>Darkaegis sent me an updated toilet flushing sound effect, so of course I’ve got to test it out with another around of Will…</itunes:subtitle>
+      <itunes:summary>Darkaegis sent me an updated toilet flushing sound effect, so of course I’ve got to test it out with another around of Will…</itunes:summary>
+      <itunes:author>RedBoxChiliPepper</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <post-id xmlns="com-wordpress:feed-additions:1">6972</post-id>
+    </item>
+    <item>
+      <title>World of Prank Calls Episode 22 – Happy Halloween</title>
+      <link>http://worldofprankcalls.com/2018/10/23/world-of-prank-calls-episode-22-happy-halloween/</link>
+      <pubDate>Tue, 23 Oct 2018 21:07:57 +0000</pubDate>
+      <dc:creator><![CDATA[Mr. Dobalina]]></dc:creator>
+      <category><![CDATA[Podcast]]></category>
+      <guid isPermaLink="false">http://worldofprankcalls.com/?p=451</guid>
+      <description><![CDATA[Today&#8217;s show takes a few of the best Halloween themed prank calls from 2016 and 2017 shows and presents them to you in a single, easy-to-digest show, devoid of long rambling intros, phone news, and thirty minutes of listener voicemails. Here&#8217;s a link to download Devo Spice&#8217;s PC Halloween and here&#8217;s MC Wreckshin&#8217;s My House [&#8230;]]]></description>
+      <content:encoded><![CDATA[<p>Today&#8217;s show takes a few of the best Halloween themed prank calls from 2016 and 2017 shows and presents them to you in a single, easy-to-digest show, devoid of long rambling intros, phone news, and thirty minutes of listener voicemails. <a href="https://thefump.bandcamp.com/track/pc-halloween">Here&#8217;s a link to download Devo Spice&#8217;s PC Halloween</a> and <a href="https://mcwreckshin.bandcamp.com/track/my-house-is-fucking-haunted-feat-betty-rebel">here&#8217;s MC Wreckshin&#8217;s My House Is Fucking Haunted</a>.</p>
+<p>If you like the calls you heard in this episode, then you&#8217;ll probably like my other podcast, called <a href="http://www.snowplowshow.com/">The Snow Plow Show</a>.  I also pop up occasionally on the shows you find on the <a href="http://www.prankcallnation.com/">Prank Call Nation</a> network, such as <a href="http://www.madhouselive.com/">Madhouse Live</a>, <a href="https://www.facebook.com/profile.php?id=100002715787887&amp;fref=search">Mop Riding With Dwight</a>, and <a href="http://www.prankcallnation.com/shows/partytime/">Partytime with Matt and Zax</a>.   <a href="http://976neon.com/">976-NEON</a>, and <a href="http://mixlr.com/jagtv/showreel/">JagTV</a> are pretty funny too, or you might enjoy <a href="https://www.facebook.com/callsofmassconfusion">Calls of Mass Confusion</a>, where hidden cameras capture the reactions of people we call.  You can <a href="http://www.patreon.com/phonelosers">support this show on Patreon</a> to get extra shows each week and get access to a giant archive of secret shows.</p>
+]]></content:encoded>
+      <enclosure url="http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/10/world_of_prank_calls_022_happy_halloween_LQ.mp3" length="17306313" type="audio/mpeg"/>
+      <itunes:subtitle>Today’s show takes a few of the best Halloween themed prank calls from 2016 and 2017 shows and presents them to you in a single, easy-to-digest show, devoid of long rambling intros, phone news, and thirty minutes of listener voicemails.</itunes:subtitle>
+      <itunes:summary>Today’s show takes a few of the best Halloween themed prank calls from 2016 and 2017 shows and presents them to you in a single, easy-to-digest show, devoid of long rambling intros, phone news, and thirty minutes of listener voicemails. Here’s a link to download Devo Spice’s PC Halloween and here’s MC Wreckshin’s My House […]</itunes:summary>
+      <itunes:author>RedBoxChiliPepper</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <post-id xmlns="com-wordpress:feed-additions:1">6967</post-id>
+    </item>
+    <item>
+      <title>TSPS Episode 505 – Jackwagoning Around In A Helicopter</title>
+      <link>http://snowplowshow.com/2018/10/22/tsps-episode-505-jackwagoning-around-in-a-helicopter/</link>
+      <pubDate>Mon, 22 Oct 2018 05:40:55 +0000</pubDate>
+      <dc:creator><![CDATA[rbcp]]></dc:creator>
+      <category><![CDATA[Snow Plow Show]]></category>
+      <guid isPermaLink="false">http://snowplowshow.com/?p=851</guid>
+      <description><![CDATA[If you haven&#8217;t heard enough of me riding around in a helicopter and calling people, then you&#8217;re in luck. This one is brought&#8230;]]></description>
+      <content:encoded><![CDATA[<a href="http://www.phonelosers.org/wp-content/uploads/2018/10/2018-PLA-coins-by-DeadlyPliers-2.jpg"><img class="aligncenter size-large wp-image-6964" src="http://www.phonelosers.org/wp-content/uploads/2018/10/2018-PLA-coins-by-DeadlyPliers-2-1024x576.jpg" alt="" width="1024" height="576" /></a>
+
+If you haven’t heard enough of me riding around in a helicopter and calling people, then you’re in luck. This one is brought to you by toinetoine, Lord and Lady of Veggies, High School Graduate, Jamie F, and Xander Fett.
+<ul>
+ 	<li>Intro mix by JayDee</li>
+ 	<li>Show art by DeadlyPliers</li>
+ 	<li><a href="https://www.opb.org/news/article/old-hardware-a-new-twist-the-no-pay-phone/">Here’s an article about that F U Tel pay phone</a></li>
+ 	<li><a href="https://portlandtribune.com/sb/74-news/341855-220736-futel-offers-free-public-phones-for-the-needy-">Here another article about the pay phone</a></li>
+ 	<li><a href="https://www.instagram.com/p/Bo-MTmOHjeV/?taken-by=bradbcp">Here’s my photo of the pay phone</a></li>
+ 	<li><a href="https://www.stitcher.com/podcast/mc-lars/the-mc-lars-podcast">Listen to the MC Lars podcast</a></li>
+ 	<li><a href="https://twitter.com/askmrbiggs">Please wish Mr. Biggs a Happy Caulktober</a></li>
+ 	<li><a href="https://divineinsanity.com/">Listen to Divine Insanity</a></li>
+</ul>
+&nbsp;
+
+<hr width="75%" />
+
+<strong>SUPPORT THE PLA:  </strong>Join <a href="http://www.patreon.com/phonelosers">PLA’s Patreon</a> to get extra weekly shows, live show archives, and other occasional perks. Get PLA stickers from <a href="http://zazzle.com/phonelosers">our Zazzle store</a>. Get PLA t-shirts in <a href="https://shop.spreadshirt.com/phonelosers/">our Spreadshirt store</a> or our <a href="https://www.teepublic.com/user/phonelosers">TeePublic store</a>.  You can find other merch on our <a href="https://phonelosers.bandcamp.com/merch">Bandcamp page</a> and on <a href="http://www.phonelosers.org/store/">our own store page</a>.   <a href="http://www.phonelosers.org/donate/">Make a donation</a>, shop on <a href="http://www.phonelosers.org/amazon/">Amazon through us</a>, take a look at <a href="https://www.amazon.com/gp/registry/wishlist/U9HUV1RK98MD">PLA’s wishlist</a> (or <a href="https://www.amazon.com/hz/wishlist/ls/RWO26B7KMOSS?&amp;sort=default">Brad’s</a>), or just support us by <a href="http://www.phonelosers.org/help/">helping out with promotion and reviews</a> and telling every last person you know about the show.
+
+<hr width="75%" />
+
+<strong>JOIN THE COMMUNITY:</strong> Add <a href="http://www.facebook.com/phonelosers">PLA on Facebook</a>, add<a href="http://www.facebook.com/snowplowshow"> Snow Plow Show on Facebook</a>, add <a href="http://www.twitter.com/phonelosers">PLA on Twitter</a>, add <a href="http://www.tumblr.com/blog/phonelosers">PLA on Tumblr</a>, add <a href="http://www.youtube.com/phonelosersofamerica">PLA on YouTube</a>, add <a href="http://www.youtube.com/phonelosersshows">PLA Shows on YouTube</a>, <a href="https://www.instagram.com/phonelosers/">PLA on Instagram</a>, join the <a href="https://discord.gg/qXqhTTa">PLA Discord</a>, the <a href="https://www.reddit.com/r/phonelosers/">PLA Reddit</a>, add <a href="http://instagram.com/bradbcp">RBCP on Instagram</a>, add <a href="http://www.twitter.com/rbcp">RBCP on Twitter</a>, add <a href="http://www.youtube.com/rbcp">RBCP on YouTube</a>, add <a href="https://vine.co/u/959585053392998400">RBCP on Vine</a>, leave a voice message for the show at 814-422-5309, call into live shows at 845-470-0336.
+
+<hr width="75%" />
+
+<strong>PLA FRIENDS AND STAFF:</strong> Nik Caesar from <a href="http://scary-art.com/">scary-art.com</a> is the unofficial PLA artist.  Buy PLA designs from <a href="https://shop.spreadshirt.com/scaryart/">Nik’s Spreadshirt store</a> and <a href="https://www.patreon.com/scaryart/">support him on Patreon</a>.  You might also like the cactus and PLA designs in <a href="https://shop.spreadshirt.com/laughtrackmatt/">Laugh Track Matt’s store</a>.  Olga &amp; Company do the <a href="https://www.patreon.com/olgadrawsdragons">PLA Corporate comic strip</a>. <a href="https://www.patreon.com/almosthenrik/">Henrik makes us music sometimes</a>. The <a href="https://discordapp.com/invite/pranks">Hijinks Hangout</a> is a Discord room for pranks. <a href="http://clownsec.com/">Clownsec</a> does a lot of <a href="http://ficklestheclown.bigcartel.com/">cool things</a> for PLA so go <a href="http://clownsec.com/">honk the PLAnet</a>.  Watch JIAD’s <a href="http://www.youtube.com/jesusinadumptruck">Calls of Mass Confusion</a> and listen to a few of the prank call shows over at <a href="http://www.prankcallnation.com/">Prank Call Nation</a> like <a href="http://www.madhouselive.com/">Madhouse Live</a>.]]></content:encoded>
+      <enclosure url="http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-10-21_TSPS505_Jackwagoning_Around_In_A_Helicopter_LQ.mp3" length="32600484" type="audio/mpeg"/>
+      <itunes:subtitle>If you haven’t heard enough of me riding around in a helicopter and calling people, then you’re in luck. This one is brought…</itunes:subtitle>
+      <itunes:summary>If you haven’t heard enough of me riding around in a helicopter and calling people, then you’re in luck. This one is brought…</itunes:summary>
+      <itunes:author>RedBoxChiliPepper</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <post-id xmlns="com-wordpress:feed-additions:1">6960</post-id>
+    </item>
+    <item>
+      <title>TSPS Episode 504 – Helicopter Rides With Brad and Carlito</title>
+      <link>http://snowplowshow.com/2018/10/16/tsps-episode-504-helicopter-rides-with-brad-and-carlito/</link>
+      <pubDate>Tue, 16 Oct 2018 15:03:22 +0000</pubDate>
+      <dc:creator><![CDATA[rbcp]]></dc:creator>
+      <category><![CDATA[Snow Plow Show]]></category>
+      <guid isPermaLink="false">http://snowplowshow.com/?p=844</guid>
+      <description><![CDATA[This is a live show that happened on Sunday afternoon where me and Carlito climbed into the corporate PLA helicopter to fly around&#8230;]]></description>
+      <content:encoded><![CDATA[<a href="http://www.phonelosers.org/wp-content/uploads/2018/10/hobostrip_by-olga.png"><img class="aligncenter size-large wp-image-6957" src="http://www.phonelosers.org/wp-content/uploads/2018/10/hobostrip_by-olga-1024x782.png" alt="" width="1024" height="782" /></a>
+
+This is a live show that happened on Sunday afternoon where me and <a href="http://www.madhouselive.com/">Carlito</a> climbed into the corporate PLA helicopter to fly around town while calling people on the ground to inform them of our various screwups along the way. This show is brought to you by Stantrucker, cody no name, Be-I-Eber_4life, TokeusPocus, and Wolfiten.
+<ul>
+ 	<li>Show art taken from <a href="https://www.patreon.com/olgadrawsdragons">Olga’s PLA comic strip</a></li>
+ 	<li><a href="https://www.facebook.com/events/565912160493447/">PLA Euromeat in California on March 16th, 2019</a></li>
+ 	<li><a href="https://www.patreon.com/dwightpcn/">Support Dwight’s Patreon</a></li>
+ 	<li><a href="https://www.patreon.com/madhouse/">Support the Madhouse Patreon</a></li>
+ 	<li><a href="https://www.patreon.com/olgadrawsdragons/overview">Support Olga’s Patreon</a></li>
+ 	<li><a href="https://twitter.com/phonelosers/status/1051271643761238016">Carlito pranks Brad and Olga</a></li>
+ 	<li><a href="https://www.patreon.com/PartyTime/posts">Support Partytime on Patreon</a></li>
+ 	<li><a href="https://www.patreon.com/scaryart/posts">Support Nik Caesar on Patreon</a></li>
+</ul>
+&nbsp;
+
+<hr width="75%" />
+
+<strong>SUPPORT THE PLA:  </strong>Join <a href="http://www.patreon.com/phonelosers">PLA’s Patreon</a> to get extra weekly shows, live show archives, and other occasional perks. Get PLA stickers from <a href="http://zazzle.com/phonelosers">our Zazzle store</a>. Get PLA t-shirts in <a href="https://shop.spreadshirt.com/phonelosers/">our Spreadshirt store</a> or our <a href="https://www.teepublic.com/user/phonelosers">TeePublic store</a>.  You can find other merch on our <a href="https://phonelosers.bandcamp.com/merch">Bandcamp page</a> and on <a href="http://www.phonelosers.org/store/">our own store page</a>.   <a href="http://www.phonelosers.org/donate/">Make a donation</a>, shop on <a href="http://www.phonelosers.org/amazon/">Amazon through us</a>, take a look at <a href="https://www.amazon.com/gp/registry/wishlist/U9HUV1RK98MD">PLA’s wishlist</a> (or <a href="https://www.amazon.com/hz/wishlist/ls/RWO26B7KMOSS?&amp;sort=default">Brad’s</a>), or just support us by <a href="http://www.phonelosers.org/help/">helping out with promotion and reviews</a> and telling every last person you know about the show.
+
+<hr width="75%" />
+
+<strong>JOIN THE COMMUNITY:</strong> Add <a href="http://www.facebook.com/phonelosers">PLA on Facebook</a>, add<a href="http://www.facebook.com/snowplowshow"> Snow Plow Show on Facebook</a>, add <a href="http://www.twitter.com/phonelosers">PLA on Twitter</a>, add <a href="http://www.tumblr.com/blog/phonelosers">PLA on Tumblr</a>, add <a href="http://www.youtube.com/phonelosersofamerica">PLA on YouTube</a>, add <a href="http://www.youtube.com/phonelosersshows">PLA Shows on YouTube</a>, <a href="https://www.instagram.com/phonelosers/">PLA on Instagram</a>, join the <a href="https://discord.gg/qXqhTTa">PLA Discord</a>, the <a href="https://www.reddit.com/r/phonelosers/">PLA Reddit</a>, add <a href="http://instagram.com/bradbcp">RBCP on Instagram</a>, add <a href="http://www.twitter.com/rbcp">RBCP on Twitter</a>, add <a href="http://www.youtube.com/rbcp">RBCP on YouTube</a>, add <a href="https://vine.co/u/959585053392998400">RBCP on Vine</a>, leave a voice message for the show at 814-422-5309, call into live shows at 845-470-0336.
+
+<hr width="75%" />
+
+<strong>PLA FRIENDS AND STAFF:</strong> Nik Caesar from <a href="http://scary-art.com/">scary-art.com</a> is the unofficial PLA artist.  Buy PLA designs from <a href="https://shop.spreadshirt.com/scaryart/">Nik’s Spreadshirt store</a> and <a href="https://www.patreon.com/scaryart/">support him on Patreon</a>.  You might also like the cactus and PLA designs in <a href="https://shop.spreadshirt.com/laughtrackmatt/">Laugh Track Matt’s store</a>.  Olga &amp; Company do the <a href="https://www.patreon.com/olgadrawsdragons">PLA Corporate comic strip</a>. <a href="https://www.patreon.com/almosthenrik/">Henrik makes us music sometimes</a>. The <a href="https://discordapp.com/invite/pranks">Hijinks Hangout</a> is a Discord room for pranks. <a href="http://clownsec.com/">Clownsec</a> does a lot of <a href="http://ficklestheclown.bigcartel.com/">cool things</a> for PLA so go <a href="http://clownsec.com/">honk the PLAnet</a>.  Watch JIAD’s <a href="http://www.youtube.com/jesusinadumptruck">Calls of Mass Confusion</a> and listen to a few of the prank call shows over at <a href="http://www.prankcallnation.com/">Prank Call Nation</a> like <a href="http://www.madhouselive.com/">Madhouse Live</a>.]]></content:encoded>
+      <enclosure url="http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-10-14_TSPS504_Helicopter_Rides_With_Brad_and_Carlito_LQ.mp3" length="69923821" type="audio/mpeg"/>
+      <itunes:subtitle>This is a live show that happened on Sunday afternoon where me and Carlito climbed into the corporate PLA helicopter to fly around…</itunes:subtitle>
+      <itunes:summary>This is a live show that happened on Sunday afternoon where me and Carlito climbed into the corporate PLA helicopter to fly around…</itunes:summary>
+      <itunes:author>RedBoxChiliPepper</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <post-id xmlns="com-wordpress:feed-additions:1">6954</post-id>
+    </item>
+    <item>
+      <title>TSPS Episode 503 – Delivering Packages Live</title>
+      <link>http://snowplowshow.com/2018/10/12/tsps-episode-503-delivering-packages-live/</link>
+      <pubDate>Fri, 12 Oct 2018 21:26:01 +0000</pubDate>
+      <dc:creator><![CDATA[rbcp]]></dc:creator>
+      <category><![CDATA[Snow Plow Show]]></category>
+      <guid isPermaLink="false">http://snowplowshow.com/?p=840</guid>
+      <description><![CDATA[This live show of package deliveries is lovingly brought to you by&#160;Delorean Jackson, eyeCyou, Lion IX, MistaJohn, and Niekisch. Show art by Nik&#8230;]]></description>
+      <content:encoded><![CDATA[<a href="http://www.phonelosers.org/wp-content/uploads/2018/10/delete-this-one.jpg"><img class="aligncenter size-full wp-image-6952" src="http://www.phonelosers.org/wp-content/uploads/2018/10/delete-this-one.jpg" alt="" width="747" height="511" /></a>
+
+This live show of package deliveries is lovingly brought to you by Delorean Jackson, eyeCyou, Lion IX, MistaJohn, and Niekisch.
+<ul>
+ 	<li>Show art by Nik Caesar from <a href="http://scary-art.com/">scary-art.com</a></li>
+ 	<li><a href="http://worldofprankcalls.com/2018/10/08/world-of-prank-calls-episode-21-grocery-store-complainers/">Listen to the latest episode of Mr. Dobalina’s Wonderful World of Prank Calls</a></li>
+ 	<li><a href="https://www.youtube.com/user/JackStratiff/videos">Listen to Papa Johns wrong number pranks</a></li>
+ 	<li><a href="https://player.fm/series/another-prank-call-show">Listen to Another Prank Call Show with King Richard, Olga, and iregretjumping</a></li>
+ 	<li>During editing, I did understand what carcenogenicguy was asking me about FedEx and Patreon. He wants to know why FedEx is reading my Patreon names for me. It’s a trick, everyone! I call them and ask them to take a note for the manager, have them read it back to me, then use some editing trickery to make it sound like I’m calling to ask them for the sponsor names.</li>
+ 	<li><a href="http://www.madhouselive.com/">Listen to the October 12th, 2018 episode of Madhouse Live to hear the sequel to that last call</a></li>
+ 	<li><a href="https://www.patreon.com/scaryart/posts">Support Nik Caesar’s Patreon</a></li>
+ 	<li><a href="https://shop.spreadshirt.com/scaryart/">Buy PLA and Snow Plow Show t-shirt designs from Nik’s Spreadshirt Store</a></li>
+ 	<li><a href="https://backroomnetwork.com/day-drinking-saved-my-life-episodes/">Nik Caesar was interviewed on the Day Drinking Saved My Life podcast</a></li>
+ 	<li>Today’s show intro and outro are by microKORGI. After-intro song is by Henrik.</li>
+</ul>
+&nbsp;
+
+<hr width="75%" />
+
+<strong>SUPPORT THE PLA:  </strong>Join <a href="http://www.patreon.com/phonelosers">PLA’s Patreon</a> to get extra weekly shows, live show archives, and other occasional perks. Get PLA stickers from <a href="http://zazzle.com/phonelosers">our Zazzle store</a>. Get PLA t-shirts in <a href="https://shop.spreadshirt.com/phonelosers/">our Spreadshirt store</a> or our <a href="https://www.teepublic.com/user/phonelosers">TeePublic store</a>.  You can find other merch on our <a href="https://phonelosers.bandcamp.com/merch">Bandcamp page</a> and on <a href="http://www.phonelosers.org/store/">our own store page</a>.   <a href="http://www.phonelosers.org/donate/">Make a donation</a>, shop on <a href="http://www.phonelosers.org/amazon/">Amazon through us</a>, take a look at <a href="https://www.amazon.com/gp/registry/wishlist/U9HUV1RK98MD">PLA’s wishlist</a> (or <a href="https://www.amazon.com/hz/wishlist/ls/RWO26B7KMOSS?&amp;sort=default">Brad’s</a>), or just support us by <a href="http://www.phonelosers.org/help/">helping out with promotion and reviews</a> and telling every last person you know about the show.
+
+<hr width="75%" />
+
+<strong>JOIN THE COMMUNITY:</strong> Add <a href="http://www.facebook.com/phonelosers">PLA on Facebook</a>, add<a href="http://www.facebook.com/snowplowshow"> Snow Plow Show on Facebook</a>, add <a href="http://www.twitter.com/phonelosers">PLA on Twitter</a>, add <a href="http://www.tumblr.com/blog/phonelosers">PLA on Tumblr</a>, add <a href="http://www.youtube.com/phonelosersofamerica">PLA on YouTube</a>, add <a href="http://www.youtube.com/phonelosersshows">PLA Shows on YouTube</a>, <a href="https://www.instagram.com/phonelosers/">PLA on Instagram</a>, join the <a href="https://discord.gg/qXqhTTa">PLA Discord</a>, the <a href="https://www.reddit.com/r/phonelosers/">PLA Reddit</a>, add <a href="http://instagram.com/bradbcp">RBCP on Instagram</a>, add <a href="http://www.twitter.com/rbcp">RBCP on Twitter</a>, add <a href="http://www.youtube.com/rbcp">RBCP on YouTube</a>, add <a href="https://vine.co/u/959585053392998400">RBCP on Vine</a>, leave a voice message for the show at 814-422-5309, call into live shows at 845-470-0336.
+
+<hr width="75%" />
+
+<strong>PLA FRIENDS AND STAFF:</strong> Nik Caesar from <a href="http://scary-art.com/">scary-art.com</a> is the unofficial PLA artist.  Buy PLA designs from <a href="https://shop.spreadshirt.com/scaryart/">Nik’s Spreadshirt store</a> and <a href="https://www.patreon.com/scaryart/">support him on Patreon</a>.  You might also like the cactus and PLA designs in <a href="https://shop.spreadshirt.com/laughtrackmatt/">Laugh Track Matt’s store</a>.  Olga &amp; Company do the <a href="https://www.patreon.com/olgadrawsdragons">PLA Corporate comic strip</a>. <a href="https://www.patreon.com/almosthenrik/">Henrik makes us music sometimes</a>. The <a href="https://discordapp.com/invite/pranks">Hijinks Hangout</a> is a Discord room for pranks. <a href="http://clownsec.com/">Clownsec</a> does a lot of <a href="http://ficklestheclown.bigcartel.com/">cool things</a> for PLA so go <a href="http://clownsec.com/">honk the PLAnet</a>.  Watch JIAD’s <a href="http://www.youtube.com/jesusinadumptruck">Calls of Mass Confusion</a> and listen to a few of the prank call shows over at <a href="http://www.prankcallnation.com/">Prank Call Nation</a> like <a href="http://www.madhouselive.com/">Madhouse Live</a>.]]></content:encoded>
+      <enclosure url="http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-10-12_TSPS503_Delivering_Packages_Live_LQ.mp3" length="46713294" type="audio/mpeg"/>
+      <itunes:subtitle>This live show of package deliveries is lovingly brought to you by Delorean Jackson, eyeCyou, Lion IX, MistaJohn, and Niekisch. Show art by Nik…</itunes:subtitle>
+      <itunes:summary>This live show of package deliveries is lovingly brought to you by Delorean Jackson, eyeCyou, Lion IX, MistaJohn, and Niekisch. Show art by Nik…</itunes:summary>
+      <itunes:author>RedBoxChiliPepper</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <post-id xmlns="com-wordpress:feed-additions:1">6950</post-id>
+    </item>
+    <item>
+      <title>TSPS Episode 502 – Package Delivery Mishaps</title>
+      <link>http://snowplowshow.com/2018/10/10/tsps-episode-502-package-delivery-mishaps/</link>
+      <pubDate>Wed, 10 Oct 2018 04:13:11 +0000</pubDate>
+      <dc:creator><![CDATA[rbcp]]></dc:creator>
+      <category><![CDATA[Snow Plow Show]]></category>
+      <guid isPermaLink="false">http://snowplowshow.com/?p=835</guid>
+      <description><![CDATA[A list from Vandershire inspires an entire show of telling people about problems with their package deliveries. This one is brought to you&#8230;]]></description>
+      <content:encoded><![CDATA[<a href="http://www.phonelosers.org/wp-content/uploads/2018/10/Mac-Gs-PLA-tattoo2.jpg"><img class="aligncenter size-full wp-image-6948" src="http://www.phonelosers.org/wp-content/uploads/2018/10/Mac-Gs-PLA-tattoo2.jpg" alt="" width="717" height="735" /></a>
+
+A list from Vandershire inspires an entire show of telling people about problems with their package deliveries. This one is brought to you with love by Zelphis, David J, Thunor, Brennan, and kristine!
+<ul>
+ 	<li>Show art by Mac G who ruined his arm with the PLA logo</li>
+ 	<li>Thanks for the new mix, Henrik</li>
+ 	<li>I was on the 10-6-2018 episode of <a href="http://www.prankcallnation.com/node/228964/">Mop Riding With Dwight</a></li>
+ 	<li>I was also on the <a href="https://www.youtube.com/watch?v=5-6u90MVaIc">10-7-2018 episode of Partytime</a></li>
+ 	<li><a href="https://www.facebook.com/events/565912160493447/">Northern California Meetup 2019</a></li>
+ 	<li><a href="https://www.facebook.com/pg/phonelosers/photos/?tab=album&amp;album_id=10151759356189001">Here’s a gallery of PLA pumpkins</a></li>
+ 	<li><a href="https://www.youtube.com/watch?v=oraonVHTqkg">RoyCo Roofing accidentally removes a lady’s roof</a></li>
+ 	<li><a href="https://www.facebook.com/groups/madhouselivefan/">New Madhouse group on Facebook</a></li>
+ 	<li>Ending song is linear by Redbox and the Chilipeppers</li>
+</ul>
+&nbsp;
+
+<hr width="75%" />
+
+<strong>SUPPORT THE PLA:  </strong>Join <a href="http://www.patreon.com/phonelosers">PLA’s Patreon</a> to get extra weekly shows, live show archives, and other occasional perks. Get PLA stickers from <a href="http://zazzle.com/phonelosers">our Zazzle store</a>. Get PLA t-shirts in <a href="https://shop.spreadshirt.com/phonelosers/">our Spreadshirt store</a> or our <a href="https://www.teepublic.com/user/phonelosers">TeePublic store</a>.  You can find other merch on our <a href="https://phonelosers.bandcamp.com/merch">Bandcamp page</a> and on <a href="http://www.phonelosers.org/store/">our own store page</a>.   <a href="http://www.phonelosers.org/donate/">Make a donation</a>, shop on <a href="http://www.phonelosers.org/amazon/">Amazon through us</a>, take a look at <a href="https://www.amazon.com/gp/registry/wishlist/U9HUV1RK98MD">PLA’s wishlist</a> (or <a href="https://www.amazon.com/hz/wishlist/ls/RWO26B7KMOSS?&amp;sort=default">Brad’s</a>), or just support us by <a href="http://www.phonelosers.org/help/">helping out with promotion and reviews</a> and telling every last person you know about the show.
+
+<hr width="75%" />
+
+<strong>JOIN THE COMMUNITY:</strong> Add <a href="http://www.facebook.com/phonelosers">PLA on Facebook</a>, add<a href="http://www.facebook.com/snowplowshow"> Snow Plow Show on Facebook</a>, add <a href="http://www.twitter.com/phonelosers">PLA on Twitter</a>, add <a href="http://www.tumblr.com/blog/phonelosers">PLA on Tumblr</a>, add <a href="http://www.youtube.com/phonelosersofamerica">PLA on YouTube</a>, add <a href="http://www.youtube.com/phonelosersshows">PLA Shows on YouTube</a>, <a href="https://www.instagram.com/phonelosers/">PLA on Instagram</a>, join the <a href="https://discord.gg/qXqhTTa">PLA Discord</a>, the <a href="https://www.reddit.com/r/phonelosers/">PLA Reddit</a>, add <a href="http://instagram.com/bradbcp">RBCP on Instagram</a>, add <a href="http://www.twitter.com/rbcp">RBCP on Twitter</a>, add <a href="http://www.youtube.com/rbcp">RBCP on YouTube</a>, add <a href="https://vine.co/u/959585053392998400">RBCP on Vine</a>, leave a voice message for the show at 814-422-5309, call into live shows at 845-470-0336.
+
+<hr width="75%" />
+
+<strong>PLA FRIENDS AND STAFF:</strong> Nik Caesar from <a href="http://scary-art.com/">scary-art.com</a> is the unofficial PLA artist.  Buy PLA designs from <a href="https://shop.spreadshirt.com/scaryart/">Nik’s Spreadshirt store</a> and <a href="https://www.patreon.com/scaryart/">support him on Patreon</a>.  You might also like the cactus and PLA designs in <a href="https://shop.spreadshirt.com/laughtrackmatt/">Laugh Track Matt’s store</a>.  Olga &amp; Company do the <a href="https://www.patreon.com/olgadrawsdragons">PLA Corporate comic strip</a>. <a href="https://www.patreon.com/almosthenrik/">Henrik makes us music sometimes</a>. The <a href="https://discordapp.com/invite/pranks">Hijinks Hangout</a> is a Discord room for pranks. <a href="http://clownsec.com/">Clownsec</a> does a lot of <a href="http://ficklestheclown.bigcartel.com/">cool things</a> for PLA so go <a href="http://clownsec.com/">honk the PLAnet</a>.  Watch JIAD’s <a href="http://www.youtube.com/jesusinadumptruck">Calls of Mass Confusion</a> and listen to a few of the prank call shows over at <a href="http://www.prankcallnation.com/">Prank Call Nation</a> like <a href="http://www.madhouselive.com/">Madhouse Live</a>.]]></content:encoded>
+      <enclosure url="http://media.blubrry.com/phonelosers/snowplowshow.com/episodes/2018-10-09_TSPS502_Package_Delivery_Mishaps_LQ.mp3" length="42973186" type="audio/mpeg"/>
+      <itunes:subtitle>A list from Vandershire inspires an entire show of telling people about problems with their package deliveries. This one is brought to you…</itunes:subtitle>
+      <itunes:summary>A list from Vandershire inspires an entire show of telling people about problems with their package deliveries. This one is brought to you…</itunes:summary>
+      <itunes:author>RedBoxChiliPepper</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <post-id xmlns="com-wordpress:feed-additions:1">6945</post-id>
+    </item>
+    <item>
+      <title>World of Prank Calls Episode 21 – Grocery Store Complainers</title>
+      <link>http://worldofprankcalls.com/2018/10/08/world-of-prank-calls-episode-21-grocery-store-complainers/</link>
+      <pubDate>Mon, 08 Oct 2018 05:41:48 +0000</pubDate>
+      <dc:creator><![CDATA[Mr. Dobalina]]></dc:creator>
+      <category><![CDATA[Podcast]]></category>
+      <guid isPermaLink="false">http://worldofprankcalls.com/?p=440</guid>
+      <description><![CDATA[Customers who&#8217;ve made online complaints against their local grocery stores get to deal with Mr. Dobalina&#8217;s horrible customer service skills as he fails to resolve their complaints, but at the same time causes them to look at things from a different perspective while teaching them a valuable life lesson. This show takes you through the [&#8230;]]]></description>
+      <content:encoded><![CDATA[Customers who’ve made online complaints against their local grocery stores get to deal with Mr. Dobalina’s horrible customer service skills as he fails to resolve their complaints, but at the same time causes them to look at things from a different perspective while teaching them a valuable life lesson. This show takes you through the biggest prank I ever pulled on myself.
+<ul>
+ 	<li><a href="https://www.oregonlive.com/portland/index.ssf/2017/10/prank_calls_to_safeway_custome.html">Here’s a link to the newspaper article about my adventures in court</a></li>
+ 	<li><a href="https://www.youtube.com/watch?v=ntiZ3HIwMZY">Here’s the show that I did a week after the raid</a></li>
+ 	<li><a href="https://www.youtube.com/watch?v=n8VP8hN5Agg">Here’s the first live grocery store show</a></li>
+ 	<li><a href="https://www.youtube.com/watch?v=b9EYUgTOW3g">Here’s the second live grocery store show</a></li>
+ 	<li><a href="https://www.youtube.com/watch?v=sqRFof101ZY">Here’s full video of me giggling like a schoolgirl during the Trick Ass Ho call</a></li>
+</ul>
+If you like the calls you heard in this episode, then you’ll probably like my other podcast, called <a href="http://www.snowplowshow.com/">The Snow Plow Show</a>.  I also pop up occasionally on the shows you find on the <a href="http://www.prankcallnation.com/">Prank Call Nation</a> network, such as <a href="http://www.madhouselive.com/">Madhouse Live</a>, <a href="https://www.facebook.com/profile.php?id=100002715787887&amp;fref=search">Mop Riding With Dwight</a>, and <a href="http://www.prankcallnation.com/shows/partytime/">Partytime with Matt and Zax</a>.  <a href="http://976neon.com/">976-NEON</a>, and <a href="http://mixlr.com/jagtv/showreel/">JagTV</a> are pretty funny too, or you might enjoy <a href="https://www.facebook.com/callsofmassconfusion">Calls of Mass Confusion</a>, where hidden cameras capture the reactions of people we call.  You can <a href="http://www.patreon.com/phonelosers">support this show on Patreon</a> to get extra shows each week and get access to a giant archive of secret shows.]]></content:encoded>
+      <enclosure url="http://media.blubrry.com/phonelosers/worldofprankcalls.com/wp-content/uploads/2018/10/world_of_prank_calls_021_grocery_store_complainers_LQ.mp3" length="28438238" type="audio/mpeg"/>
+      <itunes:subtitle>Customers who’ve made online complaints against their local grocery stores get to deal with Mr. Dobalina’s horrible customer service skills as he fails to resolve their complaints, but at the same time causes them to look at things from a different per...</itunes:subtitle>
+      <itunes:summary>Customers who’ve made online complaints against their local grocery stores get to deal with Mr. Dobalina’s horrible customer service skills as he fails to resolve their complaints, but at the same time causes them to look at things from a different perspective while teaching them a valuable life lesson. This show takes you through the […]</itunes:summary>
+      <itunes:author>RedBoxChiliPepper</itunes:author>
+      <itunes:explicit>yes</itunes:explicit>
+      <post-id xmlns="com-wordpress:feed-additions:1">6943</post-id>
+    </item>
+  </channel>
+</rss>

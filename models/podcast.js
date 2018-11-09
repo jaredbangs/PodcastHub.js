@@ -1,4 +1,6 @@
 'use strict';
+var Bluebird = require('bluebird');
+
 module.exports = (sequelize, DataTypes) => {
   const Podcast = sequelize.define('Podcast', {
     LastChecked: {
@@ -19,9 +21,28 @@ module.exports = (sequelize, DataTypes) => {
     link: DataTypes.STRING,
     title: DataTypes.STRING
   }, {});
+
   Podcast.associate = function(models) {
     // associations can be defined here
 		Podcast.hasMany(models.Episode, { onDelete: 'cascade', hooks: true });
   };
+
+	Podcast.prototype.hasEpisodeByGuid = function (guid) {  
+	
+		return Bluebird.all([
+			this.getEpisodes({ where: { guid: guid }}).then(function (matchingEpisodes) {
+				return matchingEpisodes.length === 1;
+			})
+		]);
+	};
+
+	Podcast.prototype.hasMatchingEpisode = function (episode) {  
+		return Bluebird.all([
+			this.getEpisodes({ where: { guid: episode.guid }}).then(function (matchingEpisodes) {
+				return matchingEpisodes.length === 1;
+			})
+		]);
+	};
+
   return Podcast;
 };
