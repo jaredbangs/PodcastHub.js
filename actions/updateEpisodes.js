@@ -14,7 +14,6 @@ var updateExistingModel = function (existingModel, temporaryModel, callback) {
 
 	Bluebird.all([
 		temporaryModel.getEpisodes().then(function (temporaryModelEpisodes) {
-			console.log("storing episode references: ");
 			episodes = temporaryModelEpisodes;
 		})
 	]).then(function () {
@@ -31,6 +30,7 @@ var udpateExistingModelWithCurrentEpisodes = function (existingModel, currentEpi
 			existingModel.hasMatchingEpisode(temporaryEpisode).then(function (hasEpisode) {
 				if (!hasEpisode[0]) {
 					existingModel.createEpisode({ guid: temporaryEpisode.guid });
+					console.log("Added episode: " + temporaryEpisode.guid);
 				}
 			})
 		);
@@ -65,8 +65,9 @@ module.exports = function (podcast, options, callback) {
 						} else {
 
 							updateExistingModel(podcast, temporaryModel, function (err, updatedModel) {
-								console.log("Result called after processing changes: ");
-								callback(null, updatedModel);
+								temporaryModel.destroy().then(function () {
+									callback(null, updatedModel);
+								});
 							});
 						}
 					});
