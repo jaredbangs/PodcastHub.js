@@ -1,6 +1,7 @@
 var Bluebird = require('bluebird');
 
 var fetchRss = require('./fetchRssLive');
+var logger = require('../logger');
 var models = require('../models');
 models.sequelize.sync();
 
@@ -11,6 +12,7 @@ var updateExistingModel = function (existingModel, temporaryModel, callback) {
 	var episodes;
 
 	existingModel.LastUpdated = temporaryModel.LastUpdated;
+	existingModel.ParsedFeedCache = temporaryModel.ParsedFeedCache;
 
 	Bluebird.all([
 		temporaryModel.getEpisodes().then(function (temporaryModelEpisodes) {
@@ -30,7 +32,7 @@ var udpateExistingModelWithCurrentEpisodes = function (existingModel, currentEpi
 			existingModel.hasMatchingEpisode(temporaryEpisode).then(function (hasEpisode) {
 				if (!hasEpisode[0]) {
 					existingModel.createEpisode({ guid: temporaryEpisode.guid });
-					console.log("Added episode: " + temporaryEpisode.guid);
+					logger.info("Added episode: " + temporaryEpisode.guid);
 				}
 			})
 		);
@@ -44,26 +46,27 @@ var udpateExistingModelWithCurrentEpisodes = function (existingModel, currentEpi
 module.exports = function (podcast, options, callback) {
 
 		if (podcast === undefined || podcast === null) {
-			console.log("Podcast not valid");
+			logger.info("Podcast not valid");
 		} else {
 
 			if (options.fetchRss !== undefined) {
 				fetchRss = options.fetchRss;
 			}
 
-			console.log("Fetching " + podcast.RssUrl);
+			logger.info("Fetching " + podcast.RssUrl);
 			fetchRss(podcast.RssUrl, function (err, data) {
 				if (err) {
 					callback(err);
 				} else {
 
-					console.log("Parsing " + podcast.RssUrl);
+					logger.info("Parsing " + podcast.RssUrl);
 					parse(data, function (err, temporaryModel) {
 						if (err) {
 							callback(err);
-							console.error('Parsing error', err);
+							logger.error('Parsing error', err);
 						} else {
 
+							logger.info("Updating " + podcast.RssUrl);
 							updateExistingModel(podcast, temporaryModel, function (err, updatedModel) {
 								temporaryModel.destroy().then(function () {
 									callback(null, updatedModel);

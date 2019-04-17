@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+var logger = require('./logger');
 var models = require('./models');
 
 var updateEpisodes = require('./actions/updateEpisodes');
@@ -17,16 +18,16 @@ var updateNextPodcast = function () {
 
 		updateEpisodes(podcast, { }, function (err, updatedPodcastModel) {
 			if (err) {
-				console.error(podcast.id + "\t" + podcast.title + "\t" + podcast.RssUrl);
-				console.error(err);
+				logger.error(podcast.id + "\t" + podcast.title + "\t" + podcast.RssUrl);
+				logger.error(err);
 				updateNextPodcast();
 			} else {
-				console.log("Updated " + updatedPodcastModel.title + " - " + podcast.RssUrl);
+				logger.info("Updated " + updatedPodcastModel.id + "\t" + updatedPodcastModel.title + "\t" + podcast.RssUrl);
 				updateNextPodcast();
 			}
 		});
 	} else {
-		console.log("Update complete.");
+		logger.info("Update complete.");
 	}
 }
 
