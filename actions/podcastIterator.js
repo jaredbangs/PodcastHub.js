@@ -1,19 +1,8 @@
 #!/usr/bin/env node
 
-var Bluebird = require('bluebird');
-
-var id = process.argv[2];
-
 var models = require('../models');
 
 models.sequelize.sync();
-
-var podcastFunction = function (func, podcast, options) {
-
-  return Bluebird.all([
-    func(podcast)
-  ]);
-};
 
 module.exports = function (func, options) {
 
@@ -31,13 +20,13 @@ module.exports = function (func, options) {
   
   models.Podcast.findAll({where: options.podcastWhereClause, order: options.podcastOrderClause}).then(function(podcasts) {
     podcasts.forEach(function (podcast) {
-      podcast.countEpisodes().then(function (episodeCount) {
-        podcastFunction(func, podcast, options);
+      podcast.countEpisodes().then(function () {
+        func(podcast);
       });
     });
   });
 
   if (options.callback !== undefined) {
-    callback(null, null);
+    options.callback(null, null);
   }
 }

@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-var Bluebird = require('bluebird');
-
 var episodeIterator = require('./actions/episodeIterator');
 
 var id = process.argv[2];

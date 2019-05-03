@@ -2,8 +2,6 @@
 
 var Bluebird = require('bluebird');
 
-var id = process.argv[2];
-
 var models = require('../models');
 
 models.sequelize.sync();
@@ -41,13 +39,13 @@ module.exports = function (func, options) {
   
   models.Podcast.findAll({where: options.podcastWhereClause, order: options.podcastOrderClause}).then(function(podcasts) {
     podcasts.forEach(function (podcast) {
-      podcast.countEpisodes().then(function (episodeCount) {
+      podcast.countEpisodes().then(function () {
         podcastFunction(func, podcast, options);
       });
     });
   });
 
   if (options.callback !== undefined) {
-    callback(null, null);
+    options.callback(null, null);
   }
 }
