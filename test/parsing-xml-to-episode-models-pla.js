@@ -11,7 +11,7 @@ var parse = require('../parsing/parseFeedDataToPodcastModel');
 describe('parsing-xml-to-episode-models-pla', function () {
 	this.timeout(60000);
 
-  var episodes, podcast;
+  var episodes, parseFinished, parseStarted, podcast;
 
   before(function (done) {
 
@@ -23,8 +23,12 @@ describe('parsing-xml-to-episode-models-pla', function () {
 
 		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', function (err, data) {
 			if (err) throw err;
+
+      parseStarted = new Date();
+
 			parse(data, function (err, podcastModel) {
 				if (err) throw err;
+        parseFinished = new Date();
 				podcast = podcastModel;
 				podcast.getEpisodes().then(function (allEpisodes) {
 					episodes = allEpisodes;	
@@ -79,6 +83,10 @@ describe('parsing-xml-to-episode-models-pla', function () {
 	
 	it('episode count', function () {
 		assert.strictEqual(episodes.length, 5);
+	});
+
+	it('parse time', function () {
+		assert.isBelow(parseFinished - parseStarted, 500);
 	});
 
 })

@@ -1,3 +1,4 @@
+var logger = require('../logger');
 var models = require('../models');
 var parseToJSON = require('./parseFeedDataToJSON');
 
