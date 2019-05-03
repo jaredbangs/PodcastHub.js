@@ -41,6 +41,7 @@
   "dependencies": {
     "bluebird": "^3.5.2",
     "moment": "^2.22.2",
+    "node-opml-parser": "^1.0.0",
     "node-podcast-parser": "^2.3.0",
     "opml-generator": "^1.1.1",
     "request": "^2.88.0",

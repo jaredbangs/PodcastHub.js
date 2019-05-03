@@ -5,7 +5,7 @@
             PodcastHub.js
         </title>
         <dateCreated>
-            Wed, 17 Apr 2019 05:58:36 GMT
+            Fri, 03 May 2019 04:13:02 GMT
         </dateCreated>
         <ownerName>
             jaredbangs
@@ -18,67 +18,40 @@
         <outline text="null" title="null" type="rss" xmlUrl="http://feeds.feedburner.com/TheDotNetPreacher" htmlUrl="null"/>
         <outline text="null" title="null" type="rss" xmlUrl="http://www.prankcallnation.com/feed/" htmlUrl="null"/>
         <outline text="null" title="null" type="rss" xmlUrl="http://feeds.feedburner.com/43FPodcast" htmlUrl="null"/>
+        <outline text="null" title="null" type="rss" xmlUrl="null" htmlUrl="null"/>
         <outline text=".NET Rocks!" title=".NET Rocks!" type="rss" xmlUrl="http://www.pwop.com/feed.aspx?show=dotnetrocks&amp;filetype=master" htmlUrl="http://www.dotnetrocks.com"/>
         <outline text=".NET Rocks!" title=".NET Rocks!" type="rss" xmlUrl="http://feeds.feedburner.com/netRocksFullMp3Downloads" htmlUrl="http://www.dotnetrocks.com"/>
-        <outline text=".NET Rocks!" title=".NET Rocks!" type="rss" xmlUrl="null" htmlUrl="http://www.dotnetrocks.com"/>
-        <outline text=".NET Rocks!" title=".NET Rocks!" type="rss" xmlUrl="null" htmlUrl="http://www.dotnetrocks.com"/>
-        <outline text=".NET Rocks!" title=".NET Rocks!" type="rss" xmlUrl="null" htmlUrl="http://www.dotnetrocks.com"/>
-        <outline text=".NET Rocks!" title=".NET Rocks!" type="rss" xmlUrl="null" htmlUrl="http://www.dotnetrocks.com"/>
         <outline text="/dev/random Cast" title="/dev/random Cast" type="rss" xmlUrl="http://devrandomshow.org/shows/?f=rss.xml" htmlUrl="http://devrandomshow.org/"/>
-        <outline text="/dev/random Cast" title="/dev/random Cast" type="rss" xmlUrl="null" htmlUrl="http://devrandomshow.org/"/>
         <outline text="37signals Podcast" title="37signals Podcast" type="rss" xmlUrl="http://feeds.feedburner.com/37signals_podcast" htmlUrl="http://www.37signals.com/podcast"/>
-        <outline text="37signals Podcast" title="37signals Podcast" type="rss" xmlUrl="null" htmlUrl="http://www.37signals.com/podcast"/>
         <outline text="99% Invisible" title="99% Invisible" type="rss" xmlUrl="http://feeds.99percentinvisible.org/99percentinvisible" htmlUrl="http://99percentinvisible.org"/>
-        <outline text="99% Invisible" title="99% Invisible" type="rss" xmlUrl="null" htmlUrl="http://99percentinvisible.org"/>
         <outline text="A Cast of Kings - A Game of Thrones Podcast" title="A Cast of Kings - A Game of Thrones Podcast" type="rss" xmlUrl="http://feeds.feedburner.com/castofkings" htmlUrl="http://www.slashfilm.com"/>
-        <outline text="A Cast of Kings - A Game of Thrones Podcast" title="A Cast of Kings - A Game of Thrones Podcast" type="rss" xmlUrl="null" htmlUrl="http://www.slashfilm.com"/>
         <outline text="A Responsive Web Design Podcast" title="A Responsive Web Design Podcast" type="rss" xmlUrl="http://responsivewebdesign.com/podcast/feed.xml" htmlUrl="https://responsivewebdesign.com/podcast/"/>
         <outline text="Agile Toolkit Podcast" title="Agile Toolkit Podcast" type="rss" xmlUrl="http://agiletoolkit.libsyn.com/rss" htmlUrl="http://agiletoolkit.libsyn.com"/>
-        <outline text="Agile Toolkit Podcast" title="Agile Toolkit Podcast" type="rss" xmlUrl="null" htmlUrl="http://agiletoolkit.libsyn.com"/>
         <outline text="Agile in 3 Minutes" title="Agile in 3 Minutes" type="rss" xmlUrl="https://agilein3minut.es/archive/index.rss" htmlUrl="https://agilein3minut.es/archive/"/>
-        <outline text="Agile in 3 Minutes" title="Agile in 3 Minutes" type="rss" xmlUrl="null" htmlUrl="https://agilein3minut.es/archive/"/>
         <outline text="All JavaScript Podcasts by Devchat.tv" title="All JavaScript Podcasts by Devchat.tv" type="rss" xmlUrl="http://feeds.feedburner.com/JavascriptJabber" htmlUrl="http://devchat.tv"/>
         <outline text="Android Central Podcast" title="Android Central Podcast" type="rss" xmlUrl="http://feeds.feedburner.com/AndroidCentralPodcast" htmlUrl="http://www.androidcentral.com"/>
-        <outline text="Android Central Podcast" title="Android Central Podcast" type="rss" xmlUrl="null" htmlUrl="http://www.androidcentral.com"/>
         <outline text="Angry Geeks VS" title="Angry Geeks VS" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:183228739/sounds.rss" htmlUrl="http://soundcloud.com/angrygeeksvs"/>
-        <outline text="Angry Geeks VS" title="Angry Geeks VS" type="rss" xmlUrl="null" htmlUrl="http://soundcloud.com/angrygeeksvs"/>
         <outline text="Ask Science Mike" title="Ask Science Mike" type="rss" xmlUrl="http://feedpress.me/asksciencemike" htmlUrl="http://asksciencemike.com"/>
         <outline text="Ask Science Mike" title="Ask Science Mike" type="rss" xmlUrl="http://asksciencemike.podbean.com/feed/" htmlUrl="https://asksciencemike.podbean.com"/>
-        <outline text="Ask Science Mike" title="Ask Science Mike" type="rss" xmlUrl="null" htmlUrl="https://asksciencemike.podbean.com"/>
-        <outline text="Ask Science Mike" title="Ask Science Mike" type="rss" xmlUrl="null" htmlUrl="http://asksciencemike.com"/>
         <outline text="Audible Ajax" title="Audible Ajax" type="rss" xmlUrl="http://media.ajaxian.com" htmlUrl="http://media.ajaxian.com/"/>
-        <outline text="Audible Ajax" title="Audible Ajax" type="rss" xmlUrl="null" htmlUrl="http://media.ajaxian.com/"/>
         <outline text="Benjamen Walker&apos;s Theory of Everything" title="Benjamen Walker&apos;s Theory of Everything" type="rss" xmlUrl="http://feeds.prx.org/toe" htmlUrl="http://theoryofeverythingpodcast.com/"/>
-        <outline text="Benjamen Walker&apos;s Theory of Everything" title="Benjamen Walker&apos;s Theory of Everything" type="rss" xmlUrl="null" htmlUrl="http://theoryofeverythingpodcast.com/"/>
         <outline text="Big Picture Science" title="Big Picture Science" type="rss" xmlUrl="http://podcast.seti.org/index.html" htmlUrl="http://radio.seti.org"/>
-        <outline text="Big Picture Science" title="Big Picture Science" type="rss" xmlUrl="null" htmlUrl="http://radio.seti.org"/>
         <outline text="BobHarper.org" title="BobHarper.org" type="rss" xmlUrl="http://www.bobharper.org/feed/" htmlUrl="http://www.bobharper.org"/>
-        <outline text="BobHarper.org" title="BobHarper.org" type="rss" xmlUrl="null" htmlUrl="http://www.bobharper.org"/>
         <outline text="Bootleg Gillmor Gang" title="Bootleg Gillmor Gang" type="rss" xmlUrl="http://feeds2.feedburner.com/TheGillmorGangShow" htmlUrl="http://pipes.yahoo.com/pipes/pipe.info?_id=cb54c4087c8c18e444e9f3f086e80709"/>
-        <outline text="Bootleg Gillmor Gang" title="Bootleg Gillmor Gang" type="rss" xmlUrl="null" htmlUrl="http://pipes.yahoo.com/pipes/pipe.info?_id=cb54c4087c8c18e444e9f3f086e80709"/>
         <outline text="CS Book Club" title="CS Book Club" type="rss" xmlUrl="http://www.csbookclub.com/podcast.xml" htmlUrl="http://www.csbookclub.com/podcast.xml"/>
-        <outline text="CS Book Club" title="CS Book Club" type="rss" xmlUrl="null" htmlUrl="http://www.csbookclub.com/podcast.xml"/>
         <outline text="CellCast" title="CellCast" type="rss" xmlUrl="http://feeds.feedburner.com/Cellcast" htmlUrl="http://cellcast.awardspace.com"/>
-        <outline text="CellCast" title="CellCast" type="rss" xmlUrl="null" htmlUrl="http://cellcast.awardspace.com"/>
         <outline text="Citizen Reporter" title="Citizen Reporter" type="rss" xmlUrl="http://feeds.feedburner.com/BicyclemarksCommunique" htmlUrl="http://citizenreporter.org"/>
         <outline text="Code Sermon.org" title="Code Sermon.org" type="rss" xmlUrl="http://www.codesermon.org/portals/15/podcast.xml" htmlUrl="http://www.codesermon.org"/>
-        <outline text="Code Sermon.org" title="Code Sermon.org" type="rss" xmlUrl="null" htmlUrl="http://www.codesermon.org"/>
         <outline text="Comic Geek Speak Podcast - The Best Comic Book Podcast" title="Comic Geek Speak Podcast - The Best Comic Book Podcast" type="rss" xmlUrl="http://www.comicgeekspeak.com/cgs-main-rss.xml" htmlUrl="http://www.comicgeekspeak.com/"/>
         <outline text="Comments on:" title="Comments on:" type="rss" xmlUrl="http://cactiradio.com/prankshow/rss" htmlUrl="http://www.phonelosers.org"/>
         <outline text="Comments on: Untitled" title="Comments on: Untitled" type="rss" xmlUrl="http://feeds.feedburner.com/JJRambleCast" htmlUrl="http://jayandjack.com"/>
-        <outline text="Comments on: Untitled" title="Comments on: Untitled" type="rss" xmlUrl="null" htmlUrl="http://jayandjack.com"/>
         <outline text="Cosmic Tales" title="Cosmic Tales" type="rss" xmlUrl="http://cosmictales.com/podcast/feed.xml" htmlUrl="http://cosmictales.com/podcast/"/>
-        <outline text="Cosmic Tales" title="Cosmic Tales" type="rss" xmlUrl="null" htmlUrl="http://cosmictales.com/podcast/"/>
         <outline text="Dan Koch’s Patron-Only Episodes" title="Dan Koch’s Patron-Only Episodes" type="rss" xmlUrl="https://www.patreon.com/rss/depolarize?auth=8R7AOrvfOlz7H7KzZmXpaSwNXdsej50e" htmlUrl="https://www.patreon.com/depolarize"/>
-        <outline text="Dan Koch’s Patron-Only Episodes" title="Dan Koch’s Patron-Only Episodes" type="rss" xmlUrl="null" htmlUrl="https://www.patreon.com/depolarize"/>
         <outline text="Developer Smackdown" title="Developer Smackdown" type="rss" xmlUrl="http://feeds.feedburner.com/TheSmackdown" htmlUrl="null"/>
-        <outline text="Developer Smackdown" title="Developer Smackdown" type="rss" xmlUrl="null" htmlUrl="null"/>
         <outline text="Devnology Podcast" title="Devnology Podcast" type="rss" xmlUrl="http://feeds.feedburner.com/DevnologyPodcast" htmlUrl="http://devnology.nl"/>
         <outline text="Distributed Podcast" title="Distributed Podcast" type="rss" xmlUrl="http://feeds.feedburner.com/DistributedPodcast" htmlUrl="http://distributedpodcast.com"/>
         <outline text="Doughboys" title="Doughboys" type="rss" xmlUrl="https://rss.art19.com/doughboys" htmlUrl="https://headgum.com/doughboys"/>
-        <outline text="Doughboys" title="Doughboys" type="rss" xmlUrl="null" htmlUrl="https://headgum.com/doughboys"/>
         <outline text="Doughboys Double" title="Doughboys Double" type="rss" xmlUrl="https://www.patreon.com/rss/doughboys?auth=7f9ceeea1deb703e5b1e68c2058a44ff" htmlUrl="https://www.patreon.com/doughboys"/>
-        <outline text="Doughboys Double" title="Doughboys Double" type="rss" xmlUrl="null" htmlUrl="https://www.patreon.com/doughboys"/>
         <outline text="Embedded" title="Embedded" type="rss" xmlUrl="http://www.npr.org/rss/podcast.php?id=510311" htmlUrl="https://www.npr.org/series/469833353/embedded"/>
         <outline text="FLOSS Weekly (MP3)" title="FLOSS Weekly (MP3)" type="rss" xmlUrl="http://leo.am/podcasts/floss" htmlUrl="https://twit.tv/shows/floss-weekly"/>
         <outline text="FLOSS Weekly (MP3)" title="FLOSS Weekly (MP3)" type="rss" xmlUrl="http://leoville.tv/podcasts/floss.xml" htmlUrl="https://twit.tv/shows/floss-weekly"/>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<opml version="1.0">
+  <head>
+    <title>PodcastAddict registration feeds</title>
+    <dateCreated>Apr 15, 2019 22:28:25</dateCreated>
+    <dateModified>Apr 15, 2019 22:28:25</dateModified>
+  </head>
+  <body>
+    <outline text="Admin Admin Podcast" type="rss" xmlUrl="http://feeds.feedburner.com/TheAdminAdminPodcast" htmlUrl="http://www.adminadminpodcast.co.uk" />
+    <outline text="All Things Git" type="rss" xmlUrl="https://www.allthingsgit.com/episodes.xml" htmlUrl="https://www.allthingsgit.com/" />
+    <outline text="Another Prank Call Show" type="rss" xmlUrl="http://anotherprankcallshow.libsyn.com/rss" htmlUrl="http://anotherprankcallshow.libsyn.com" />
+    <outline text="Blackwood" type="rss" xmlUrl="https://rss.art19.com/blackwood" htmlUrl="https://art19.com/shows/blackwood" />
+    <outline text="Cold" type="rss" xmlUrl="https://rss.art19.com/cold" htmlUrl="https://art19.com/shows/cold" />
+    <outline text="CoOp Cast" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:308629852/sounds.rss" htmlUrl="http://soundcloud.com/user-318456537" />
+    <outline text="Dan Carlin's Hardcore History" type="rss" xmlUrl="http://feeds.feedburner.com/dancarlin/history" htmlUrl="http://www.dancarlin.com" />
+    <outline text="Dan Koch’s Patron-Only Episodes" type="rss" xmlUrl="https://www.patreon.com/rss/depolarize?auth=8R7AOrvfOlz7H7KzZmXpaSwNXdsej50e" htmlUrl="https://www.patreon.com/dankoch" />
+    <outline text="Evan Doorbell" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:63253897/sounds.rss" htmlUrl="http://soundcloud.com/evan-doorbell" />
+    <outline text="Four Corners of the Board podcast" type="rss" xmlUrl="http://fourcornersoftheboard.libsyn.com/rss" htmlUrl="http://fourcornersoftheboard.com" />
+    <outline text="FSRN" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:5345503/sounds.rss" htmlUrl="http://soundcloud.com/fsrn" />
+    <outline text="Git Tips" type="rss" xmlUrl="https://www.briefs.fm/git-tips.xml" htmlUrl="https://www.briefs.fm/git-tips" />
+    <outline text="Greater Than Code" type="rss" xmlUrl="https://www.greaterthancode.com/rss" htmlUrl="https://www.greaterthancode.com" />
+    <outline text="Greater Than Games Podcast" type="rss" xmlUrl="http://greaterthangames.libsyn.com/rss" htmlUrl="http://greaterthangames.libsyn.com/website" />
+    <outline text="Homecoming" type="rss" xmlUrl="http://feeds.gimletmedia.com/homecomingshow" htmlUrl="https://feeds.gimletmedia.com/show/homecoming" />
+    <outline text="Hope in Source" type="rss" xmlUrl="https://rss.simplecast.com/podcasts/7049/rss" htmlUrl="https://hopeinsource.com" />
+    <outline text="Last Week on Earth with Ben Gleib" type="rss" xmlUrl="http://feeds.feedburner.com/LastWeekOnEarth" htmlUrl="http://soundcloud.com/lastweekonearth" />
+    <outline text="Leder Games Studio Podcast" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:476170041/sounds.rss" htmlUrl="http://soundcloud.com/user-6952822" />
+    <outline text="Linear Digressions" type="rss" xmlUrl="http://feeds.feedburner.com/udacity-linear-digressions" htmlUrl="http://lineardigressions.com" />
+    <outline text="Little Gold Men" type="rss" xmlUrl="https://feeds.megaphone.fm/littlegoldmen" htmlUrl="http://littlegoldmen.slate.libsynpro.com/podcast" />
+    <outline text="Marvel's Secret Wars &amp; Beyond" type="rss" xmlUrl="http://secretwars.libsyn.com/rss" htmlUrl="http://secretwars.libsyn.com/website" />
+    <outline text="mintCast" type="rss" xmlUrl="http://feeds.feedburner.com/mintcast_mp3" htmlUrl="https://mintcast.org" />
+    <outline text="Monsteropolis: Legends Anomalies Monsters" type="rss" xmlUrl="https://monsteropolis.podbean.com/feed.xml" htmlUrl="https://monsteropolis.podbean.com" />
+    <outline text="Mr. Dobalina's Wonderful World of Prank Calls" type="rss" xmlUrl="http://worldofprankcalls.com/feed/podcast/" htmlUrl="http://worldofprankcalls.com" />
+    <outline text="Podnutz - All Shows" type="rss" xmlUrl="http://feeds.feedburner.com/allpodnutzshows" htmlUrl="http://podnutz.com" />
+    <outline text="Rough Translation" type="rss" xmlUrl="https://www.npr.org/rss/podcast.php?id=510324" htmlUrl="" />
+    <outline text="Sean Carroll's Mindscape: Science, Society, Philosophy, Culture, Arts, and Ideas" type="rss" xmlUrl="http://seancarroll.libsyn.com/rss" htmlUrl="https://preposterousuniverse.com/podcast/" />
+    <outline text="Showcase from Radiotopia feat. Spacebridge" type="rss" xmlUrl="http://feeds.radiotopia.fm/radiotopia-showcase" htmlUrl="https://www.radiotopia.fm/showcase" />
+    <outline text="Talk Nerdy" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:85240368/sounds.rss" htmlUrl="http://www.carasantamaria.com" />
+    <outline text="The Bible as Literature" type="rss" xmlUrl="https://feedpress.me/the-bible-as-literature-v-2" htmlUrl="http://ephesusschool.org" />
+    <outline text="The End Of The World with Josh Clark" type="rss" xmlUrl="https://feeds.megaphone.fm/HSW2707885722" htmlUrl="https://www.theendwithjosh.com/" />
+    <outline text="The Future of Life" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:191806282/sounds.rss" htmlUrl="http://www.futureoflife.org" />
+    <outline text="The Pull List" type="rss" xmlUrl="http://pulllist.libsyn.com/rss" htmlUrl="http://pulllist.libsyn.com/website" />
+    <outline text="The Secret Cabal Gaming Podcast" type="rss" xmlUrl="http://cdn.thesecretcabal.com/scpodcast.xml" htmlUrl="http://www.thesecretcabal.com/" />
+    <outline text="This Is That from CBC Radio" type="rss" xmlUrl="https://www.cbc.ca/podcasting/includes/thisisthat.xml" htmlUrl="http://www.cbc.ca/radio/podcasts/comedy/this-is-that/" />
+    <outline text="VOX Podcast with Mike Erre" type="rss" xmlUrl="http://feeds.soundcloud.com/users/soundcloud:users:254148175/sounds.rss" htmlUrl="http://www.voxpodcast.com" />
+    <outline text="Weekly Edition – FSRN" type="rss" xmlUrl="http://fsrn.org/category/audio/weekly-edition/feed/" htmlUrl="http://fsrn.org" />
+  </body>
+</opml>

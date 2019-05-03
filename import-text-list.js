@@ -19,7 +19,7 @@ subscribe = function () {
 			line = lines[i];
 			
 			if (line.indexOf('http:') === 0) {
-				addSubscription(line, function (err) {
+				addSubscription(line, {}, function (err) {
 					
 					if (err) {
 						console.error(err);

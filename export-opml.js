@@ -19,6 +19,7 @@ var outlines = [];
 
 var addPodcastToOutline = function (podcast) {
   outlines.push({
+    id: podcast.id,
     text: podcast.title,
     title: podcast.title,
     type: "rss",
