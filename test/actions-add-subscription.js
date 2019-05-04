@@ -21,7 +21,7 @@ describe('actions-add-subscription', function () {
 
 		Bluebird.all([
 			models.sequelize.sync(),
-			models.Episode.destroy({ truncate: true }),
+      //models.Episode.destroy({ truncate: true }),
 			models.Podcast.destroy({ truncate: true }),
 		]);
 
