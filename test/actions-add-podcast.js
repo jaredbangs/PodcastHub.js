@@ -5,13 +5,13 @@ chai.use(require('chai-datetime'));
 
 var fetchRssFile = require('../actions/fetchRssFile');
 var models = require('../models');
-var addSubscription = require('../actions/addSubscription');
+var addPodcast = require('../actions/add-podcast');
 
 var fetchRss = function () {
 	return fetchRssFile('data-pla.xml');
 }
 
-describe('actions-add-subscription', function () {
+describe('actions-add-podcast', function () {
 	
 	//this.timeout(30000);
 
@@ -25,7 +25,7 @@ describe('actions-add-subscription', function () {
 			models.Podcast.destroy({ truncate: true }),
 		]);
 
-		addSubscription('http://www.phonelosers.org/feed/', { fetchRss: fetchRss }, function (err, podcastModel) {
+		addPodcast('http://www.phonelosers.org/feed/', { fetchRss: fetchRss }, function (err, podcastModel) {
 			if (err) throw err;
 			podcast = podcastModel;
 			done();

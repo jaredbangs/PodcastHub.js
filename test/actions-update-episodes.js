@@ -3,7 +3,7 @@ var Bluebird = require('bluebird');
 var chai = require('chai');
 chai.use(require('chai-datetime'));
 
-var addSubscription = require('../actions/addSubscription');
+var addPodcast = require('../actions/add-podcast');
 var fetchRssFile = require('../actions/fetchRssFile');
 var models = require('../models');
 var updateEpisodes = require('../actions/updateEpisodes');
@@ -30,7 +30,7 @@ describe('actions-update-episodes', function () {
 			models.Podcast.destroy({ truncate: true }),
 		]);
 
-		addSubscription('http://www.phonelosers.org/feed/', { fetchRss: fetchFirstRss }, function (err, podcastModel) {
+		addPodcast('http://www.phonelosers.org/feed/', { fetchRss: fetchFirstRss }, function (err, podcastModel) {
 			if (err) throw err;
 
 			originalId = podcastModel.id;
