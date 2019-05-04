@@ -1,3 +1,4 @@
+var logger = require('../logger');
 var models = require('../models');
 models.sequelize.sync();
 
@@ -16,7 +17,7 @@ module.exports = function (rssUrl, options, callback) {
 				fetchRss = options.fetchRss;
 			}
 
-      console.log("Fetching " + rssUrl);
+      logger.info("Fetching " + rssUrl);
       try {
         data = await fetchRss(rssUrl); 
       } catch(err) {
@@ -24,7 +25,7 @@ module.exports = function (rssUrl, options, callback) {
         callback(err);
       }
 
-      console.log("Parsing " + rssUrl);
+      logger.info("Parsing " + rssUrl);
       try {
         podcastModel = await parse(data); 
       } catch(err) {
@@ -35,12 +36,12 @@ module.exports = function (rssUrl, options, callback) {
       podcastModel.RssUrl = rssUrl;
 
       podcastModel.save().then(function (savedPodcastModel) {
-        console.log("Subscribed to " + savedPodcastModel.title);
+        logger.info("Subscribed to " + savedPodcastModel.title);
         callback(null, savedPodcastModel);
       });
 
 		} else {
-			console.log("Already subscribed to " + podcast.title + " - " + podcast.RssUrl);
+			logger.info("Already subscribed to " + podcast.title + " - " + podcast.RssUrl);
 			callback(null, podcast);
 		}
 
