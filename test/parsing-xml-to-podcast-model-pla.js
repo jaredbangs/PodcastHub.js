@@ -10,7 +10,7 @@ var parse = require('../parsing/parseFeedDataToPodcastModel');
 
 describe('parsing-xml-to-podcast-model-pla', function () {
 	
-	this.timeout(30000);
+	//this.timeout(30000);
 
   var podcast;
 
@@ -22,13 +22,10 @@ describe('parsing-xml-to-podcast-model-pla', function () {
 			models.Podcast.destroy({ truncate: true }),
 		]);
 
-		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', function (err, data) {
+		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', async function (err, data) {
 			if (err) throw err;
-			parse(data, function (err, podcastModel) {
-				if (err) throw err;
-				podcast = podcastModel;
-				done();
-			});
+      podcast = await parse(data);
+      done();
 		});
   });
   

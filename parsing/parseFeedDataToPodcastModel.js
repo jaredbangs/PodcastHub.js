@@ -6,7 +6,9 @@ var addParsedEnclosureToEpisode = function (episode, parsedEnclosure) {
 	if (parsedEnclosure !== undefined) {
 		episode.enclosureType = parsedEnclosure.type;
 		episode.enclosureUrl = parsedEnclosure.url;
-		episode.fileSize = parsedEnclosure.filesize;
+		if (!isNaN(parsedEnclosure.filesize)) {
+      episode.fileSize = parsedEnclosure.filesize;
+    }
 	}
 }
 
@@ -26,42 +28,44 @@ var addParsedEpisodeToPodcast = function (podcast, parsedEpisode) {
 	});
 }
 
-module.exports = function (data, callback) {
+module.exports = function (data) {
 	
-	models.sequelize.sync();
+  return new Promise(async (resolve, reject) => {
+    models.sequelize.sync();
 
-  parseToJSON(data, function (err, parsedData) {
-    if (err) {
-      callback(err);
-    } else {
+    try {
 
-			models.Podcast.create({ 
-				author: parsedData.author, 
-				image: parsedData.image, 
-				language: parsedData.language, 
-				link: parsedData.link, 
-				title: parsedData.title, 
-				LastUpdated: parsedData.updated,
-				ParsedFeedCache: parsedData,
-				}).then(function (podcast) {
-			
-					if (parsedData.description !== undefined) {
-						podcast.descriptionLong = parsedData.description.long;
-						podcast.descriptionShort = parsedData.description.short;
-					}
+      var parsedData = await parseToJSON(data);
+      
+      var podcast = await models.Podcast.create({ 
+        author: parsedData.author, 
+        image: parsedData.image, 
+        language: parsedData.language, 
+        link: parsedData.link, 
+        title: parsedData.title, 
+        LastUpdated: parsedData.updated,
+        ParsedFeedCache: parsedData,
+      });
+      
+      if (parsedData.description !== undefined) {
+        podcast.descriptionLong = parsedData.description.long;
+        podcast.descriptionShort = parsedData.description.short;
+      }
 
-					if (parsedData.episodes !== undefined) {
-			
-						parsedData.episodes.forEach(function (parsedEpisode) {
-							addParsedEpisodeToPodcast(podcast, parsedEpisode);
-						});
-					}
+      if (parsedData.episodes !== undefined) {
 
-					podcast.save().then(function (savedPodcast) {
-						callback(null, savedPodcast);
-					});
-			});
+        parsedData.episodes.forEach(function (parsedEpisode) {
+          addParsedEpisodeToPodcast(podcast, parsedEpisode);
+        });
+      }
+
+      podcast.save().then(function (savedPodcast) {
+        resolve(savedPodcast);
+      });
+
+    } catch(err) {
+      reject(err);
     }
-  });
 
+  });
 }

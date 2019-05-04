@@ -8,7 +8,7 @@ var parse = require('../parsing/parseFeedDataToJSON');
 
 describe('parsing-caches-parsed-data', function () {
 
-	this.timeout(60000);
+	//this.timeout(60000);
 
   var parsedFile;
   
@@ -18,19 +18,18 @@ describe('parsing-caches-parsed-data', function () {
 			models.sequelize.sync()
 		]);
 		
-		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', function (err, data) {
+		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', async function (err, data) {
 
 			if (err) throw err;
-			parse(data, function (err, parsedData) {
-				if (err) throw err;
-				parsedFile = parsedData;
-				Bluebird.all([
-					models.Episode.destroy({ truncate: true }),
-					models.Podcast.destroy({ truncate: true }),
-					models.Podcast.create({ title: 'parsing-caches-parsed-data', RssUrl: 'http://www.phonelosers.org/feed/', ParsedFeedCache: parsedFile }),
-					done()
-				]);
-			});
+
+      parsedFile = await parse(data); 
+				
+      Bluebird.all([
+        models.Episode.destroy({ truncate: true }),
+        models.Podcast.destroy({ truncate: true }),
+        models.Podcast.create({ title: 'parsing-caches-parsed-data', RssUrl: 'http://www.phonelosers.org/feed/', ParsedFeedCache: parsedFile }),
+        done()
+      ]);
 		});
   });
 	

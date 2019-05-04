@@ -3,6 +3,8 @@ var Bluebird = require('bluebird');
 var fetchRss = require('./fetchRssLive');
 var logger = require('../logger');
 var models = require('../models');
+var moment = require('moment');
+
 models.sequelize.sync();
 
 var parse = require('../parsing/parseFeedDataToPodcastModel');
@@ -11,6 +13,7 @@ var updateExistingModel = function (existingModel, temporaryModel, callback) {
 
 	var episodes;
 
+	existingModel.LastChecked = moment.utc();
 	existingModel.LastUpdated = temporaryModel.LastUpdated;
 	existingModel.ParsedFeedCache = temporaryModel.ParsedFeedCache;
 
@@ -32,49 +35,57 @@ var udpateExistingModelWithCurrentEpisodes = function (existingModel, currentEpi
 			existingModel.hasMatchingEpisode(temporaryEpisode).then(function (hasEpisode) {
 				if (!hasEpisode[0]) {
 					existingModel.createEpisode({ guid: temporaryEpisode.guid });
-					logger.info("Added episode: " + temporaryEpisode.guid);
+					logger.info("Added episode: " + temporaryEpisode.guid + " " + temporaryEpisode.enclosureUrl);
 				}
 			})
 		);
 	});
 
 	Bluebird.all(episodeProcessingFunctions).then(function () {
-		callback(null, existingModel);	
+    existingModel.save().then(function () {
+      callback(null, existingModel);	
+    });
 	});
 };
 
-module.exports = function (podcast, options, callback) {
+module.exports = async function (podcast, options, callback) {
+
+    var data, temporaryModel;
 
 		if (podcast === undefined || podcast === null) {
 			logger.info("Podcast not valid");
 		} else {
 
-			if (options.fetchRss !== undefined) {
-				fetchRss = options.fetchRss;
-			}
+      if (options.fetchRss !== undefined) {
+        fetchRss = options.fetchRss;
+      }
 
-			logger.info("Fetching " + podcast.RssUrl);
-			fetchRss(podcast.RssUrl, function (err, data) {
-				if (err) {
-					callback(err);
-				} else {
+      logger.info("Podcast ID: " + podcast.id + " " + podcast.title + " LastChecked: " + moment(podcast.LastChecked).format("YYYY/MM/DD HH:mm"));
+      
+      logger.info("\tFetching " + podcast.RssUrl);
+      try {
+        data = await fetchRss(podcast.RssUrl);
+      } catch(err) {
+        console.error(err);
+        callback(err);
+      }
+        
+      logger.info("\tParsing " + podcast.RssUrl);
+      try {
+        temporaryModel = await parse(data);
+      } catch(err) {
+        console.error(err);
+        callback(err);
+      }
 
-					logger.info("Parsing " + podcast.RssUrl);
-					parse(data, function (err, temporaryModel) {
-						if (err) {
-							callback(err);
-							logger.error('Parsing error', err);
-						} else {
+      if (temporaryModel !== undefined) {
+        logger.info("\tUpdating " + podcast.RssUrl);
+        updateExistingModel(podcast, temporaryModel, function (err, updatedModel) {
+          temporaryModel.destroy().then(function () {
+            callback(null, updatedModel);
+          });
+        });
+      }
 
-							logger.info("Updating " + podcast.RssUrl);
-							updateExistingModel(podcast, temporaryModel, function (err, updatedModel) {
-								temporaryModel.destroy().then(function () {
-									callback(null, updatedModel);
-								});
-							});
-						}
-					});
-				}
-			});
 		}
 }

@@ -4,7 +4,7 @@ var models = require('../models');
 
 models.sequelize.sync();
 
-module.exports = function (func, options) {
+module.exports = async (func, options) => {
 
   if (options === undefined) {
     options = {};
@@ -17,16 +17,20 @@ module.exports = function (func, options) {
   if (options.podcastOrderClause === undefined) {
     options.podcastOrderClause = [['title', 'ASC']]; 
   }
+ 
+  var podcasts = await models.Podcast.findAll({where: options.podcastWhereClause, order: options.podcastOrderClause});
   
-  models.Podcast.findAll({where: options.podcastWhereClause, order: options.podcastOrderClause}).then(function(podcasts) {
-    podcasts.forEach(function (podcast) {
-      podcast.countEpisodes().then(function () {
-        func(podcast);
-      });
-    });
-  });
+  if (options.preIterationFunction !== undefined) {
+    options.preIterationFunction(podcasts);
+  }
 
+  while (podcasts.length > 0) {
+
+    var next = podcasts.shift();
+    await func(next);
+  }
+  
   if (options.callback !== undefined) {
-    options.callback(null, null);
+    options.callback();
   }
 }

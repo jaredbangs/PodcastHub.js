@@ -6,7 +6,9 @@ var parse = require('../parsing/parseFeedDataToPodcastModel');
 
 module.exports = function (rssUrl, options, callback) {
 
-	models.Podcast.findOne({ where: { RssUrl: rssUrl }}).then(function (podcast) {
+	models.Podcast.findOne({ where: { RssUrl: rssUrl }}).then(async function (podcast) {
+
+    var data, podcastModel;
 
 		if (podcast === undefined || podcast === null) {
 
@@ -14,30 +16,28 @@ module.exports = function (rssUrl, options, callback) {
 				fetchRss = options.fetchRss;
 			}
 
-			console.log("Fetching " + rssUrl);
-			fetchRss(rssUrl, function (err, data) {
-				if (err) {
-					callback(err);
-				} else {
+      console.log("Fetching " + rssUrl);
+      try {
+        data = await fetchRss(rssUrl); 
+      } catch(err) {
+        console.error(err);
+        callback(err);
+      }
 
-					console.log("Parsing " + rssUrl);
-					parse(data, function (err, podcastModel) {
-						if (err) {
-							callback(err);
-							console.error('Parsing error', err);
-						} else {
-							
-							podcastModel.RssUrl = rssUrl;
+      console.log("Parsing " + rssUrl);
+      try {
+        podcastModel = await parse(data); 
+      } catch(err) {
+        callback(err);
+        console.error('Parsing error', err);
+      }
+          
+      podcastModel.RssUrl = rssUrl;
 
-							podcastModel.save().then(function (savedPodcastModel) {
-								console.log("Subscribed to " + savedPodcastModel.title);
-								callback(null, savedPodcastModel);
-							});
-						}
-
-					});
-				}
-			});
+      podcastModel.save().then(function (savedPodcastModel) {
+        console.log("Subscribed to " + savedPodcastModel.title);
+        callback(null, savedPodcastModel);
+      });
 
 		} else {
 			console.log("Already subscribed to " + podcast.title + " - " + podcast.RssUrl);

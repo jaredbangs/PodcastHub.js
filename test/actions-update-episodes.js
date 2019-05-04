@@ -8,17 +8,17 @@ var fetchRssFile = require('../actions/fetchRssFile');
 var models = require('../models');
 var updateEpisodes = require('../actions/updateEpisodes');
 
-var fetchFirstRss = function (rssUrl, callback) {
-	fetchRssFile('data-pla.xml', callback);
+var fetchFirstRss = function () {
+	return fetchRssFile('data-pla.xml');
 }
 
-var fetchUpdatedRss = function (rssUrl, callback) {
-	fetchRssFile('data-pla-updated.xml', callback);
+var fetchUpdatedRss = function () {
+	return fetchRssFile('data-pla-updated.xml');
 }
 
 describe('actions-update-episodes', function () {
 	
-	this.timeout(30000);
+	//this.timeout(30000);
 
   var allEpisodes, originalId, originalEpisodeCount, podcast;
 

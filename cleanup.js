@@ -1,31 +1,41 @@
 #!/usr/bin/env node
 
-var Bluebird, models, podcastDestroyFunctions;
-
-Bluebird = require('bluebird');
-models = require('./models');
+var models = require('./models');
 
 models.sequelize.sync();
 
-podcastDestroyFunctions = [];
+var podcastIterator = require('./actions/podcastIterator');
 
-models.Podcast.findAll({order: [['title', 'ASC']]}).then(function(podcasts) {
-	podcasts.forEach(function (podcast) {
+var shouldDestroy = function (podcast) { return podcast.RssUrl === undefined || podcast.RssUrl === null || podcast.RssUrl === "null"; };
 
-    if (podcast.RssUrl === undefined || podcast.RssUrl === null || podcast.RssUrl === "null") {
-      console.log("Queueing " + podcast.id + "\t" + podcast.title + " - " + podcast.RssUrl);
-      var message = "Deleted " + podcast.id + "\t" + podcast.title + " - " + podcast.RssUrl;
-      podcastDestroyFunctions.push(
-        podcast.destroy().then(function () {
-          console.log(message); 
-        }).catch(function(e) {
-          console.log(e); 
-        })
-      );
-    }
-	});
+var options = {};
+
+options.callback = function () {
+  console.log("Cleanup completed.");
+};
+
+options.preIterationFunction = function (podcasts) {
  
-  Bluebird.all(podcastDestroyFunctions).then(function () {
-    process.exit(0);
+  var podcastsToDestroy = [];
+
+  console.log("All podcasts: " + podcasts.length); 
+
+  podcasts.forEach(function (podcast) {
+    if (shouldDestroy(podcast)) {
+      podcastsToDestroy.push(podcast);
+    }
   });
-});
+  
+  console.log("Podcasts to destroy: " + podcastsToDestroy.length); 
+};
+
+podcastIterator(async function (podcast) {
+
+    if (shouldDestroy(podcast)) {
+        var message = "Deleting " + podcast.id + "\t" + podcast.title + " - " + podcast.RssUrl;
+        console.log(message);
+        message = "Deleted " + podcast.id + "\t" + podcast.title + " - " + podcast.RssUrl;
+        await podcast.destroy();
+        console.log(message);
+    }
+}, options);

@@ -12,14 +12,11 @@ describe('parsing-xml-to-json-pla', function () {
 
   before(function (done) {
 
-		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', function (err, data) {
+		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', async function (err, data) {
 
 			if (err) throw err;
-			parse(data, function (err, parsedData) {
-				if (err) throw err;
-				parsedFile = parsedData;
-				done();
-			});
+      parsedFile = await parse(data);
+      done();
 		});
   });
   

@@ -1,6 +1,7 @@
 {
 	"env": 
 	{
+    "es6": true,
 		"mocha": true,
 		"node": true
 	},
@@ -28,6 +29,9 @@
 			}
 		}
 	],
+  "parserOptions": {
+    "ecmaVersion": 8
+  },
 	"rules": {
 		"no-console": 0,
 		"no-useless-escape": 0

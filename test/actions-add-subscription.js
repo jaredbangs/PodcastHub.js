@@ -7,13 +7,13 @@ var fetchRssFile = require('../actions/fetchRssFile');
 var models = require('../models');
 var addSubscription = require('../actions/addSubscription');
 
-var fetchRss = function (rssUrl, callback) {
-	fetchRssFile('data-pla.xml', callback);
+var fetchRss = function () {
+	return fetchRssFile('data-pla.xml');
 }
 
 describe('actions-add-subscription', function () {
 	
-	this.timeout(30000);
+	//this.timeout(30000);
 
   var podcast;
 

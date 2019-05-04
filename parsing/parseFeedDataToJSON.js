@@ -1,13 +1,15 @@
 var parsePodcast = require('node-podcast-parser');
 
-module.exports = function (data, callback) {
+module.exports = function (data) {
+  
+  return new Promise((resolve, reject) => {
 	
-  parsePodcast(data, function (err, parsedData) {
-    if (err) {
-      callback(err);
-    } else {
-      callback(null, parsedData);
-    }
+    parsePodcast(data, function (err, parsedData) {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(parsedData);
+      }
+    });
   });
-
 }
