@@ -36,7 +36,7 @@ var udpateExistingModelWithCurrentEpisodes = function (existingModel, currentEpi
       hasEpisode = await existingModel.hasMatchingEpisode(temporaryEpisode);
       
       if (!hasEpisode[0]) {
-        await existingModel.createEpisode({ guid: temporaryEpisode.guid });
+        await existingModel.createEpisodeFromReference(temporaryEpisode);
         logger.info("Added episode: " + temporaryEpisode.guid + " " + temporaryEpisode.enclosureUrl);
       }
     }

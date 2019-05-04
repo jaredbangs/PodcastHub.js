@@ -27,6 +27,34 @@ module.exports = (sequelize, DataTypes) => {
 		Podcast.hasMany(models.Episode, { onDelete: 'cascade', hooks: true });
   };
 
+	Podcast.prototype.createEpisodeFromReference = function (episode) {  
+    
+    return new Promise(async (resolve) => {
+   
+      var createdEpisode, fileSize;
+
+      fileSize = 0;
+
+      if (!isNaN(episode.fileSize)) {
+        fileSize = episode.fileSize;
+      }
+
+      createdEpisode = await this.createEpisode({ 
+        guid: episode.guid, 
+        description: episode.description, 
+        duration: episode.duration, 
+        image: episode.image, 
+        published: episode.published, 
+        title: episode.title,
+        enclosureType: episode.enclosureType,
+        enclosureUrl: episode.enclosureUrl,
+        fileSize: fileSize
+      });
+
+      resolve(createdEpisode);
+    });
+	};
+
 	Podcast.prototype.hasEpisodeByGuid = function (guid) {  
 	
 		return Bluebird.all([
