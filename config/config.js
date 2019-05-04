@@ -1,4 +1,4 @@
-{
+module.exports = {
   "development": {
     "dialect": "sqlite",
     "logging": false,
