@@ -28,44 +28,46 @@ var addParsedEpisodeToPodcast = function (podcast, parsedEpisode) {
 	});
 }
 
-module.exports = function (data) {
+module.exports = async function (data) {
 	
   return new Promise(async (resolve, reject) => {
+	
     models.sequelize.sync();
 
     try {
 
       var parsedData = await parseToJSON(data);
-      
-      var podcast = await models.Podcast.create({ 
-        author: parsedData.author, 
-        image: parsedData.image, 
-        language: parsedData.language, 
-        link: parsedData.link, 
-        title: parsedData.title, 
-        LastUpdated: parsedData.updated,
-        ParsedFeedCache: parsedData,
-      });
-      
-      if (parsedData.description !== undefined) {
-        podcast.descriptionLong = parsedData.description.long;
-        podcast.descriptionShort = parsedData.description.short;
-      }
+        models.Podcast.create({ 
+          author: parsedData.author, 
+          image: parsedData.image, 
+          language: parsedData.language, 
+          link: parsedData.link, 
+          title: parsedData.title, 
+          LastUpdated: parsedData.updated,
+          ParsedFeedCache: parsedData,
+          }).then(function (podcast) {
+        
+            if (parsedData.description !== undefined) {
+              podcast.descriptionLong = parsedData.description.long;
+              podcast.descriptionShort = parsedData.description.short;
+            }
 
-      if (parsedData.episodes !== undefined) {
+            if (parsedData.episodes !== undefined) {
+        
+              parsedData.episodes.forEach(function (parsedEpisode) {
+                addParsedEpisodeToPodcast(podcast, parsedEpisode);
+              });
+            }
 
-        parsedData.episodes.forEach(function (parsedEpisode) {
-          addParsedEpisodeToPodcast(podcast, parsedEpisode);
+            podcast.save().then(function (savedPodcast) {
+              resolve(savedPodcast);
+            });
         });
-      }
 
-      podcast.save().then(function (savedPodcast) {
-        resolve(savedPodcast);
-      });
 
     } catch(err) {
       reject(err);
     }
-
   });
+
 }
