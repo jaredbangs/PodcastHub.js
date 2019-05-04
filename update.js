@@ -6,7 +6,7 @@ var logger = require('./logger');
 var models = require('./models');
 
 var podcastIterator = require('./actions/podcastIterator');
-var updateEpisodes = require('./actions/updateEpisodes');
+var updateEpisodes = require('./actions/update-episodes');
 
 models.sequelize.sync();
 

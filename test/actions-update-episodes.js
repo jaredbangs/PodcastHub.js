@@ -6,7 +6,7 @@ chai.use(require('chai-datetime'));
 var addPodcast = require('../actions/add-podcast');
 var fetchRssFile = require('../actions/fetchRssFile');
 var models = require('../models');
-var updateEpisodes = require('../actions/updateEpisodes');
+var updateEpisodes = require('../actions/update-episodes');
 
 var fetchFirstRss = function () {
 	return fetchRssFile('data-pla.xml');
