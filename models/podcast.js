@@ -25,6 +25,7 @@ module.exports = (sequelize, DataTypes) => {
   Podcast.associate = function(models) {
     // associations can be defined here
 		Podcast.hasMany(models.Episode, { onDelete: 'cascade', hooks: true });
+		Podcast.hasMany(models.Subscription, { onDelete: 'cascade', hooks: true });
   };
 
 	Podcast.prototype.createEpisodeFromReference = function (episode) {  

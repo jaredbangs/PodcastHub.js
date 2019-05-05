@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-var addSubscription = require('./actions/addSubscription');
+var addPodcast = require('./actions/add-podcast');
 
 var fs = require('fs');
 
@@ -21,7 +21,7 @@ subscribe = function (items) {
 			item = items[i];
 			
 			if (item.feedUrl !== undefined) {
-				addSubscription(item.feedUrl, {}, function (err) {
+				addPodcast(item.feedUrl, {}, function (err) {
 					
 					if (err) {
 						console.error(err);

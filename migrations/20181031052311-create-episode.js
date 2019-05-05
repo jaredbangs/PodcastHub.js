@@ -29,13 +29,6 @@ module.exports = {
       enclosureType: {
         type: Sequelize.STRING
       },
-			PodcastId: {
-				type: Sequelize.INTEGER,
-				references: {
-					model: 'Podcasts',
-					key: 'id'
-				},
-			},
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
