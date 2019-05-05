@@ -40,4 +40,9 @@ describe('orm-model-user', function () {
 			assert.strictEqual(user.email, 'jaredbangs@gmail.com');
 		});
 	});
+	
+  it('current user name', async function () {
+    var currentUser = await models.User.loadCurrentUser();
+    assert.strictEqual(currentUser.name, 'Jared');
+	});
 })
