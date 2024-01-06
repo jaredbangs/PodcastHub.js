@@ -40,6 +40,14 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      PodcastId: {
+        type: Sequelize.INTEGER,
+        references: {
+          model: 'Podcasts',
+          key: 'id'
+        },
+        allowNull: false
       }
     });
   },
