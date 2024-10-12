@@ -2,10 +2,8 @@
 
 export class PodcastIterator {
   
-  public async iterate(func: any, options: any): Promise<void> {
-
-    throw new Error("Not Implemented");
-
+  public async iterate(func: any, options: any = {}): Promise<void> {
+    throw new Error("Not Implemented" + func + options);
   }
 
 }

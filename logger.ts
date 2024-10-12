@@ -1,5 +1,5 @@
 import moment from 'moment';
-import winston, {format} from 'winston';
+import winston from 'winston';
 
 const loggerInstance = winston.createLogger({
 	level: 'info',
