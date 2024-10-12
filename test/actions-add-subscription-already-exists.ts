@@ -1,51 +1,57 @@
-/*
-var assert = require('chai').assert;
-var chai = require('chai');
-chai.use(require('chai-string'));
-var Bluebird = require('bluebird');
+let assert: Chai.AssertStatic;
 
-var models = require('../models');
+import('chai').then((c) => {
+  
+  import('chai-string').then((cs) => {
+    c.use(cs.default);
+    assert = c.assert;
+  });
+});
 
-var addSubscription = require('../actions/add-subscription');
-*/
+import { AddSubscription } from '../actions/add-subscription';
+import { Podcast } from '../models/podcast';
+import { Subscription } from '../models/subscription';
+import { User } from '../models/user';
+const addSubscription = new AddSubscription();
 
-describe('actions-add-subscription', function () {
+describe('actions-add-subscription', () => {
 
-  let podcast, user;
+  let podcast: Podcast;
+  let user: User;
 
-	before(function () {
+	before(() => {
+    /*
 		return Bluebird.all([
 			models.sequelize.sync()
 		]);
+    */
   });
 
-  beforeEach(async function () {
+  beforeEach(async () => {
 
-    await models.Subscription.destroy({ truncate: true });
-    await models.Podcast.destroy({ truncate: true });
-    await models.User.destroy({ truncate: true });
+    await Subscription.destroy();
+    await Podcast.destroy();
+    await User.destroy();
     
-    user = await models.User.create({ name: 'Jared' });
-    podcast = await models.Podcast.create({ title: 'Subscription Test' });
+    user = await User.create('Jared');
+    podcast = await Podcast.create('Subscription Test');
 
-    await addSubscription(user, podcast.id); 
-
-    return;
+    await addSubscription.add(user, podcast.id); 
   });
 
-	it('add existing subscription', async function () {
+	it('add existing subscription', async () => {
     
     let error, subscription;
    
     try {
-      subscription = await addSubscription(user, podcast.id); 
+      subscription = await addSubscription.add(user, podcast.id); 
     } catch (err) {
       error = err;
     }
     
     assert.isUndefined(subscription);
     assert.isNotNull(error);
-    assert.startsWith(error.toString(), "Error: Already subscribed");
+    assert.startsWith((error as any).toString(), "Error: Already subscribed");
 	});
 
 });

@@ -8,7 +8,7 @@
     "lintfix": "./node_modules/.bin/eslint . --fix",
     "pretest": "npm run lint ",
     "pretest_old": "npm run lint && NODE_ENV=test node_modules/.bin/sequelize db:migrate",
-    "test": "NODE_ENV=test mocha",
+    "test": "NODE_ENV=test mocha -r ts-node/register 'test/**/*.ts'",
     "testsingle": "NODE_ENV=test mocha test/podcast-with-episode-read.test.js"
   },
   "bin": {
@@ -34,14 +34,19 @@
   "homepage": "https://github.com/jaredbangs/PodcastHub.js#readme",
   "devDependencies": {
     "@eslint/js": "^9.12.0",
+    "@types/chai": "^5.0.0",
+    "@types/chai-datetime": "^1.0.0",
+    "@types/chai-string": "^1.4.5",
+    "@types/mocha": "^10.0.9",
     "@types/node": "^22.7.5",
     "chai": "^4.2.0",
-    "chai-datetime": "^1.5.0",
+    "chai-datetime": "^1.8.1",
     "chai-string": "^1.5.0",
     "eslint": "^9.12.0",
     "globals": "^15.11.0",
     "mocha": "^10.7.3",
     "timezone-mock": "^1.0.2",
+    "ts-node": "^10.9.2",
     "typescript-eslint": "^8.8.1"
   },
   "dependencies": {
@@ -51,6 +56,7 @@
     "node-opml-parser": "^1.0.0",
     "node-podcast-parser": "^2.3.0",
     "opml-generator": "^1.1.1",
+    "typescript": "^5.5.4",
     "winston": "^3.1.0",
     "xml-formatter": "^1.1.0"
   }

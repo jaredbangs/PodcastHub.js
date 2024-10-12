@@ -1,9 +1,10 @@
 // import { Logger } from "../logger";
 
+import { Podcast } from "../models/podcast";
+
 export class AddPodcast {
-  //public async add(rssUrl: string, options: any, callback: any): Promise<void> {
-  public async add(): Promise<void> {
-    throw new Error("Not Implemented");
+  public async add(rssUrl: string, options: any): Promise<Podcast> {
+    throw new Error("Not Implemented" + rssUrl + options);
   }
 }
 

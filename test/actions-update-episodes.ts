@@ -1,63 +1,62 @@
-/*
-var assert = require('chai').assert;
-var Bluebird = require('bluebird');
-var chai = require('chai');
-chai.use(require('chai-datetime'));
+let assert: Chai.AssertStatic;
 
-var addPodcast = require('../actions/add-podcast');
-var fetchRssFile = require('../actions/fetchRssFile');
-var models = require('../models');
-var updateEpisodes = require('../actions/update-episodes');
+import('chai').then((c) => {
+  import('chai-datetime').then((cdt) => {
+    c.use(cdt.default);
+    assert = c.assert;
+  });
+});
 
-var fetchFirstRss = function () {
-	return fetchRssFile('data-pla.xml');
+import { AddPodcast } from '../actions/add-podcast';
+import { FetchRssFile } from '../actions/fetchRssFile';
+import { UpdateEpisodes } from '../actions/update-episodes';
+import { Podcast } from '../models/podcast';
+
+const addPodcast = new AddPodcast();
+const fetchRssFile = new FetchRssFile();
+const updateEpisodes = new UpdateEpisodes();
+
+const fetchFirstRss = () => {
+	return fetchRssFile.fetch('data-pla.xml');
 }
 
-var fetchUpdatedRss = function () {
-	return fetchRssFile('data-pla-updated.xml');
+const fetchUpdatedRss = () => {
+	return fetchRssFile.fetch('data-pla-updated.xml');
 }
-*/
 
 describe('actions-update-episodes', function () {
 	
 	//this.timeout(30000);
 
-  let allEpisodes, originalId, originalEpisodeCount, podcast;
+	let allEpisodes;
+	let originalId: any;
+	let originalEpisodeCount: number;
+	let podcast: Podcast;
 
-  before(function (done) {
+	before(async () => {
 
+		/*
 		Bluebird.all([
 			models.sequelize.sync(),
 			models.Episode.destroy({ truncate: true }),
 			models.Podcast.destroy({ truncate: true }),
 		]);
+		*/
 
-		addPodcast('http://www.phonelosers.org/feed/', { fetchRss: fetchFirstRss }, function (err, podcastModel) {
-			if (err) throw err;
+		const podcastModel = await addPodcast.add('http://www.phonelosers.org/feed/', { fetchRss: fetchFirstRss });
+		
+		originalId = podcastModel.id;
 
-			originalId = podcastModel.id;
+		originalEpisodeCount = await podcastModel.countEpisodes();
 
-			podcastModel.countEpisodes().then(function (episodeCount) {
-
-				originalEpisodeCount = episodeCount;
-
-				updateEpisodes(podcastModel, { fetchRss: fetchUpdatedRss }, function (err, updatedPodcastModel) {
-					if (err) throw err;
-					podcast = updatedPodcastModel;
-			
-					updatedPodcastModel.getEpisodes().then(function (updatedEpisodes) {
-
-						allEpisodes = updatedEpisodes;
-						done();
-					});
-				});
-			});
-		});
-  });
+		await updateEpisodes.update(podcastModel, { fetchRss: fetchUpdatedRss });
+		
+		allEpisodes = await podcastModel.getEpisodes();
+	});
 
 	it('original episode count', function () {
-    assert.strictEqual(originalEpisodeCount, 5);
-  });
+		assert.strictEqual(originalEpisodeCount, 5);
+	});
   
 	it('model is original model', function () {
     assert.strictEqual(podcast.id, originalId);

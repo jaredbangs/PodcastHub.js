@@ -1,45 +1,52 @@
-/*
-var assert = require('chai').assert;
-var Bluebird = require('bluebird');
-var chai = require('chai');
-chai.use(require('chai-datetime'));
+import { AddPodcast } from "../actions/add-podcast";
+import { FetchRssFile } from "../actions/fetchRssFile";
+import { Podcast } from "../models/podcast";
 
-var fetchRssFile = require('../actions/fetchRssFile');
-var models = require('../models');
-var addPodcast = require('../actions/add-podcast');
+//import { expect } from "chai";
+let assert: Chai.AssertStatic;
+let expect: Chai.ExpectStatic;
 
-var fetchRss = function () {
-	return fetchRssFile('data-pla.xml');
+import('chai').then((c) => {
+  
+  import('chai-datetime').then((cdt) => {
+    
+    c.use(cdt.default);
+    assert = c.assert;
+    expect = c.expect;
+  });
+});
+
+const fetchRss = () => {
+	return new FetchRssFile().fetch('data-pla.xml');
 }
-*/
 
-describe('actions-add-podcast', function () {
+const addPodcast = new AddPodcast();
+
+describe('actions-add-podcast', () => {
 	
 	//this.timeout(30000);
 
-  let podcast;
+  let podcast: Podcast;
 
-  before(function (done) {
+  before(async () => {
 
+    /*
 		Bluebird.all([
 			models.sequelize.sync(),
       //models.Episode.destroy({ truncate: true }),
 			models.Podcast.destroy({ truncate: true }),
 		]);
+    */
 
-		addPodcast('http://www.phonelosers.org/feed/', { fetchRss: fetchRss }, function (err, podcastModel) {
-			if (err) throw err;
-			podcast = podcastModel;
-			done();
-		});
+		podcast = await addPodcast.add('http://www.phonelosers.org/feed/', { fetchRss: fetchRss });
   });
   
-	it('model is saved', function () {
-    assert.notEqual(podcast.id, 0);
+	it('model is saved', () => {
+    assert.notStrictEqual(podcast.id, 0);
   });
 
-	it('author', function () {
-    assert.strictEqual(podcast.author, "RedBoxChiliPepper");
+	it('author', () => {
+    expect(podcast.author).equal("RedBoxChiliPepper");
   });
 /*  
   it('categories', function () {
@@ -47,35 +54,35 @@ describe('actions-add-podcast', function () {
     assert.strictEqual(podcast.categories[0], "Comedy");
   });
 */  
-  it('copyright', function () {
-    assert.strictEqual(podcast.copyright, undefined);
+  it('copyright', () => {
+    expect(podcast.copyright).equal(undefined);
   });
 
-  it('description long', function () {
-    assert.strictEqual(podcast.descriptionLong, 'home of The Snow Plow Show wacky morning podcast');
+  it('description long', () => {
+    expect(podcast.descriptionLong).equal('home of The Snow Plow Show wacky morning podcast');
   });
 
-  it('description short', function () {
-    assert.strictEqual(podcast.descriptionShort, 'Prank phone calls and other wacky morning humor by the people at Phone Losers of America');
+  it('description short', () => {
+    expect(podcast.descriptionShort).equal('Prank phone calls and other wacky morning humor by the people at Phone Losers of America');
   });
 
-  it('image', function () {
-    assert.strictEqual(podcast.image, 'http://www.phonelosers.org/images/site_images/podcast_2018_art_3000x3000.jpg');
+  it('image', () => {
+    expect(podcast.image).equal('http://www.phonelosers.org/images/site_images/podcast_2018_art_3000x3000.jpg');
   });
   
-  it('language', function () {
-    assert.strictEqual(podcast.language, 'en-us');
+  it('language', () => {
+    expect(podcast.language).equal('en-us');
   });
   
-	it('link', function () {
-    assert.strictEqual(podcast.link, 'http://www.phonelosers.org');
+	it('link', () => {
+    expect(podcast.link).equal('http://www.phonelosers.org');
   });
 
-  it('title', function () {
-    assert.strictEqual(podcast.title, 'Phone Losers of America');
+  it('title', () => {
+    expect(podcast.title).equal('Phone Losers of America');
   });
   
-	it('updated', function () {
-    assert.equalDate(podcast.LastUpdated, new Date("2018-10-16 15:03:22"));
+	it('updated', () => {
+    expect(podcast.LastUpdated).equal(new Date("2018-10-16 15:03:22"));
   });
 })

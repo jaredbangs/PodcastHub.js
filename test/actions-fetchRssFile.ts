@@ -1,25 +1,27 @@
-/*
-var assert = require('chai').assert;
+let assert: Chai.AssertStatic;
 
-var fetchRssFile = require('../actions/fetchRssFile');
+import('chai').then((c) => {
+  assert = c.assert;
+});
 
-var fetchRss = function () {
-	return fetchRssFile('data-pla.xml');
+import { FetchRssFile } from '../actions/fetchRssFile';
+
+const fetchRss = () => {
+	return new FetchRssFile().fetch('data-pla.xml');
 }
-*/
 
-describe('actions-fetchRssFile', function () {
+describe('actions-fetchRssFile', function() {
 	
 	this.timeout(30000);
 
-  let data;
+  let data: any;
 
-  before(async function () {
+  before(async () => {
     data = await fetchRss();
     return;
   });
 
-	it('fetched data', function () {
+	it('fetched data', () => {
     assert.strictEqual(data.length, 29674);
   });
 })

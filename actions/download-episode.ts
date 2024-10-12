@@ -2,7 +2,7 @@
 
 export class DownloadEpisode {
 
-  public async download(episode: any, options: any){
+  public async download(episode: any, options: any): Promise<void> {
     throw new Error("Not Implemented" + episode + options);
   }
 

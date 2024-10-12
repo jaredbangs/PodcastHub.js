@@ -1,6 +1,28 @@
 'use strict';
 
+import { Subscription } from "./subscription";
+
 export class User {
+
+  public static async create(name: string): Promise<User> {
+
+    const user = new User();
+    user.name = name;
+  
+    return user;
+  }
+
+  public static destroy() {
+    // throw new Error('Method not implemented.');
+  }
+  
+  public static findOne(arg0: { where: { name: string; }; }): Promise<User> {
+	  throw new Error('Method not implemented.' + arg0);
+  }
+  
+  public getSubscriptions(): Promise<Subscription[]> {
+	  throw new Error('Method not implemented.');
+  }
 
   constructor() {
     this.email = "";

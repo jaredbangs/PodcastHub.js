@@ -7,8 +7,8 @@ var moment = require('moment');
 
 export class UpdateEpisodes {
   
-  public async update(podcast: any, options: any, callback: any): Promise<void> {
-    throw new Error("Not Implemented" + podcast + options + callback);
+  public async update(podcast: any, options: any): Promise<void> {
+    throw new Error("Not Implemented" + podcast + options);
   }
 }
 

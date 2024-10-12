@@ -1,24 +1,31 @@
-/*
-var assert = require('chai').assert;
+let assert: Chai.AssertStatic;
 
-var downloadEpisode = require('../actions/download-episode');
-*/
+import('chai').then((c) => {
+  assert = c.assert;
+});
 
-describe('actions-download-episodes', function () {
 
-	let result;
+import { DownloadEpisode } from '../actions/download-episode';
 
-  const altDownloadFunction = function () {
+const downloadEpisode = new DownloadEpisode();
+
+describe('actions-download-episodes', () => {
+
+	let result: string;
+
+  const altDownloadFunction = () => {
     return new Promise((resolve) => {
-      resolve('ABC');
+      result = 'ABC';
+      resolve(result);
     });
   };
 
   before(async () => {
-    result = await downloadEpisode('https://downloadUrlFake', { alternateDownloadFunction: altDownloadFunction });
+    result = "";
+    await downloadEpisode.download('https://downloadUrlFake', { alternateDownloadFunction: altDownloadFunction });
   });
 
-	it('test that download function was called', function () {
+	it('test that download function was called', () => {
     assert.strictEqual(result, 'ABC');
   });
 });

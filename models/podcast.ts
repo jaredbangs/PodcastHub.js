@@ -1,14 +1,37 @@
 'use strict';
 
+import { Episode } from "./episode";
+import { Subscription } from "./subscription";
+
 export class Podcast {
+
+  
+	public async countEpisodes(): Promise<number> {
+		throw new Error('Method not implemented.');
+	}
+
+  static async create(title: string): Promise<Podcast> {
+    
+    const podcast = new Podcast();
+    podcast.title = title;
+    return podcast;
+  }
+  static destroy() {
+    throw new Error('Method not implemented.');
+  }
+	static findOne(arg0: { where: { title: string; }; }): Promise<Podcast> {
+		throw new Error('Method not implemented.' + arg0);
+	}
 
   public LastChecked: Date = new Date();
   public LastUpdated: Date = new Date();
   public ParsedFeedCache: any;
   public RssUrl: string = "";
   public author: string = "";
+  public copyright: any;
   public descriptionLong: string = "";
   public descriptionShort: string = "";
+  public id: string = "";
   public image: string = "";
   public language: string = "";
   public link: string = "";
@@ -17,7 +40,15 @@ export class Podcast {
 	public async createEpisodeFromReference(episode: any): Promise<any> {
     throw new Error("Not Implemented" + episode);
   }
-
+	
+  public async getEpisodes(): Promise<Episode[]> {
+		throw new Error('Method not implemented.');
+	}
+	
+  public async getSubscriptions(): Promise<Subscription[]> {
+		throw new Error('Method not implemented.');
+	}
+  
   public async hasEpisodeByGuid(guid: any): Promise<boolean> { 
     throw new Error("Not Implemented" + guid);
   }
