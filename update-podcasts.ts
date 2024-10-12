@@ -1,16 +1,18 @@
 #!/usr/bin/env node
 
-var id = process.argv[2];
+const id = process.argv[2];
 
-var logger = require('./logger');
-var models = require('./models');
+import { Logger } from './logger';
+import { PodcastIterator } from './actions/podcastIterator';
+import { UpdateEpisodes } from './actions/update-episodes';
 
-var podcastIterator = require('./actions/podcastIterator');
-var updateEpisodes = require('./actions/update-episodes');
+// var models = require('./models');
 
-models.sequelize.sync();
+const logger = Logger.logger;
 
-var options = {};
+// models.sequelize.sync();
+
+const options: any = {};
 
 options.callback = function () {
   console.log("Update completed.");
@@ -22,8 +24,8 @@ if (id !== undefined && id !== null && id !== '') {
   options.podcastWhereClause = { id: id };
 }
 
-podcastIterator(async function (podcast) {
-  await updateEpisodes(podcast, { }, function (err, updatedPodcastModel) {
+new PodcastIterator().iterate(async (podcast: any) => {
+  await new UpdateEpisodes().update(podcast, { }, (err: any, updatedPodcastModel: any) => {
     if (err) {
       logger.error(podcast.id + "\t" + podcast.title + "\t" + podcast.RssUrl);
       logger.error(err);

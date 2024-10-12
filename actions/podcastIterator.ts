@@ -1,5 +1,16 @@
 #!/usr/bin/env node
 
+export class PodcastIterator {
+  
+  public async iterate(func: any, options: any): Promise<void> {
+
+    throw new Error("Not Implemented");
+
+  }
+
+}
+
+/*
 var models = require('../models');
 
 models.sequelize.sync();
@@ -34,3 +45,4 @@ module.exports = async (func, options) => {
     options.callback();
   }
 }
+*/

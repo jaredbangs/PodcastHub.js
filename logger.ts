@@ -1,7 +1,7 @@
-var moment = require('moment');
-var winston = require('winston');
+import moment from 'moment';
+import winston, {format} from 'winston';
 
-var logger = winston.createLogger({
+const loggerInstance = winston.createLogger({
 	level: 'info',
 	format: winston.format.combine(
 		winston.format.timestamp(),
@@ -15,4 +15,6 @@ var logger = winston.createLogger({
 	]
 });
 
-module.exports = logger;
+export class Logger {
+	public static readonly logger = loggerInstance;
+}

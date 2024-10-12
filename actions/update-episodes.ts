@@ -1,8 +1,18 @@
+/*
 var fetchRss = require('./fetchRssLive');
 var logger = require('../logger');
 var models = require('../models');
 var moment = require('moment');
+*/
 
+export class UpdateEpisodes {
+  
+  public async update(podcast: any, options: any, callback: any): Promise<void> {
+    throw new Error("Not Implemented");
+  }
+}
+
+/*
 models.sequelize.sync();
 
 var parse = require('../parsing/parseFeedDataToUnsavedPodcastModel');
@@ -88,3 +98,4 @@ module.exports = async function (podcast, options, callback) {
 
 		}
 }
+*/
