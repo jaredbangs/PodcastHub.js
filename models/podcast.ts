@@ -16,6 +16,7 @@ export class Podcast {
   public copyright: any;
   public descriptionLong: string = "";
   public descriptionShort: string = "";
+  public episodes: Episode[] = [];
   public id: string = "";
   public image: string = "";
   public language: string = "";
@@ -65,7 +66,9 @@ export class Podcast {
   */
 	
   public async getEpisodes(): Promise<Episode[]> {
-		throw new Error('Method not implemented.');
+
+    // TODO: load on demand based on search parameters rather than returning all
+    return this.episodes;
 	}
 	
   public async getSubscriptions(): Promise<Subscription[]> {

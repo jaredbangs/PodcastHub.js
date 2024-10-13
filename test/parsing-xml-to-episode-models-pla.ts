@@ -1,23 +1,16 @@
-let assert: Chai.AssertStatic;
-
-import('chai').then((c) => {
-  import('chai-datetime').then((cdt) => {
-    c.use(cdt.default);
-    assert = c.assert;
-  });
-});
-
 import { promises as fsp } from 'fs';
 import path from 'path';
+import { ChaiWrapper } from './chai-dynamic-import-wrapper';
 
 import { Episode } from '../models/episode';
 import { Podcast } from '../models/podcast';
-import { ParseFeedDataToPodcastModel } from "../parsing/parseFeedDataToPodcastModel";
+import { ParseFeedDataToPodcastModel } from '../parsing/parseFeedDataToPodcastModel';
 
 const parser = new ParseFeedDataToPodcastModel();
 
 describe('parsing-xml-to-episode-models-pla', () => {
 	//this.timeout(60000);
+	let assert: Chai.AssertStatic;
 
   	let episodes: Episode[];
   	let firstEpisode: Episode;
@@ -26,6 +19,8 @@ describe('parsing-xml-to-episode-models-pla', () => {
 	let podcast: Podcast;
 
 	before(async () => {
+		
+		assert = await ChaiWrapper.importAssert();
 
 		await Episode.destroyAll();
 		await Podcast.destroyAll();

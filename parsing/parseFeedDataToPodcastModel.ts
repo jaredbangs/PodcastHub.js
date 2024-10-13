@@ -1,3 +1,4 @@
+import { Episode } from '../models/episode';
 import { Podcast } from '../models/podcast';
 import { ParseFeedDataToJSON } from "../parsing/parseFeedDataToJSON";
 
@@ -22,107 +23,39 @@ export class ParseFeedDataToPodcastModel {
       podcast.descriptionLong = parsedData.description.long;
       podcast.descriptionShort = parsedData.description.short;
     }
-   
-    /*
-    podcast.episodes = [];
 
     if (parsedData.episodes !== undefined) {
-
-      parsedData.episodes.forEach(function (parsedEpisode) {
-        addParsedEpisodeToPodcast(podcast, parsedEpisode);
+      parsedData.episodes.forEach((parsedEpisode: any) => {
+        this.addParsedEpisodeToPodcast(podcast, parsedEpisode);
       });
     }
-
-    podcast.getEpisodes = function () {
-      return new Promise(async (resolve) => {
-        resolve(podcast.episodes);
-      });
-    };
-    */
 
     return podcast;
   }
-
-}
-
-/*
-var models = require('../models');
-var parseToJSON = require('./parseFeedDataToJSON');
-
-var addParsedEnclosureToEpisode = function (episode, parsedEnclosure) {
-
-	if (parsedEnclosure !== undefined) {
-		episode.enclosureType = parsedEnclosure.type;
-		episode.enclosureUrl = parsedEnclosure.url;
-		if (!isNaN(parsedEnclosure.filesize)) {
-      episode.fileSize = parsedEnclosure.filesize;
+  
+  private addParsedEnclosureToEpisode(episode: Episode, enclosure: any) {
+    
+    if (enclosure !== undefined) {
+      episode.enclosureType = enclosure.type;
+      episode.enclosureUrl = enclosure.url;
+      if (!isNaN(enclosure.filesize)) {
+        episode.fileSize = enclosure.filesize;
+      }
     }
-	}
-}
+  }
 
-var addParsedEpisodeToPodcast = function (podcast, parsedEpisode) {
-
-	var episode = new models.Episode({ 
-		description: parsedEpisode.description, 
-		duration: parsedEpisode.duration, 
-		guid: parsedEpisode.guid, 
-		image: parsedEpisode.image, 
-		published: parsedEpisode.published, 
-		title: parsedEpisode.title 
-		});
-  
-  addParsedEnclosureToEpisode(episode, parsedEpisode.enclosure);
-  
-  podcast.episodes.push(episode);
-
-  return episode;
-}
-
-module.exports = function (data) {
+  private addParsedEpisodeToPodcast(podcast: Podcast, parsedEpisode: any) {
 	
-  return new Promise(async (resolve, reject) => {
-    models.sequelize.sync();
-
-    try {
-
-      var parsedData = await parseToJSON(data);
-      
-      var podcast = new models.Podcast({ 
-        author: parsedData.author, 
-        image: parsedData.image, 
-        language: parsedData.language, 
-        link: parsedData.link, 
-        title: parsedData.title, 
-        LastUpdated: parsedData.updated,
-        ParsedFeedCache: parsedData,
-      });
-
-      podcast.episodes = [];
-      
-      if (parsedData.description !== undefined) {
-        podcast.descriptionLong = parsedData.description.long;
-        podcast.descriptionShort = parsedData.description.short;
-      }
-
-      if (parsedData.episodes !== undefined) {
-
-        parsedData.episodes.forEach(function (parsedEpisode) {
-          addParsedEpisodeToPodcast(podcast, parsedEpisode);
-        });
-      }
-
-      podcast.getEpisodes = function () {
-        return new Promise(async (resolve) => {
-          resolve(podcast.episodes);
-        });
-      };
-
-      resolve(podcast);
-
-    } catch(err) {
-      reject(err);
-    }
-
-  });
+    const episode = new Episode();
+    episode.description = parsedEpisode.description;
+    episode.duration = parsedEpisode.duration;
+    episode.guid = parsedEpisode.guid;
+    episode.imageUrl = parsedEpisode.image;
+    episode.published = parsedEpisode.published;
+    episode.title = parsedEpisode.title; 
+  
+    this.addParsedEnclosureToEpisode(episode, parsedEpisode.enclosure);
+  
+    podcast.episodes.push(episode);
+  }
 }
-*/

@@ -7,6 +7,7 @@ export class Episode {
   public createdAt: Date = new Date();
   public description: string = "";
   public downloadedServerPath: string = "";
+  public duration: number = 0;
   public enclosureType: string = "";
   public enclosureUrl: string = "";
   public fileSize: number = 0;
