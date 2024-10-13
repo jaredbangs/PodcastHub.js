@@ -4,29 +4,14 @@ import { Episode } from "./episode";
 import { Subscription } from "./subscription";
 
 export class Podcast {
-
-  
-	public async countEpisodes(): Promise<number> {
+	public async save(): Promise<void> {
 		throw new Error('Method not implemented.');
 	}
-
-  static async create(title: string): Promise<Podcast> {
-    
-    const podcast = new Podcast();
-    podcast.title = title;
-    return podcast;
-  }
-  static destroy() {
-    throw new Error('Method not implemented.');
-  }
-	static findOne(arg0: { where: { title: string; }; }): Promise<Podcast> {
-		throw new Error('Method not implemented.' + arg0);
+	
+  public static findAll(): PromiseLike<Podcast[]> {
+		throw new Error('Method not implemented.');
 	}
-
-  public LastChecked: Date = new Date();
-  public LastUpdated: Date = new Date();
-  public ParsedFeedCache: any;
-  public RssUrl: string = "";
+ 
   public author: string = "";
   public copyright: any;
   public descriptionLong: string = "";
@@ -34,12 +19,50 @@ export class Podcast {
   public id: string = "";
   public image: string = "";
   public language: string = "";
+  public LastChecked: Date = new Date();
+  public LastUpdated: Date = new Date();
   public link: string = "";
+  public ParsedFeedCache: any;
+  public RssUrl: string = "";
   public title: string = "";
 
+  public static async create(title: string, rssUrl?: string): Promise<Podcast> {
+    
+    const podcast = new Podcast();
+    podcast.title = title;
+    
+    if (rssUrl != undefined) {
+      podcast.RssUrl = rssUrl;
+    }
+
+    return podcast;
+  }
+
+	public async createEpisode(title?: string, id?: string): Promise<Episode> {
+		throw new Error('Method not implemented.' + id + title);
+	}
+  
+	public async countEpisodes(): Promise<number> {
+		throw new Error('Method not implemented.');
+	}
+
+  public static destroyAll(): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
+
+	public static findOne(arg0: { where: { title: string; }; }): Promise<Podcast> {
+		throw new Error('Method not implemented.' + arg0);
+	}
+  
+	public static loadById(id: string): Promise<Podcast> {
+		throw new Error('Method not implemented.' + id);
+	}
+
+  /*
 	public async createEpisodeFromReference(episode: any): Promise<any> {
     throw new Error("Not Implemented" + episode);
   }
+  */
 	
   public async getEpisodes(): Promise<Episode[]> {
 		throw new Error('Method not implemented.');
@@ -53,7 +76,7 @@ export class Podcast {
     throw new Error("Not Implemented" + guid);
   }
 
-  public async hasMatchingEpisode(episode: any): Promise<boolean> { 
+  public async hasMatchingEpisode(episode: Episode): Promise<boolean> { 
     throw new Error("Not Implemented" + episode);
   }
 

@@ -1,50 +1,46 @@
-/*
-var assert = require('chai').assert;
-var Bluebird = require('bluebird');
-var fs = require('fs');
-var path = require('path');
+import { promises as fsp } from 'fs';
+import path from 'path';
 
-var models = require('../models');
-*/
+let assert: Chai.AssertStatic;
 
-// import { ParseFeedDataToJSON } from "../parsing/parseFeedDataToJSON";
-// const parser = new ParseFeedDataToJSON();
+import('chai').then((c) => {
+	assert = c.assert;
+});
+
+import { Episode } from '../models/episode';
+import { Podcast } from '../models/podcast';
+import { ParseFeedDataToJSON } from "../parsing/parseFeedDataToJSON";
+
+const parser = new ParseFeedDataToJSON();
 
 describe('parsing-caches-parsed-data', () => {
 
 	//this.timeout(60000);
 
-	// let parsedFile: any;
+	let parsedFile: any;
   
-	before((done) => {
+	before(async () => {
 
 		/*
 		Bluebird.all([
 			models.sequelize.sync()
 		]);
 		*/
-		
-		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', async (err: any) => { // data: any) => {
-
-			if (err) throw err;
-
-      		// parsedFile = await parser.parse(data); 
-			
-			/*
-				Bluebird.all([
-					models.Episode.destroy({ truncate: true }),
-					models.Podcast.destroy({ truncate: true }),
-					models.Podcast.create({ title: 'parsing-caches-parsed-data', RssUrl: 'http://www.phonelosers.org/feed/', ParsedFeedCache: parsedFile }),
-					done()
-				]);*/
-			done();
-		});
-  	});
 	
-	it('creates a podcast', () => {
-		return models.Podcast.findOne({ where: { title: 'parsing-caches-parsed-data' }}).then((podcast) => {
-			assert.strictEqual(podcast.ParsedFeedCache.author, "RedBoxChiliPepper");
-		});
+		const data: any = await fsp.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8');
+
+		parsedFile = await parser.parse(data); 
+			
+		await Episode.destroyAll();
+		await Podcast.destroyAll();
+		const podcast = await Podcast.create('parsing-caches-parsed-data', 'http://www.phonelosers.org/feed/');
+		podcast.ParsedFeedCache = parsedFile;
+		podcast.save();
+	});
+	
+	it('creates a podcast', async () => {
+		const podcast = await Podcast.findOne({ where: { title: 'parsing-caches-parsed-data' }});
+		assert.strictEqual(podcast.ParsedFeedCache.author, "RedBoxChiliPepper");
 	});
 
 });

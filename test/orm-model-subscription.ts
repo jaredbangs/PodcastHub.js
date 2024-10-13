@@ -1,30 +1,40 @@
-/*
-var assert = require('chai').assert;
-var Bluebird = require('bluebird');
+import { Podcast } from '../models/podcast';
+import { Subscription } from '../models/subscription';
+import { User } from '../models/user';
 
-var models = require('../models');
-*/
+let assert: Chai.AssertStatic;
+
+import('chai').then((c) => {
+  import('chai-datetime').then((cdt) => {
+    c.use(cdt.default);
+    assert = c.assert;
+  });
+});
 
 describe('orm-model-subscription', function () {
 
-  let podcast, subscription, user;
+  let podcast: Podcast;
+  let subscription: Subscription;
+  let user: User;
 
-	before(function () {
+	before(async () => {
+    /*
 		return Bluebird.all([
 			models.sequelize.sync()
 		]);
+    */
   });
 
-  beforeEach(async function () {
+  beforeEach(async () => {
 
-    await models.Subscription.destroy({ truncate: true });
-    await models.Podcast.destroy({ truncate: true });
-    await models.User.destroy({ truncate: true });
+    await Subscription.destroyAll();
+    await Podcast.destroyAll();
+    await User.destroyAll();
     
-    user = await models.User.create({ name: 'Jared' });
-    podcast = await models.Podcast.create({ title: 'Subscription Test' });
+    user = await User.create('Jared');
+    podcast = await Podcast.create('Subscription Test');
 
-    subscription = await models.Subscription.create();
+    subscription = await Subscription.create();
     await subscription.setUser(user);
     await subscription.setPodcast(podcast);
     await subscription.save();
@@ -32,24 +42,21 @@ describe('orm-model-subscription', function () {
     return;
   });
 
-	it('count', function () {
-		return models.Subscription.findAll().then(function (subscriptions) {
-			assert.strictEqual(subscriptions.length, 1);
-		});
+	it('count', async () => {
+		const subscriptions: Subscription[] = await Subscription.findAll();
+    assert.strictEqual(subscriptions.length, 1);
 	});
 
-	it('user subscription count', function () {
-		return models.User.findOne({ where: { name: 'Jared' }}).then(async function (user) {
-      const subscriptions = await user.getSubscriptions();
-      assert.strictEqual(subscriptions.length, 1);
-		});
+	it('user subscription count', async () => {
+		const user = await User.findOne({ where: { name: 'Jared' }});
+    const subscriptions = await user.getSubscriptions();
+    assert.strictEqual(subscriptions.length, 1);
 	});
 
-	it('podcast subscription count', function () {
-		return models.Podcast.findOne({ where: { title: 'Subscription Test' }}).then(async function (podcast) {
-      const subscriptions = await podcast.getSubscriptions();
-      assert.strictEqual(subscriptions.length, 1);
-		});
+	it('podcast subscription count', async () => {
+		const podcast = await Podcast.findOne({ where: { title: 'Subscription Test' }});
+    const subscriptions = await podcast.getSubscriptions();
+    assert.strictEqual(subscriptions.length, 1);
 	});
 
 });

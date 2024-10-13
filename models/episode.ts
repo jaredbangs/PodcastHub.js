@@ -4,20 +4,34 @@
 
 export class Episode {
 
-    public guid: string = "";
-    public title: string = "";
-    public description: string = "";
-    public fileSize: number = 0;
-    public published: Date = new Date();
-    public imageUrl: string = "";
-    public enclosureUrl: string = "";
-    public enclosureType: string = "";
-    public shouldDownload: boolean = false;
-    public downloadedServerPath: string = "";
+  public createdAt: Date = new Date();
+  public description: string = "";
+  public downloadedServerPath: string = "";
+  public enclosureType: string = "";
+  public enclosureUrl: string = "";
+  public fileSize: number = 0;
+  public guid: string = "";
+  public imageUrl: string = "";
+  public published: Date = new Date();
+  public shouldDownload: boolean = false;
+  public title: string = "";
+  public updatedAt: Date = new Date();
+	
+  public static create(id: string): Promise<Episode> {
+		throw new Error('Method not implemented.' + id);
+	}
+	
+  public static async destroyAll(): Promise<void> {
+		throw new Error('Method not implemented.');
+	}
 
-    public async download(): Promise<void> {
-      throw new Error("Not Implemented");
-    }
+  public async download(): Promise<void> {
+    throw new Error("Not Implemented");
+  }
+  
+  public static findOne(arg0: { where: { title: string; }; }): Episode | PromiseLike<Episode> {
+	  throw new Error('Method not implemented.' + arg0);
+  }
 
 }
 

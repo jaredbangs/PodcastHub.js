@@ -1,15 +1,18 @@
+let assert: Chai.AssertStatic;
 
-/*
-var assert = require('chai').assert;
-var Bluebird = require('bluebird');
-var chai = require('chai');
-chai.use(require('chai-datetime'));
-var fs = require('fs');
-var path = require('path');
-*/
+import('chai').then((c) => {
+  import('chai-datetime').then((cdt) => {
+    c.use(cdt.default);
+    assert = c.assert;
+  });
+});
+
+import { promises as fsp } from 'fs';
+import path from 'path';
 
 import { ParseFeedDataToPodcastModel } from "../parsing/parseFeedDataToPodcastModel";
-// var models = require('../models');
+import { Episode } from '../models/episode';
+import { Podcast } from '../models/podcast';
 
 const parser = new ParseFeedDataToPodcastModel();
 
@@ -17,23 +20,15 @@ describe('parsing-xml-to-podcast-model-pla', () => {
 	
 	//this.timeout(30000);
 
-  let podcast: any = undefined;
+  let podcast: Podcast;
 
-  before((done: any) => {
+  before(async () => {
 
-    /*
-		Bluebird.all([
-			models.sequelize.sync(),
-			models.Episode.destroy({ truncate: true }),
-			models.Podcast.destroy({ truncate: true }),
-		]);
-    */
+    await Episode.destroyAll();
+    await Podcast.destroyAll()
 
-		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', async (err: any, data: any) => {
-			if (err) throw err;
-      podcast = await parser.parse(data);
-      done();
-		});
+		const data: any = await fsp.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8');
+    podcast = await parser.parse(data);
   });
   
 	it('author', () => {

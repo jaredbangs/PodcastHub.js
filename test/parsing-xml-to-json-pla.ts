@@ -1,10 +1,14 @@
-/*
-var assert = require('chai').assert;
-var chai = require('chai');
-chai.use(require('chai-datetime'));
-var fs = require('fs');
-var path = require('path');
-*/
+let assert: Chai.AssertStatic;
+
+import('chai').then((c) => {
+  import('chai-datetime').then((cdt) => {
+    c.use(cdt.default);
+    assert = c.assert;
+  });
+});
+
+import { promises as fsp } from 'fs';
+import path from 'path';
 
 import { ParseFeedDataToJSON } from "../parsing/parseFeedDataToJSON";
 const parser = new ParseFeedDataToJSON();
@@ -13,14 +17,9 @@ describe('parsing-xml-to-json-pla', function () {
 
   let parsedFile: any;
 
-  before((done: any) => {
-
-		fs.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8', async (err, data) => {
-
-			if (err) throw err;
-      parsedFile = await parser.parse(data);
-      done();
-		});
+  before(async () => {
+		const data: any = await fsp.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8');
+    parsedFile = await parser.parse(data);
   });
   
   it('author', () => {

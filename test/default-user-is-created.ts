@@ -1,27 +1,36 @@
-/*
-var assert = require('chai').assert;
-var Bluebird = require('bluebird');
-var chai = require('chai');
-chai.use(require('chai-datetime'));
+import { User } from '../models/user';
 
-var models = require('../models');
-*/
+let assert: Chai.AssertStatic;
+
+import('chai').then((c) => {
+  
+  import('chai-datetime').then((cdt) => {
+    
+    c.use(cdt.default);
+    assert = c.assert;
+  });
+});
+
 describe('default-user-is-created', function () {
 
-	before(function () {
+	before(async () => {
+		/*
 		return Bluebird.all([
 			models.sequelize.sync()
 		]);
-  });
+		*/
+  	});
 
-  beforeEach(function () {
+  	beforeEach(async () => {
+		/*
 		return Bluebird.all([
 			models.User.destroy({ truncate: true }),
 		]);
-  });
+		*/
+  	});
 	
-  it('current user name', async function () {
-    const currentUser = await models.User.loadCurrentUser();
-    assert.strictEqual(currentUser.name, 'Jared');
+  	it('current user name', async function () {
+    	const currentUser = await User.loadCurrentUser();
+    	assert.strictEqual(currentUser.name, 'Jared');
 	});
 })

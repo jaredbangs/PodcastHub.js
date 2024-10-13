@@ -26,9 +26,9 @@ describe('actions-add-subscription', () => {
 
   	beforeEach(async () => {
 
-		await Subscription.destroy();
-		await Podcast.destroy();
-		await User.destroy();
+		await Subscription.destroyAll();
+		await Podcast.destroyAll();
+		await User.destroyAll();
 		
 		user = await User.create('Jared');
 		podcast = await Podcast.create('Subscription Test');
@@ -56,7 +56,7 @@ describe('actions-add-subscription', () => {
 	it('podcast subscription count', async () => {
 
 		const podcast: Podcast = await Podcast.findOne({ where: { title: 'Subscription Test' }});
-		const subscriptions: Subscription[] = podcast.getSubscriptions();
+		const subscriptions: Subscription[] = await podcast.getSubscriptions();
 		assert.strictEqual(subscriptions.length, 1);
 	});
 

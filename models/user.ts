@@ -3,16 +3,23 @@
 import { Subscription } from "./subscription";
 
 export class User {
+  public static async findAll(): Promise<User[]> {
+	  throw new Error('Method not implemented.');
+  }
+  public static async loadCurrentUser(): Promise<User> {
+	  throw new Error('Method not implemented.');
+  }
 
-  public static async create(name: string): Promise<User> {
+  public static async create(name: string, email: string = ""): Promise<User> {
 
     const user = new User();
     user.name = name;
+    user.email = email;
   
     return user;
   }
 
-  public static destroy() {
+  public static destroyAll() {
     // throw new Error('Method not implemented.');
   }
   

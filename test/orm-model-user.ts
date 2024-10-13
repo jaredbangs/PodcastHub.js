@@ -1,50 +1,46 @@
-/*
-var assert = require('chai').assert;
-var Bluebird = require('bluebird');
-var chai = require('chai');
-chai.use(require('chai-datetime'));
+import { User } from '../models/user';
 
-var models = require('../models');
-*/
+let assert: Chai.AssertStatic;
+
+import('chai').then((c) => {
+  import('chai-datetime').then((cdt) => {
+    c.use(cdt.default);
+    assert = c.assert;
+  });
+});
 
 describe('orm-model-user', function () {
 
-	before(function () {
+	before(async () => {
+		/*
 		return Bluebird.all([
 			models.sequelize.sync()
 		]);
-  });
-
-  beforeEach(function () {
-		return Bluebird.all([
-			models.User.destroy({ truncate: true }),
-			models.User.create({ 
-				name: 'Jared', 
-				email: 'jaredbangs@gmail.com' 
-			})
-		]);
-  });
-
-	it('count', function () {
-		return models.User.findAll().then(function(users) {
-			assert.strictEqual(users.length, 1);
-		})
+		*/
 	});
 
-	it('first entry name', function () {
-		return models.User.findOne({ where: { name: 'Jared' }}).then(function (user) {
-			assert.strictEqual(user.name, 'Jared');
-		});
+	beforeEach(async () => {
+		await User.destroyAll();
+		await User.create('Jared', 'jaredbangs@gmail.com');
 	});
 
-	it('first entry email', function () {
-		return models.User.findOne({ where: { name: 'Jared' }}).then(function (user) {
-			assert.strictEqual(user.email, 'jaredbangs@gmail.com');
-		});
+	it('count', async () => {
+		const users: User[] = await User.findAll();
+		assert.strictEqual(users.length, 1);
+	});
+
+	it('first entry name', async () => {
+		const user = await User.findOne({ where: { name: 'Jared' }});
+		assert.strictEqual(user.name, 'Jared');
+	});
+
+	it('first entry email', async () => {
+		const user = await User.findOne({ where: { name: 'Jared' }});
+		assert.strictEqual(user.email, 'jaredbangs@gmail.com');
 	});
 	
-  	it('current user name', async function () {
-    	const currentUser = await models.User.loadCurrentUser();
+  	it('current user name', async () => {
+    	const currentUser = await User.loadCurrentUser();
     	assert.strictEqual(currentUser.name, 'Jared');
 	});
 })

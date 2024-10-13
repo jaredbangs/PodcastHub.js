@@ -1,12 +1,27 @@
 'use strict';
 
+import { Podcast } from "./podcast";
+import { User } from "./user";
+
 export class Subscription {
-  
-  static destroy() {
+  save() {
+    throw new Error('Method not implemented.');
+  }
+  public setPodcast(podcast: Podcast): void {
+    throw new Error('Method not implemented.' + podcast);
+  }
+  public setUser(user: User): void {
+    throw new Error('Method not implemented.' + user);
+  }
+  public static async create(): Promise<Subscription> {
     throw new Error('Method not implemented.');
   }
   
-  static findAll(): Promise<Subscription[]> {
+  public static async destroyAll(): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
+  
+  public static async findAll(): Promise<Subscription[]> {
 	  throw new Error('Method not implemented.');
   }
   

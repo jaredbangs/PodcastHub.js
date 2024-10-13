@@ -29,9 +29,9 @@ describe('actions-add-subscription', () => {
 
   beforeEach(async () => {
 
-    await Subscription.destroy();
-    await Podcast.destroy();
-    await User.destroy();
+    await Subscription.destroyAll();
+    await Podcast.destroyAll();
+    await User.destroyAll();
     
     user = await User.create('Jared');
     podcast = await Podcast.create('Subscription Test');
