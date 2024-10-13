@@ -1,11 +1,6 @@
 import { promises as fsp } from 'fs';
 import path from 'path';
-
-let assert: Chai.AssertStatic;
-
-import('chai').then((c) => {
-	assert = c.assert;
-});
+import { ChaiWrapper } from './chai-dynamic-import-wrapper';
 
 import { Episode } from '../models/episode';
 import { Podcast } from '../models/podcast';
@@ -15,17 +10,14 @@ const parser = new ParseFeedDataToJSON();
 
 describe('parsing-caches-parsed-data', () => {
 
+	let assert: Chai.AssertStatic;
 	//this.timeout(60000);
 
 	let parsedFile: any;
   
 	before(async () => {
-
-		/*
-		Bluebird.all([
-			models.sequelize.sync()
-		]);
-		*/
+		
+		assert = await ChaiWrapper.importAssert();
 	
 		const data: any = await fsp.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8');
 
@@ -33,6 +25,7 @@ describe('parsing-caches-parsed-data', () => {
 			
 		await Episode.destroyAll();
 		await Podcast.destroyAll();
+		
 		const podcast = await Podcast.create('parsing-caches-parsed-data', 'http://www.phonelosers.org/feed/');
 		podcast.ParsedFeedCache = parsedFile;
 		await podcast.save();
