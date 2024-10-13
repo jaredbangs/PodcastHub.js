@@ -12,7 +12,7 @@ import path from 'path';
 
 import { Episode } from '../models/episode';
 import { Podcast } from '../models/podcast';
-import { ParseFeedDataToPodcastModel } from "../parsing/parseFeedDataToPodcastModel";
+import { ParseFeedDataToPodcastModel } from '../parsing/parseFeedDataToPodcastModel';
 
 const parser = new ParseFeedDataToPodcastModel();
 

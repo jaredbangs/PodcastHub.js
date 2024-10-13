@@ -46,8 +46,8 @@ export class Podcast {
 		throw new Error('Method not implemented.');
 	}
 
-  public static destroyAll(): Promise<void> {
-    throw new Error('Method not implemented.');
+  public static async destroyAll(): Promise<void> {
+    // TODO: move these to repository
   }
 
 	public static findOne(arg0: { where: { title: string; }; }): Promise<Podcast> {

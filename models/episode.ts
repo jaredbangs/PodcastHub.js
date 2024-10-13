@@ -22,7 +22,7 @@ export class Episode {
 	}
 	
   public static async destroyAll(): Promise<void> {
-		throw new Error('Method not implemented.');
+		// TODO: move these to repository
 	}
 
   public async download(): Promise<void> {
