@@ -1,12 +1,4 @@
-let assert: Chai.AssertStatic;
-
-import('chai').then((c) => {
-  
-  import('chai-string').then((cs) => {
-    c.use(cs.default);
-    assert = c.assert;
-  });
-});
+import { ChaiWrapper } from './chai-dynamic-import-wrapper';
 
 import { AddSubscription } from '../actions/add-subscription';
 import { Podcast } from '../models/podcast';
@@ -16,10 +8,13 @@ const addSubscription = new AddSubscription();
 
 describe('actions-add-subscription', () => {
 
+  let assert: Chai.AssertStatic;
+  
   let podcast: Podcast;
   let user: User;
 
-	before(() => {
+	before(async () => {
+    assert = await ChaiWrapper.importAssert();
     /*
 		return Bluebird.all([
 			models.sequelize.sync()
@@ -51,7 +46,7 @@ describe('actions-add-subscription', () => {
     
     assert.isUndefined(subscription);
     assert.isNotNull(error);
-    assert.startsWith((error as any).toString(), "Error: Already subscribed");
+    assert.strictEqual((error as any).toString().indexOf("Error: Already subscribed"), 0);
 	});
 
 });
