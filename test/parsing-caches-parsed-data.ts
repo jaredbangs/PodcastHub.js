@@ -35,7 +35,7 @@ describe('parsing-caches-parsed-data', () => {
 		await Podcast.destroyAll();
 		const podcast = await Podcast.create('parsing-caches-parsed-data', 'http://www.phonelosers.org/feed/');
 		podcast.ParsedFeedCache = parsedFile;
-		podcast.save();
+		await podcast.save();
 	});
 	
 	it('creates a podcast', async () => {

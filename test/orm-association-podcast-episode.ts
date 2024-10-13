@@ -6,7 +6,6 @@ let assert: Chai.AssertStatic;
 import('chai').then((c) => {
   
   import('chai-datetime').then((cdt) => {
-    
     c.use(cdt.default);
     assert = c.assert;
   });
