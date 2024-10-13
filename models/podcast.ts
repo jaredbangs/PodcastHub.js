@@ -1,23 +1,19 @@
 'use strict';
 
+import { SavableItem } from "../repositories/savableItem";
+import { UUID } from "../uuid";
 import { Episode } from "./episode";
 import { Subscription } from "./subscription";
 
-export class Podcast {
-	public async save(): Promise<void> {
-		throw new Error('Method not implemented.');
-	}
-	
-  public static findAll(): PromiseLike<Podcast[]> {
-		throw new Error('Method not implemented.');
-	}
- 
+export class Podcast implements SavableItem {
+  
+  public _id: string = "";
+  // public _rev: string | undefined = undefined;
   public author: string = "";
   public copyright: any;
   public descriptionLong: string = "";
   public descriptionShort: string = "";
   public episodes: Episode[] = [];
-  public id: string = "";
   public image: string = "";
   public language: string = "";
   public LastChecked: Date = new Date();
@@ -26,6 +22,14 @@ export class Podcast {
   public ParsedFeedCache: any;
   public RssUrl: string = "";
   public title: string = "";
+	
+  constructor(id: string = UUID.random()){
+    this._id = id;
+  }
+	
+  public static findAll(): PromiseLike<Podcast[]> {
+		throw new Error('Method not implemented.');
+	}
 
   public static async create(title: string, rssUrl?: string): Promise<Podcast> {
     

@@ -42,7 +42,7 @@ describe('actions-add-podcast', () => {
   });
   
 	it('model is saved', () => {
-    assert.notStrictEqual(podcast.id, "0");
+    assert.notStrictEqual(podcast._id, "0");
   });
 
 	it('author', () => {

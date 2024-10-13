@@ -31,7 +31,7 @@ describe('orm-association-podcast-episode', function () {
 		await Podcast.destroyAll();
 		
 		const podcast = await Podcast.create('podcast-with-episode', 'http://www.phonelosers.org/feed/');
-		podcastId = podcast.id;
+		podcastId = podcast._id;
 		
 		await podcast.createEpisode('Episode 1', 'abcdefg'); 
 		matchingEpisode = await Episode.create('abcdefg');

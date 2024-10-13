@@ -45,7 +45,7 @@ describe('actions-update-episodes', function () {
 
 		const podcastModel = await addPodcast.add('http://www.phonelosers.org/feed/', { fetchRss: fetchFirstRss });
 		
-		originalId = podcastModel.id;
+		originalId = podcastModel._id;
 
 		originalEpisodeCount = await podcastModel.countEpisodes();
 
@@ -59,7 +59,7 @@ describe('actions-update-episodes', function () {
 	});
   
 	it('model is original model', function () {
-    assert.strictEqual(podcast.id, originalId);
+    assert.strictEqual(podcast._id, originalId);
   });
 
 	it('updated episode count', function () {

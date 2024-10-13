@@ -33,7 +33,7 @@ describe('actions-add-subscription', () => {
 		user = await User.create('Jared');
 		podcast = await Podcast.create('Subscription Test');
 
-		await addSubscription.add(user, podcast.id); 
+		await addSubscription.add(user, podcast._id); 
 
   	});
 

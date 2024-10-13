@@ -11,6 +11,9 @@
     //"verbatimModuleSyntax": true,
     "verbatimModuleSyntax": false,
     
+    // Pouchdb
+    "allowSyntheticDefaultImports": true,
+
     // TODO: remove once any is not in use
 
     /* Strictness */

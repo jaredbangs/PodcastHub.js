@@ -3,36 +3,37 @@ import path from 'path';
 import { ChaiWrapper } from './chai-dynamic-import-wrapper';
 
 import { Episode } from '../models/episode';
-import { Podcast } from '../models/podcast';
-import { ParseFeedDataToJSON } from "../parsing/parseFeedDataToJSON";
+import { PodcastRepository } from '../repositories/podcastRepository';
+import { ParseFeedDataToPodcastModel } from '../parsing/parseFeedDataToPodcastModel';
 
-const parser = new ParseFeedDataToJSON();
+const parser = new ParseFeedDataToPodcastModel();
 
 describe('parsing-caches-parsed-data', () => {
 
 	let assert: Chai.AssertStatic;
 	//this.timeout(60000);
 
-	let parsedFile: any;
+	let podcastId: string;
+
+	const repository = new PodcastRepository();
   
 	before(async () => {
 		
 		assert = await ChaiWrapper.importAssert();
+		
+		await Episode.destroyAll();
+		await repository.deleteAll();
 	
 		const data: any = await fsp.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8');
 
-		parsedFile = await parser.parse(data); 
-			
-		await Episode.destroyAll();
-		await Podcast.destroyAll();
-		
-		const podcast = await Podcast.create('parsing-caches-parsed-data', 'http://www.phonelosers.org/feed/');
-		podcast.ParsedFeedCache = parsedFile;
-		await podcast.save();
+		const podcast = await parser.parse(data); 
+		podcastId = podcast._id;
+		await repository.save(podcast);
 	});
 	
-	it('creates a podcast', async () => {
-		const podcast = await Podcast.findOne({ where: { title: 'parsing-caches-parsed-data' }});
+	it('reloaded podcast has expected parsedfeedcache data', async () => {
+		const podcast = await repository.load(podcastId);
+		assert.strictEqual(podcast.author, "RedBoxChiliPepper");
 		assert.strictEqual(podcast.ParsedFeedCache.author, "RedBoxChiliPepper");
 	});
 
