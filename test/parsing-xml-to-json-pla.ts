@@ -1,31 +1,29 @@
-let assert: Chai.AssertStatic;
-
-import('chai').then((c) => {
-  import('chai-datetime').then((cdt) => {
-    c.use(cdt.default);
-    assert = c.assert;
-  });
-});
-
 import { promises as fsp } from 'fs';
 import path from 'path';
+import { ChaiWrapper } from './chai-dynamic-import-wrapper';
 
 import { ParseFeedDataToJSON } from "../parsing/parseFeedDataToJSON";
 const parser = new ParseFeedDataToJSON();
-
+  
 describe('parsing-xml-to-json-pla', function () {
+
+  let assert: Chai.AssertStatic;
 
   let parsedFile: any;
 
   before(async () => {
-		const data: any = await fsp.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8');
+    
+    assert = await ChaiWrapper.importAssert();
+
+    const data: any = await fsp.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8');
     parsedFile = await parser.parse(data);
+
   });
   
   it('author', () => {
     assert.strictEqual(parsedFile.author, "RedBoxChiliPepper");
   });
- 
+
   it('categories', () => {
     assert.strictEqual(parsedFile.categories.length, 3);
     assert.strictEqual(parsedFile.categories[0], "Comedy");
@@ -34,7 +32,7 @@ describe('parsing-xml-to-json-pla', function () {
   it('copyright', () => {
     assert.strictEqual(parsedFile.copyright, undefined);
   });
-
+  
   it('description long', () => {
     assert.strictEqual(parsedFile.description.long, 'home of The Snow Plow Show wacky morning podcast');
   });
@@ -107,4 +105,5 @@ describe('parsing-xml-to-json-pla', function () {
   it('updated', () => {
     assert.equalDate(parsedFile.updated, new Date("2018-10-16 15:03:22"));
   });
-})
+  
+});

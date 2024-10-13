@@ -1,7 +1,20 @@
+import parse from 'node-podcast-parser';
 
 export class ParseFeedDataToJSON {
+
   public async parse(data: any): Promise<any> {
-    throw new Error("Not Implemented" + data);
+
+    return new Promise<any>((resolve, reject) => {
+    
+      parse(data, (err: any, parsedData: any) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(parsedData);
+        }
+      });
+    });
+
   }
 }
 
