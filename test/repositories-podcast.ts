@@ -1,34 +1,24 @@
-import { Episode } from '../models/episode';
+import { ChaiWrapper } from './chai-dynamic-import-wrapper';
 import { Podcast } from '../models/podcast';
+import { PodcastRepository } from '../repositories/podcastRepository';
 
-let assert: Chai.AssertStatic;
+describe('repositories-podcast', function () {
 
-import('chai').then((c) => {
-  import('chai-datetime').then((cdt) => {
-    c.use(cdt.default);
-    assert = c.assert;
-  });
-});
-
-describe('orm-model-podcast', function () {
-
-	before(async () => {
-		/*
-		return Bluebird.all([
-			models.sequelize.sync()
-		]);
-		*/
-	});
+	let assert: Chai.AssertStatic;
 
 	let plaPodcast: Podcast;
+	
+	const repository = new PodcastRepository();
+	
+	before(async () => {
+		assert = await ChaiWrapper.importAssert();
+	});
 
 	beforeEach(async () => {
 		
-		await Episode.destroyAll();
-		await Podcast.destroyAll();
+		await repository.deleteAll();
 		
 		const p = await Podcast.create('Phone Losers of America', 'http://www.phonelosers.org');
-		
 		p.author = 'Jared';
 		p.descriptionLong = 'Long';
 		p.descriptionShort = 'Short';
@@ -39,9 +29,12 @@ describe('orm-model-podcast', function () {
 		p.LastUpdated = new Date("2018-10-16 15:03:22");
 		p.ParsedFeedCache = { author: 'Jared' };
 
-		await Podcast.create('This American Life');
+		await repository.save(p);
+
+		const p2 = await Podcast.create('This American Life');
+		await repository.save(p2);
 		
-		plaPodcast = await Podcast.findOne({ where: { title: 'Phone Losers of America' }});
+		plaPodcast = await repository.findOne({ where: { title: 'Phone Losers of America' }});
 	});
 
 	it('count', async () => {
