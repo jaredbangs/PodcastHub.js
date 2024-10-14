@@ -6,7 +6,7 @@ export class Repository<T extends SavableItem> {
     private readonly db: PouchDB.Database;
 
     constructor(databaseName: string) {
-        this.db = new PouchDB(databaseName);
+        this.db = new PouchDB("db_" + databaseName);
     }
 
     public async deleteAll(): Promise<void> {
