@@ -16,15 +16,29 @@ export class Podcast implements SavableItem {
   public episodes: Episode[] = [];
   public image: string = "";
   public language: string = "";
-  public LastChecked: Date = new Date();
-  public LastUpdated: Date = new Date();
+  public lastChecked_ISOString: string = "";
+  public lastUpdated_ISOString: string = "";
   public link: string = "";
   public ParsedFeedCache: any;
   public RssUrl: string = "";
   public title: string = "";
-	
+  
   constructor(id: string = UUID.random()){
     this._id = id;
+  }
+
+  public get LastChecked(): Date {
+    return new Date(this.lastChecked_ISOString);
+  }
+  public set LastChecked(val: Date) {
+    this.lastChecked_ISOString = val.toISOString();
+  }
+
+  public get LastUpdated(): Date {
+    return new Date(this.lastUpdated_ISOString);
+  }
+  public set LastUpdated(val: Date) {
+    this.lastUpdated_ISOString = val.toISOString();
   }
 	
   public static findAll(): PromiseLike<Podcast[]> {

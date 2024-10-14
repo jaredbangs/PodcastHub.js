@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "@types/pouchdb": "^6.4.2",
+    "@types/pouchdb-find": "^7.3.3",
     "bluebird": "^3.5.2",
     "dotenv": "^8.0.0",
     "moment": "^2.22.2",
@@ -57,6 +58,7 @@
     "node-podcast-parser": "^2.3.0",
     "opml-generator": "^1.1.1",
     "pouchdb": "^9.0.0",
+    "pouchdb-find": "^9.0.0",
     "typescript": "^5.5.4",
     "winston": "^3.1.0",
     "xml-formatter": "^1.1.0"

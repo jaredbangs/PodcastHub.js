@@ -16,7 +16,7 @@ export class ParseFeedDataToPodcastModel {
     podcast.language = parsedData.language;
     podcast.link = parsedData.link;
     podcast.title = parsedData.title;
-    podcast.LastUpdated = parsedData.updated;
+    podcast.LastUpdated = new Date(parsedData.updated);
     podcast.ParsedFeedCache = parsedData;
       
     if (parsedData.description !== undefined) {

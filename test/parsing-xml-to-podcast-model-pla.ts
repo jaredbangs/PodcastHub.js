@@ -64,6 +64,10 @@ describe('parsing-xml-to-podcast-model-pla', () => {
     assert.strictEqual(podcast.title, 'Phone Losers of America');
   });
   
+	it('updated type', () => {
+    assert.strictEqual(typeof(podcast.LastUpdated), "object");
+  });
+
 	it('updated', () => {
     assert.equalDate(podcast.LastUpdated, new Date("2018-10-16 15:03:22"));
   });
