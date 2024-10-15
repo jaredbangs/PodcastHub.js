@@ -4,12 +4,13 @@ import PouchDBFind from 'pouchdb-find';
 PouchDB.plugin(PouchDBFind);
 
 import { SavableItem } from './savableItem';
+// import { NotFoundError } from './notFound';
 
 export class Repository<T extends SavableItem> {
 
     protected readonly db: PouchDB.Database;
 
-    constructor(databaseName: string, private readonly instanceConstructor: () => T) {
+    constructor(protected readonly databaseName: string, private readonly instanceConstructor: () => T) {
         this.db = new PouchDB("db_" + databaseName);
     }
 
@@ -22,6 +23,30 @@ export class Repository<T extends SavableItem> {
         }));
 
     }
+    
+    public async has(id: string): Promise<boolean> {
+
+        let found = false;
+
+        try {
+
+            const doc = await this.db.get(id);
+
+            found =  doc !== undefined;
+
+        } catch (err: unknown) {
+            
+            const pouchError = err as PouchDB.Core.Error;
+
+            if (pouchError !== undefined && pouchError.status === 404) {
+                // throw new NotFoundError("" + " not found: " + id);
+            } else {
+                throw err;
+            }
+        } 
+
+        return found;
+    }
 
     public async load(id: string): Promise<T> {
 
@@ -32,12 +57,12 @@ export class Repository<T extends SavableItem> {
    	
     public async loadAll(): Promise<T[]> {
 
-        const response = await this.db.allDocs();
+        const response = await this.db.allDocs({ include_docs: true });
 
         const objects: T[] = [];
         
         response.rows.forEach((row: any) => {
-            objects.push(this.getObjectFromDocument(row));
+            objects.push(this.getObjectFromDocument(row.doc));
         });
 
         return objects;

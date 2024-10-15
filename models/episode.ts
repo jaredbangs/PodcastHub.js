@@ -1,9 +1,13 @@
 'use strict';
 
+import { SavableItem } from "../repositories/savableItem";
+import { UUID } from "../uuid";
+
 // var downloadEpisode = require('../actions/download-episode');
 
-export class Episode {
+export class Episode implements SavableItem {
 
+  public _id: string = "";
   public createdAt: Date = new Date();
   public description: string = "";
   public downloadedServerPath: string = "";
@@ -18,20 +22,12 @@ export class Episode {
   public title: string = "";
   public updatedAt: Date = new Date();
 	
-  public static create(id: string): Promise<Episode> {
-		throw new Error('Method not implemented.' + id);
-	}
-	
-  public static async destroyAll(): Promise<void> {
-		// TODO: move these to repository
-	}
+  constructor(id: string = UUID.random()){
+    this._id = id;
+  }
 
   public async download(): Promise<void> {
     throw new Error("Not Implemented");
-  }
-  
-  public static findOne(arg0: { where: { title: string; }; }): Episode | PromiseLike<Episode> {
-	  throw new Error('Method not implemented.' + arg0);
   }
 
 }

@@ -1,36 +1,18 @@
-import { User } from '../models/user';
-
-let assert: Chai.AssertStatic;
-
-import('chai').then((c) => {
-  
-  import('chai-datetime').then((cdt) => {
-    
-    c.use(cdt.default);
-    assert = c.assert;
-  });
-});
+import { ChaiWrapper } from './chai-dynamic-import-wrapper';
+import { UserRepository } from '../repositories/userRepository';
 
 describe('default-user-is-created', function () {
+	
+	let assert: Chai.AssertStatic;
+
+	const userRepository = new UserRepository();
 
 	before(async () => {
-		/*
-		return Bluebird.all([
-			models.sequelize.sync()
-		]);
-		*/
-  	});
-
-  	beforeEach(async () => {
-		/*
-		return Bluebird.all([
-			models.User.destroy({ truncate: true }),
-		]);
-		*/
+		assert = await ChaiWrapper.importAssert();
   	});
 	
   	it('current user name', async function () {
-    	const currentUser = await User.loadCurrentUser();
+    	const currentUser = await userRepository.loadCurrentUser();
     	assert.strictEqual(currentUser.name, 'Jared');
 	});
 })

@@ -1,61 +1,22 @@
 'use strict';
 
-import { Subscription } from "./subscription";
+import { SavableItem } from "../repositories/savableItem";
+import { UUID } from "../uuid";
 
-export class User {
-  public static async findAll(): Promise<User[]> {
-	  throw new Error('Method not implemented.');
-  }
-  public static async loadCurrentUser(): Promise<User> {
-	  throw new Error('Method not implemented.');
-  }
+export class User implements SavableItem {
 
-  public static async create(name: string, email: string = ""): Promise<User> {
-
-    const user = new User();
-    user.name = name;
-    user.email = email;
+  public _id: string = "";
+  public email: string = "";
+  public name: string = "";
   
-    return user;
+  constructor(id: string = UUID.random()){
+    this._id = id;
   }
-
-  public static destroyAll() {
-    // throw new Error('Method not implemented.');
-  }
-  
-  public static findOne(arg0: { where: { name: string; }; }): Promise<User> {
-	  throw new Error('Method not implemented.' + arg0);
-  }
-  
-  public getSubscriptions(): Promise<Subscription[]> {
-	  throw new Error('Method not implemented.');
-  }
-
-  constructor() {
-    this.email = "";
-    this.name = "";
-  }
-
-  public email: string;
-  public name: string;
-
 }
 
 /*
 require('dotenv').config();
 
-var Bluebird = require('bluebird');
-
-module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define('User', {
-    email: DataTypes.STRING,
-    name: DataTypes.STRING
-  }, {});
-
-  User.associate = function(models) {
-    // associations can be defined here
-		User.hasMany(models.Subscription, { onDelete: 'cascade', hooks: true });
-  };
 
   User.loadCurrentUser = function () {
     return new Promise((resolve, reject) => {
@@ -72,5 +33,4 @@ module.exports = (sequelize, DataTypes) => {
   };
 
   return User;
-};
 */

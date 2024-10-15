@@ -22,9 +22,6 @@ describe('parsing-xml-to-episode-models-pla', () => {
 		
 		assert = await ChaiWrapper.importAssert();
 
-		await Episode.destroyAll();
-		await Podcast.destroyAll();
-
 		const data: any = await fsp.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8');
 			
 		parseStarted = new Date();

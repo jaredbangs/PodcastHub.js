@@ -2,7 +2,6 @@ import { promises as fsp } from 'fs';
 import path from 'path';
 import { ChaiWrapper } from './chai-dynamic-import-wrapper';
 
-import { Episode } from '../models/episode';
 import { Podcast } from '../models/podcast';
 import { ParseFeedDataToPodcastModel } from '../parsing/parseFeedDataToPodcastModel';
 
@@ -19,9 +18,6 @@ describe('parsing-xml-to-podcast-model-pla', () => {
   before(async () => {
     
     assert = await ChaiWrapper.importAssert();
-
-    await Episode.destroyAll();
-    await Podcast.destroyAll()
 
 		const data: any = await fsp.readFile(path.resolve(__dirname, './data-pla.xml'), 'utf8');
     podcast = await parser.parse(data);

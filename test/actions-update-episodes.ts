@@ -1,11 +1,4 @@
-let assert: Chai.AssertStatic;
-
-import('chai').then((c) => {
-  import('chai-datetime').then((cdt) => {
-    c.use(cdt.default);
-    assert = c.assert;
-  });
-});
+import { ChaiWrapper } from './chai-dynamic-import-wrapper';
 
 import { AddPodcast } from '../actions/add-podcast';
 import { FetchRssFile } from '../actions/fetchRssFile';
@@ -26,6 +19,7 @@ const fetchUpdatedRss = () => {
 
 describe('actions-update-episodes', function () {
 	
+	let assert: Chai.AssertStatic;
 	//this.timeout(30000);
 
 	let allEpisodes;
@@ -35,19 +29,14 @@ describe('actions-update-episodes', function () {
 
 	before(async () => {
 
-		/*
-		Bluebird.all([
-			models.sequelize.sync(),
-			models.Episode.destroy({ truncate: true }),
-			models.Podcast.destroy({ truncate: true }),
-		]);
-		*/
+		assert = await ChaiWrapper.importAssert();
 
 		const podcastModel = await addPodcast.add('http://www.phonelosers.org/feed/', { fetchRss: fetchFirstRss });
 		
 		originalId = podcastModel._id;
 
-		originalEpisodeCount = await podcastModel.countEpisodes();
+		const originalEpisodes = await podcastModel.getEpisodes();
+		originalEpisodeCount = originalEpisodes.length;
 
 		await updateEpisodes.update(podcastModel, { fetchRss: fetchUpdatedRss });
 		
