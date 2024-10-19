@@ -22,7 +22,7 @@ describe('actions-add-subscription', () => {
 	let podcastId: string;
 	let user: User;
 
-	before(async () => {
+	beforeEach(async () => {
 		assert = await ChaiWrapper.importAssert();
 
 		await subscriptionRepository.deleteAll();
@@ -31,16 +31,20 @@ describe('actions-add-subscription', () => {
 		
 		user = new User();
 		user.name = 'Jared';
+		await userRepository.save(user);
 
 		podcast = await Podcast.create('Subscription Test');
 		podcastId = podcast._id;
+		await podcastRepository.save(podcast);
 
-		await addSubscription.add(user, podcast._id); 
+		await addSubscription.add(user, podcast); 
   	});
 
 	it('count', async () => {
 		
 		const subscriptions: Subscription[] = await subscriptionRepository.loadAll();
+
+		console.log(subscriptions);
 		
 		assert.strictEqual(subscriptions.length, 1);
 	});

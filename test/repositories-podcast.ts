@@ -155,7 +155,7 @@ describe('repositories-podcast', function () {
 		});
 
 		it('count', async () => {
-			assert.strictEqual(podcasts.length, 3);
+			assert.strictEqual(podcasts.length, 2);
 		});
 	
 	});

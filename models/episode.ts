@@ -1,14 +1,13 @@
 'use strict';
 
-import { SavableItem } from "../repositories/savableItem";
+import { SavableItemBase } from "../repositories/savableItem";
 import { UUID } from "../uuid";
 
 // var downloadEpisode = require('../actions/download-episode');
 
-export class Episode implements SavableItem {
+export class Episode extends SavableItemBase {
 
-  public _id: string = "";
-  public createdAt: Date = new Date();
+  public createdAt_ISOString: string = "";
   public description: string = "";
   public downloadedServerPath: string = "";
   public duration: number = 0;
@@ -17,13 +16,35 @@ export class Episode implements SavableItem {
   public fileSize: number = 0;
   public guid: string = "";
   public imageUrl: string = "";
-  public published: Date = new Date();
+  public published_ISOString: string  = "";
   public shouldDownload: boolean = false;
   public title: string = "";
-  public updatedAt: Date = new Date();
+  public updatedAt_ISOString: string = "";
 	
   constructor(id: string = UUID.random()){
-    this._id = id;
+    super(id);
+    this.CreatedAt = new Date();
+  }
+
+  public get CreatedAt(): Date {
+    return new Date(this.createdAt_ISOString);
+  }
+  public set CreatedAt(val: Date) {
+    this.createdAt_ISOString = val.toISOString();
+  }
+  
+  public get Published(): Date {
+    return new Date(this.published_ISOString);
+  }
+  public set Published(val: Date) {
+    this.published_ISOString = val.toISOString();
+  }
+  
+  public get UpdatedAt(): Date {
+    return new Date(this.updatedAt_ISOString);
+  }
+  public set UpdatedAt(val: Date) {
+    this.updatedAt_ISOString = val.toISOString();
   }
 
   public async download(): Promise<void> {

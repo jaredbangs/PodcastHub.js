@@ -8,7 +8,7 @@ import { UserRepository } from '../repositories/userRepository';
 import { SubscriptionRepository } from '../repositories/subscriptionRepository';
 const addSubscription = new AddSubscription();
 
-describe('actions-add-subscription', () => {
+describe('actions-add-subscription-already-exists', () => {
 
   let assert: Chai.AssertStatic;
   
@@ -17,6 +17,7 @@ describe('actions-add-subscription', () => {
 	const subscriptionRepository = new SubscriptionRepository();
  
   let podcast: Podcast;
+  let subscriptionId: string;
   let user: User;
 
 	before(async () => {
@@ -28,25 +29,22 @@ describe('actions-add-subscription', () => {
     
     user = new User();
     user.name = 'Jared';
+		await userRepository.save(user);
 
     podcast = await Podcast.create('Subscription Test');
+		await podcastRepository.save(podcast);
 
-    await addSubscription.add(user, podcast._id); 
+    const sub = await addSubscription.add(user, podcast);
+    subscriptionId = sub._id;
+
   });
 
 	it('add existing subscription', async () => {
     
-    let error, subscription;
-   
-    try {
-      subscription = await addSubscription.add(user, podcast._id); 
-    } catch (err) {
-      error = err;
-    }
+    const subscription = await addSubscription.add(user, podcast); 
     
-    assert.isUndefined(subscription);
-    assert.isNotNull(error);
-    assert.strictEqual((error as any).toString().indexOf("Error: Already subscribed"), 0);
+    assert.isDefined(subscription);
+    assert.strictEqual(subscription._id, subscriptionId);
 	});
 
 });

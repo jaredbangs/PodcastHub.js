@@ -1,24 +1,23 @@
 'use strict';
 
 import { PodcastRepository } from "../repositories/podcastRepository";
-import { SavableItem } from "../repositories/savableItem";
+import { SavableItemBase } from "../repositories/savableItem";
 import { UserRepository } from "../repositories/userRepository";
 import { UUID } from "../uuid";
 import { Podcast } from "./podcast";
 import { User } from "./user";
 
-export class Subscription implements SavableItem {
+export class Subscription extends SavableItemBase {
   
   private static readonly podcastRepository = new PodcastRepository();
   private static readonly userRepository = new UserRepository();
 
-  public _id: string = "";
   public lastUpdated_ISOString: string = "";
   public podcast_id: string = "";
   public user_id: string = "";
   
   constructor(user?: User, podcast?: Podcast, id: string = UUID.random()){
-    this._id = id;
+    super(id);
     this.LastUpdated = new Date();
     
     if (user !== undefined) {

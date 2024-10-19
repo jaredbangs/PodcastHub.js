@@ -32,20 +32,29 @@ export class UserRepository extends Repository<User> {
      
         if (process.env.USER_EMAIL !== undefined) {
             
-            const user = await this.findByEmail(process.env.USER_EMAIL); 
+            try {
 
-            return user;
+                const user = await this.findByEmail(process.env.USER_EMAIL); 
+
+                return user;
+
+            } catch {
+
+                const user = new User();
+                user.email = process.env.USER_EMAIL;
+                
+                if (process.env.USER_NAME !== undefined) {
+                    user.name = process.env.USER_NAME;
+                }
+
+                await this.save(user);
+
+                return user;
+            }
 
         } else {
             throw new Error("USER_EMAIL environment variable undefined");
         }
-        /*
-      User.findOne({ where: { email: process.env.USER_EMAIL }}).then(async function(currentUser) {
-
-        if (currentUser === undefined || currentUser === null) {
-          currentUser = await User.create({ name: process.env.USER_NAME, email: process.env.USER_EMAIL });
-        }
-*/
     };
 
 }

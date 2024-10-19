@@ -1,9 +1,4 @@
-let assert: Chai.AssertStatic;
-
-import('chai').then((c) => {
-  assert = c.assert;
-});
-
+import { ChaiWrapper } from './chai-dynamic-import-wrapper';
 
 import { DownloadEpisode } from '../actions/download-episode';
 
@@ -11,6 +6,7 @@ const downloadEpisode = new DownloadEpisode();
 
 describe('actions-download-episodes', () => {
 
+	let assert: Chai.AssertStatic;
 	let result: string;
 
   const altDownloadFunction = () => {
@@ -21,8 +17,9 @@ describe('actions-download-episodes', () => {
   };
 
   before(async () => {
+		assert = await ChaiWrapper.importAssert();
     result = "";
-    await downloadEpisode.download('https://downloadUrlFake', { alternateDownloadFunction: altDownloadFunction });
+    await downloadEpisode.download('https://downloadUrlFake', altDownloadFunction);
   });
 
 	it('test that download function was called', () => {

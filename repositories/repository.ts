@@ -62,7 +62,10 @@ export class Repository<T extends SavableItem> {
         const objects: T[] = [];
         
         response.rows.forEach((row: any) => {
-            objects.push(this.getObjectFromDocument(row.doc));
+
+            if (row.doc !== undefined && row.doc.isSavableItemDocument) {
+                objects.push(this.getObjectFromDocument(row.doc));
+            }
         });
 
         return objects;

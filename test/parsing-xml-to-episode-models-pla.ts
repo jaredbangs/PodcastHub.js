@@ -60,7 +60,7 @@ describe('parsing-xml-to-episode-models-pla', () => {
 	});
 
 	it('episode 0 published', function () {
-		assert.equalDate(firstEpisode.published, new Date("2018-10-16 15:03:22"));
+		assert.equalDate(firstEpisode.Published, new Date("2018-10-16 15:03:22"));
 	});
 
 	it('episode 0 title', function () {

@@ -3,6 +3,7 @@ import { Subscription } from '../models/subscription';
 import { User } from '../models/user';
 import { PodcastRepository } from './podcastRepository';
 import { Repository } from './repository';
+import { SavableItem } from './savableItem';
 import { UserRepository } from './userRepository';
 
 export class SubscriptionRepository extends Repository<Subscription> {
@@ -25,6 +26,23 @@ export class SubscriptionRepository extends Repository<Subscription> {
                 podcast_id: {$eq: podcast._id}
             }
         });
+	}
+
+	public async getSubscriptionForUserAndPodcast(user: User, podcast: Podcast): Promise<Subscription | undefined> {
+
+        const subscriptions = await this.getSubscriptionsForUser(user);
+
+        const arrayEntry = subscriptions.find((s) => s.podcast_id === podcast._id);
+
+        if (arrayEntry === undefined){
+            return undefined;
+        } else if (arrayEntry instanceof Subscription) {
+            return arrayEntry;
+        } else if ((arrayEntry as SavableItem)._id !== undefined) {
+            return await this.load((arrayEntry as SavableItem)._id);
+        } else {
+            return undefined;
+        }
 	}
 
 	public async getSubscriptionsForUser(user: User): Promise<Subscription[]> {

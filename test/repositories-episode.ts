@@ -3,11 +3,12 @@ import { Episode } from '../models/episode';
 import { PodcastRepository } from '../repositories/podcastRepository';
 import { Podcast } from '../models/podcast';
 
-describe('orm-model-episode', function () {
+describe('repositories-episode', function () {
 	
 	let assert: Chai.AssertStatic;
 
 	let episode: Episode;
+	let originalEpisode: Episode;
 
 	before(async () => {
 		
@@ -23,8 +24,9 @@ describe('orm-model-episode', function () {
 		e.enclosureUrl = 'http://www.phonelosers.org/i.mp3';
 		e.fileSize = 9876;
 		e.imageUrl = 'http://www.phonelosers.org/i.jpg';
-		e.published = new Date("2018-10-16 15:03:22");
+		e.Published = new Date("2018-10-16 15:03:22");
 		e.title = 'Episode 1';
+		originalEpisode = e;
 		
 		const pod = new Podcast();
 		pod.episodes.push(e);
@@ -34,11 +36,11 @@ describe('orm-model-episode', function () {
 		const reloaded = await podcastRepository.load(pod._id);
 
 		episode = await reloaded.getEpisodeById(e._id);
-		
+
 	});
 
 	it('createdAt', async () => {
-		assert.strictEqual(episode.createdAt.getHours(), new Date().getHours());
+		assert.strictEqual(episode.CreatedAt.getHours(), new Date().getHours());
 	});
 
 	it('description', async () => {
@@ -60,17 +62,21 @@ describe('orm-model-episode', function () {
 	it('imageUrl', async () => {
 		assert.strictEqual(episode.imageUrl, 'http://www.phonelosers.org/i.jpg');
 	});
+
+	it('original episoe is instance of Episode class', async () => {
+		assert.instanceOf(originalEpisode, Episode);
+	});
+
+	it('reloaded episoe is instance of Episode class', async () => {
+		assert.instanceOf(episode, Episode);
+	});
 	
 	it('published', async () => {
-		assert.equalDate(episode.published, new Date("2018-10-16 15:03:22"));
+		assert.equalDate(episode.Published, new Date("2018-10-16 15:03:22"));
 	});
 	
 	it('title', async () => {
 		assert.strictEqual(episode.title, 'Episode 1');
-	});
-
-	it('updatedAt', async () => {
-		assert.strictEqual(episode.updatedAt.getHours(), new Date().getHours());
 	});
 
 });

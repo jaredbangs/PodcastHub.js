@@ -51,7 +51,7 @@ export class ParseFeedDataToPodcastModel {
     episode.duration = parsedEpisode.duration;
     episode.guid = parsedEpisode.guid;
     episode.imageUrl = parsedEpisode.image;
-    episode.published = parsedEpisode.published;
+    episode.Published = parsedEpisode.published;
     episode.title = parsedEpisode.title; 
   
     this.addParsedEnclosureToEpisode(episode, parsedEpisode.enclosure);

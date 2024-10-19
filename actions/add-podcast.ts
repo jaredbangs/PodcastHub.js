@@ -1,60 +1,47 @@
 // import { Logger } from "../logger";
 
 import { Podcast } from "../models/podcast";
+import { ParseFeedDataToPodcastModel } from "../parsing/parseFeedDataToPodcastModel";
+import { PodcastRepository } from "../repositories/podcastRepository";
+import { FetchRss } from "./fetchRss";
+import { FetchRssLive } from "./fetchRssLive";
 
 export class AddPodcast {
-  public async add(rssUrl: string, options: any): Promise<Podcast> {
-    throw new Error("Not Implemented" + rssUrl + options);
+
+  private readonly fetchRss: FetchRss = new FetchRssLive();
+
+  private readonly repository = new PodcastRepository();
+
+  private readonly parser = new ParseFeedDataToPodcastModel();
+
+  public async add(rssUrl: string, fetcher?: () => Promise<any>): Promise<Podcast> {
+
+    if (fetcher === undefined) {
+      fetcher = async () => {
+        return await this.fetchRss.fetch(rssUrl);
+      }
+    }
+
+    try {
+      const existingPodcast = await this.repository.findByRssUrl(rssUrl);
+      return existingPodcast;
+    } catch {
+
+      const data = await fetcher();
+
+      if (data !== undefined) {
+        
+        const newPodcast = await this.parser.parse(data);
+
+        await this.repository.save(newPodcast);
+
+        return newPodcast;
+
+      } else {
+        throw new Error("No data fetched");
+      }
+
+    }
+
   }
 }
-
-/*
-var fetchRss = require('./fetchRssLive');
-var parse = require('../parsing/parseFeedDataToPodcastModel');
-
-module.exports = function (rssUrl, options, callback) {
-
-	models.Podcast.findOne({ where: { RssUrl: rssUrl }}).then(async function (podcast) {
-
-    var data, podcastModel;
-
-		if (podcast === undefined || podcast === null) {
-
-			if (options.fetchRss !== undefined) {
-				fetchRss = options.fetchRss;
-			}
-
-      logger.info("Fetching " + rssUrl);
-      try {
-        data = await fetchRss(rssUrl); 
-      } catch(err) {
-        console.error(err);
-        callback(err);
-      }
-
-      logger.info("Parsing " + rssUrl);
-      try {
-        podcastModel = await parse(data); 
-      } catch(err) {
-        callback(err);
-        console.error('Parsing error', err);
-      }
-          
-      podcastModel.RssUrl = rssUrl;
-
-      podcastModel.save().then(function (savedPodcastModel) {
-        logger.info("Subscribed to " + savedPodcastModel.title);
-        callback(null, savedPodcastModel);
-      });
-
-		} else {
-			logger.info("Already subscribed to " + podcast.title + " - " + podcast.RssUrl);
-			callback(null, podcast);
-		}
-
-	}, function (err) {
-		console.error(err);
-		callback(err);
-	});
-}
-*/

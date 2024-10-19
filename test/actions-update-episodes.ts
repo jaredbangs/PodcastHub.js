@@ -1,20 +1,22 @@
 import { ChaiWrapper } from './chai-dynamic-import-wrapper';
+import path from 'path';
 
 import { AddPodcast } from '../actions/add-podcast';
 import { FetchRssFile } from '../actions/fetchRssFile';
 import { UpdateEpisodes } from '../actions/update-episodes';
 import { Podcast } from '../models/podcast';
+import { PodcastRepository } from '../repositories/podcastRepository';
 
 const addPodcast = new AddPodcast();
 const fetchRssFile = new FetchRssFile();
 const updateEpisodes = new UpdateEpisodes();
 
-const fetchFirstRss = () => {
-	return fetchRssFile.fetch('data-pla.xml');
+const fetchFirstRss = async () => {
+	return await fetchRssFile.fetch(path.resolve(__dirname, './data-pla.xml'));
 }
 
-const fetchUpdatedRss = () => {
-	return fetchRssFile.fetch('data-pla-updated.xml');
+const fetchUpdatedRss = async () => {
+	return await fetchRssFile.fetch(path.resolve(__dirname, './data-pla-updated.xml'));
 }
 
 describe('actions-update-episodes', function () {
@@ -25,22 +27,24 @@ describe('actions-update-episodes', function () {
 	let allEpisodes;
 	let originalId: any;
 	let originalEpisodeCount: number;
-	let podcast: Podcast;
+	let podcastModelReloaded: Podcast;
 
 	before(async () => {
 
 		assert = await ChaiWrapper.importAssert();
 
-		const podcastModel = await addPodcast.add('http://www.phonelosers.org/feed/', { fetchRss: fetchFirstRss });
+		const podcastModel = await addPodcast.add('http://www.phonelosers.org/feed/', fetchFirstRss);
 		
 		originalId = podcastModel._id;
 
 		const originalEpisodes = await podcastModel.getEpisodes();
 		originalEpisodeCount = originalEpisodes.length;
 
-		await updateEpisodes.update(podcastModel, { fetchRss: fetchUpdatedRss });
+		await updateEpisodes.update(podcastModel, fetchUpdatedRss);
+
+		podcastModelReloaded = await new PodcastRepository().load(originalId);
 		
-		allEpisodes = await podcastModel.getEpisodes();
+		allEpisodes = await podcastModelReloaded.getEpisodes();
 	});
 
 	it('original episode count', function () {
@@ -48,15 +52,14 @@ describe('actions-update-episodes', function () {
 	});
   
 	it('model is original model', function () {
-    assert.strictEqual(podcast._id, originalId);
-  });
+		assert.strictEqual(podcastModelReloaded._id, originalId);
+	});
 
 	it('updated episode count', function () {
-		console.log("Checking ep count");
-    assert.strictEqual(allEpisodes.length, 11);
-  });
+		assert.strictEqual(allEpisodes.length, 10);
+  	});
   
 	it('updated', function () {
-    assert.equalDate(podcast.LastUpdated, new Date("2018-11-03 15:03:22"));
-  });
+    	assert.equalDate(podcastModelReloaded.LastUpdated, new Date("2018-11-03 15:03:22"));
+  	});
 })

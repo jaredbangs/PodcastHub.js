@@ -1,101 +1,95 @@
-/*
-var fetchRss = require('./fetchRssLive');
-var logger = require('../logger');
-var models = require('../models');
-var moment = require('moment');
-*/
+import { Podcast } from "../models/podcast";
+import { Logger } from "../logger";
+import { FetchRss } from "./fetchRss";
+import { FetchRssLive } from "./fetchRssLive";
+import { ParseFeedDataToPodcastModel } from "../parsing/parseFeedDataToPodcastModel";
+import { Episode } from "../models/episode";
+import { PodcastRepository } from "../repositories/podcastRepository";
+
+const logger = Logger.logger;
 
 export class UpdateEpisodes {
   
-  public async update(podcast: any, options: any): Promise<void> {
-    throw new Error("Not Implemented" + podcast + options);
-  }
+  private readonly fetchRss: FetchRss = new FetchRssLive();
+  
+  private readonly parser = new ParseFeedDataToPodcastModel();
+  
+  private readonly repository = new PodcastRepository();
+  
+  public async update(podcast: Podcast, fetcher?: () => Promise<any>): Promise<Podcast> {
+
+    if (fetcher === undefined) {
+      fetcher = async () => {
+        return await this.fetchRss.fetch(podcast.RssUrl);
+      }
+    }
+ 
+    logger.info("Podcast: " + podcast.title + " LastChecked: " + podcast.LastChecked);
+    logger.info("\tFetching " + podcast.RssUrl);
+
+    try {
+
+      const data = await fetcher();
+      
+      logger.info("\tParsing " + podcast.RssUrl);
+      
+      try {
+        
+        const temporaryModel = await this.parser.parse(data);
+
+        if (temporaryModel !== undefined) {
+          logger.info("\tUpdating " + podcast.RssUrl);
+          return await this.updateExistingModel(podcast, temporaryModel);
+
+        } else {
+          const err = new Error("No parsed podcast model");
+          logger.error(err);
+          throw err;
+        }
+
+      } catch(err) {
+        if (err !== undefined && err != null){
+          logger.error(err);
+        }
+        throw err;
+      }
+   
+    } catch(err) {
+      if (err !== undefined && err != null){
+        logger.error(err);
+      }
+      throw err;
+    }
+      
+   
 }
 
-/*
-models.sequelize.sync();
+private async updateExistingModel(existingModel: Podcast, temporaryModel: Podcast): Promise<Podcast> {
 
-var parse = require('../parsing/parseFeedDataToUnsavedPodcastModel');
-
-var updateExistingModel = function (existingModel, temporaryModel) {
-
-  return new Promise(async (resolve) => {
-    
-    var episodes, updatedModel;
-
-    existingModel.LastChecked = moment.utc();
+    existingModel.LastChecked = new Date();
     existingModel.LastUpdated = temporaryModel.LastUpdated;
     existingModel.ParsedFeedCache = temporaryModel.ParsedFeedCache;
 
-    episodes = await temporaryModel.getEpisodes();
+    const episodes = await temporaryModel.getEpisodes();
     
-    updatedModel = await udpateExistingModelWithCurrentEpisodes(existingModel, episodes);
-    
-    resolve(updatedModel);
-	});
+    return await this.udpateExistingModelWithCurrentEpisodes(existingModel, episodes);
 }
 
-var udpateExistingModelWithCurrentEpisodes = function (existingModel, currentEpisodes) {
-
-  return new Promise(async (resolve) => {
-    
-    var hasEpisode; 
+private async udpateExistingModelWithCurrentEpisodes(existingModel: Podcast, currentEpisodes: Episode[]) {
 
     for (const temporaryEpisode of currentEpisodes) {
 
-      hasEpisode = await existingModel.hasMatchingEpisode(temporaryEpisode);
+      const hasEpisode = await existingModel.hasEpisode(temporaryEpisode);
       
-      if (!hasEpisode[0]) {
-        await existingModel.createEpisodeFromReference(temporaryEpisode);
-        logger.info("Added episode: " + temporaryEpisode.guid + " " + temporaryEpisode.enclosureUrl);
+      if (!hasEpisode) {
+        await existingModel.episodes.push(temporaryEpisode);
+        logger.info("Added episode: " + temporaryEpisode._id + " " + temporaryEpisode.enclosureUrl);
       }
     }
 
-    existingModel.save().then(function () {
-      resolve(existingModel);	
-    });
+    await this.repository.save(existingModel);
 
-	});
-};
+    return existingModel;
+  }
 
-module.exports = async function (podcast, options, callback) {
-
-    var data, temporaryModel, updatedModel;
-
-		if (podcast === undefined || podcast === null) {
-			logger.info("Podcast not valid");
-		} else {
-
-      if (options.fetchRss !== undefined) {
-        fetchRss = options.fetchRss;
-      }
-
-      logger.info("Podcast ID: " + podcast.id + " " + podcast.title + " LastChecked: " + moment(podcast.LastChecked).format("YYYY/MM/DD HH:mm"));
-      
-      logger.info("\tFetching " + podcast.RssUrl);
-      try {
-        data = await fetchRss(podcast.RssUrl);
-      } catch(err) {
-        console.error(err);
-        callback(err);
-      }
-        
-      logger.info("\tParsing " + podcast.RssUrl);
-      try {
-        temporaryModel = await parse(data);
-      } catch(err) {
-        console.error(err);
-        callback(err);
-      }
-
-      if (temporaryModel !== undefined) {
-        logger.info("\tUpdating " + podcast.RssUrl);
-        updatedModel = await updateExistingModel(podcast, temporaryModel);
-        callback(null, updatedModel);
-      } else {
-        callback(new Error("No parsed podcast model"));
-      }
-
-		}
 }
-*/

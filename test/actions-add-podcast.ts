@@ -1,3 +1,4 @@
+import path from 'path';
 import { AddPodcast } from "../actions/add-podcast";
 import { FetchRssFile } from "../actions/fetchRssFile";
 import { Podcast } from "../models/podcast";
@@ -16,8 +17,8 @@ import('chai').then((c) => {
   });
 });
 
-const fetchRss = () => {
-	return new FetchRssFile().fetch('data-pla.xml');
+const fetchRss = async (): Promise<any> => {
+	return await new FetchRssFile().fetch(path.resolve(__dirname, './data-pla.xml'));
 }
 
 const addPodcast = new AddPodcast();
@@ -38,7 +39,7 @@ describe('actions-add-podcast', () => {
 		]);
     */
 
-		podcast = await addPodcast.add('http://www.phonelosers.org/feed/', { fetchRss: fetchRss });
+		podcast = await addPodcast.add('http://www.phonelosers.org/feed/', fetchRss);
   });
   
 	it('model is saved', () => {
@@ -83,6 +84,6 @@ describe('actions-add-podcast', () => {
   });
   
 	it('updated', () => {
-    expect(podcast.LastUpdated).equal(new Date("2018-10-16 15:03:22"));
+    assert.equalDate(podcast.LastUpdated, new Date("2018-10-16 15:03:22"));
   });
 })

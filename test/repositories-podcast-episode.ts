@@ -3,7 +3,7 @@ import { Episode } from '../models/episode';
 import { Podcast } from '../models/podcast';
 import { PodcastRepository } from '../repositories/podcastRepository';
 
-describe('orm-association-podcast-episode', function () {
+describe('repositories-podcast-episode', function () {
 
 	let assert: Chai.AssertStatic;
 	
@@ -57,12 +57,12 @@ describe('orm-association-podcast-episode', function () {
 		assert.isFalse(hasEpisode);
 	});
 
-	it('has episode by guid', async () => {
+	it('has episode by id', async () => {
 		const hasEpisode = await podcast.hasEpisodeById(matchingEpisode._id);
 		assert.isTrue(hasEpisode);
 	});
 
-	it('does not have episode by guid', async () => {
+	it('does not have episode by id', async () => {
 		const hasEpisode = await podcast.hasEpisodeById(nonMatchingEpisode._id);
 		assert.isFalse(hasEpisode);
 	});

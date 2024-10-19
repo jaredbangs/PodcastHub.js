@@ -1,16 +1,15 @@
 'use strict';
 
-import { SavableItem } from "../repositories/savableItem";
+import { SavableItemBase } from "../repositories/savableItem";
 import { UUID } from "../uuid";
 
-export class User implements SavableItem {
+export class User extends SavableItemBase {
 
-  public _id: string = "";
   public email: string = "";
   public name: string = "";
   
   constructor(id: string = UUID.random()){
-    this._id = id;
+    super(id);
   }
 }
 
