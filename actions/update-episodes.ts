@@ -83,7 +83,9 @@ private async udpateExistingModelWithCurrentEpisodes(existingModel: Podcast, cur
       
       if (!hasEpisode) {
         await existingModel.episodes.push(temporaryEpisode);
-        logger.info("Added episode: " + temporaryEpisode._id + " " + temporaryEpisode.enclosureUrl);
+        logger.info("Added episode: " + temporaryEpisode.title + " " + temporaryEpisode.enclosureUrl);
+      } else {
+        logger.info("Already had episode: " + temporaryEpisode.title + " " + temporaryEpisode.enclosureUrl);
       }
     }
 

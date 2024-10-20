@@ -1,6 +1,6 @@
 'use strict';
 
-import { SavableItem, SavableItemBase } from "../repositories/savableItem";
+import { SavableItemBase } from "../repositories/savableItem";
 import { UUID } from "../uuid";
 import { Episode } from "./episode";
 
@@ -67,8 +67,16 @@ export class Podcast extends SavableItemBase {
 	}
   
   public async hasEpisode(episode: Episode): Promise<boolean> { 
-    // TODO: try multiple ways of matching, not just id
-    return this.getEpisodeFromArrayById(this.episodes, episode._id) !== undefined;
+    
+    let item = this.getEpisodeFromArrayById(this.episodes, episode._id);
+    
+    if (item === undefined) {
+      item = this.findSavableItemInArray(Episode, this.episodes, (e) => {
+        return e.enclosureUrl !== "" && e.enclosureUrl === episode.enclosureUrl;
+      });
+    }
+
+    return item !== undefined;
   }
   
   public async hasEpisodeById(id: string) {
@@ -76,21 +84,7 @@ export class Podcast extends SavableItemBase {
   }
 
   private getEpisodeFromArrayById(episodes: Episode[], id: string): Episode | undefined {
-
-    const arrayEntry = episodes.find((e) => e._id === id);
-
-    if (arrayEntry === undefined){
-      return undefined;
-    } else if (arrayEntry instanceof Episode) {
-      return arrayEntry;
-    } else if ((arrayEntry as SavableItem)._id === id) {
-        const e = new Episode(id);
-        Object.assign(e, arrayEntry);
-        return e;
-    } else {
-      return undefined;
-    }
-
+    return this.findSavableItemInArray(Episode, episodes, (e) => e._id === id);
   }
 
   private async getEpisodeOrUndefinedById(id: string): Promise<Episode | undefined> {

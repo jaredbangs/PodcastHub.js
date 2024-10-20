@@ -24,7 +24,7 @@ describe('actions-update-episodes', function () {
 	let assert: Chai.AssertStatic;
 	//this.timeout(30000);
 
-	let allEpisodes;
+	let allEpisodes: any;
 	let originalId: any;
 	let originalEpisodeCount: number;
 	let podcastModelReloaded: Podcast;
@@ -56,7 +56,9 @@ describe('actions-update-episodes', function () {
 	});
 
 	it('updated episode count', function () {
-		assert.strictEqual(allEpisodes.length, 10);
+
+		// Original file contains 5 episodes, new file contains 10, 6 of which are new
+		assert.strictEqual(allEpisodes.length, 11);
   	});
   
 	it('updated', function () {

@@ -43,8 +43,6 @@ describe('actions-add-subscription', () => {
 	it('count', async () => {
 		
 		const subscriptions: Subscription[] = await subscriptionRepository.loadAll();
-
-		console.log(subscriptions);
 		
 		assert.strictEqual(subscriptions.length, 1);
 	});
