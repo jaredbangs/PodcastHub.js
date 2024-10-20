@@ -2,12 +2,13 @@
 
 import { AddSubscription } from "./actions/add-subscription";
 import { PodcastIterator } from "./actions/podcastIterator";
+import { UserRepository } from "./repositories/userRepository";
 
-//var models = require('./models');
+const userRepository = new UserRepository();
 
 const subscribeAll = async function () {
 
-  const currentUser = await models.User.loadCurrentUser(); 
+  const currentUser = await userRepository.loadCurrentUser(); 
 
   const addSubscription = new AddSubscription(); 
 

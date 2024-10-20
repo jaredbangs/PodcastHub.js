@@ -44,8 +44,12 @@
     // "lib": ["es2022"]
          
     "paths": {
-      "*": [ "types/*" ]
+      "*": [ "./types/*" ]
     }
-  } 
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+  ]
 
 }

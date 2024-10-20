@@ -4,9 +4,10 @@
   "description": "Podcast Manager",
   "main": "index.js",
   "scripts": {
+    "compile": "npm run pretest && npm link",
     "lint": "./node_modules/.bin/eslint .",
     "lintfix": "./node_modules/.bin/eslint . --fix",
-    "pretest": "npm run lint ",
+    "pretest": "npm run lint && tsc -p .",
     "pretest_old": "npm run lint && NODE_ENV=test node_modules/.bin/sequelize db:migrate",
     "test": "NODE_ENV=test USER_EMAIL=jaredbangs@gmail.com USER_NAME=Jared mocha --enable-source-maps -r ts-node/register 'test/**/*.ts'",
     "test-single": "NODE_ENV=test mocha -r ts-node/register 'test/parsing-xml-to-json*.ts'",
@@ -19,7 +20,7 @@
     "pch-destroy-podcast": "./destroy-podcast.js",
     "pch-export-opml": "./export-opml.js",
     "pch-import-opml": "./import-opml.js",
-    "pch-list-podcasts": "./list-podcasts.js",
+    "pch-list-podcasts": "./dist/list-podcasts.js",
     "pch-show-podcast": "./show-podcast.js",
     "pch-update-podcasts": "./update-podcasts.js"
   },

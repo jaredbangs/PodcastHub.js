@@ -5,12 +5,9 @@ const id = process.argv[2];
 import { Logger } from './logger';
 import { PodcastIterator } from './actions/podcastIterator';
 import { UpdateEpisodes } from './actions/update-episodes';
-
-// var models = require('./models');
+import { Podcast } from './models/podcast';
 
 const logger = Logger.logger;
-
-// models.sequelize.sync();
 
 const options: any = {};
 
@@ -24,13 +21,10 @@ if (id !== undefined && id !== null && id !== '') {
   options.podcastWhereClause = { id: id };
 }
 
-new PodcastIterator().iterate(async (podcast: any) => {
-  await new UpdateEpisodes().update(podcast, { }, (err: any, updatedPodcastModel: any) => {
-    if (err) {
-      logger.error(podcast.id + "\t" + podcast.title + "\t" + podcast.RssUrl);
-      logger.error(err);
-    } else {
-      logger.info("Updated " + updatedPodcastModel.id + "\t" + updatedPodcastModel.title + "\t" + podcast.RssUrl);
-    }
-  });
+new PodcastIterator().iterate(async (podcast: Podcast) => {
+  
+  const updatedPodcastModel = await new UpdateEpisodes().update(podcast);
+  
+  logger.info("Updated " + updatedPodcastModel.title + "\t" + podcast.RssUrl);
+
 }, options);
