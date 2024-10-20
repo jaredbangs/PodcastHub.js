@@ -1,6 +1,6 @@
 import { Podcast } from "../models/podcast";
 import { User } from "../models/user";
-import { Logger } from "../logger";
+import { Logger } from "../util/logger";
 import { SubscriptionRepository } from "../repositories/subscriptionRepository";
 import { Subscription } from "../models/subscription";
 const logger = Logger.logger;

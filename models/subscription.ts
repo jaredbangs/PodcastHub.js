@@ -3,7 +3,7 @@
 import { PodcastRepository } from "../repositories/podcastRepository";
 import { SavableItemBase } from "../repositories/savableItem";
 import { UserRepository } from "../repositories/userRepository";
-import { UUID } from "../uuid";
+import { UUID } from "../util/uuid";
 import { Podcast } from "./podcast";
 import { User } from "./user";
 

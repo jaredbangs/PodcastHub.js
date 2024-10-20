@@ -1,5 +1,5 @@
 import { Podcast } from "../models/podcast";
-import { Logger } from "../logger";
+import { Logger } from "../util/logger";
 import { FetchRss } from "./fetchRss";
 import { FetchRssLive } from "./fetchRssLive";
 import { ParseFeedDataToPodcastModel } from "../parsing/parseFeedDataToPodcastModel";

@@ -1,7 +1,7 @@
 'use strict';
 
 import { SavableItemBase } from "../repositories/savableItem";
-import { UUID } from "../uuid";
+import { UUID } from "../util/uuid";
 import { Episode } from "./episode";
 
 export class Podcast extends SavableItemBase {
