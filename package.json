@@ -9,7 +9,7 @@
     "lintfix": "./node_modules/.bin/eslint . --fix",
     "pretest": "npm run lint && tsc -p .",
     "pretest_old": "npm run lint && NODE_ENV=test node_modules/.bin/sequelize db:migrate",
-    "test": "NODE_ENV=test USER_EMAIL=jaredbangs@gmail.com USER_NAME=Jared mocha --enable-source-maps -r ts-node/register 'test/**/*.ts'",
+    "test": "NODE_ENV=test mocha --enable-source-maps -r ts-node/register 'test/**/*.ts'",
     "test-single": "NODE_ENV=test mocha -r ts-node/register 'test/parsing-xml-to-json*.ts'",
     "test-trace-deprecation": "NODE_ENV=test USER_EMAIL=jaredbangs@gmail.com USER_NAME=Jared mocha --enable-source-maps -r ts-node/register --trace-deprecation 'test/**/*.ts'",
     "testsingle": "NODE_ENV=test mocha test/podcast-with-episode-read.test.js"

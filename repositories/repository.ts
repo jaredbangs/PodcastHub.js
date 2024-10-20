@@ -11,7 +11,20 @@ export class Repository<T extends SavableItem> {
     protected readonly db: PouchDB.Database;
 
     constructor(protected readonly databaseName: string, private readonly instanceConstructor: () => T) {
-        this.db = new PouchDB("db_" + databaseName);
+        
+        let databaseFullName = "db_";
+        
+        if (process.env.NODE_ENV !== undefined) {
+            databaseFullName = databaseFullName + process.env.NODE_ENV + "_";
+        }
+
+        databaseFullName = databaseFullName + databaseName;
+
+        this.db = new PouchDB(databaseFullName);
+    }
+
+    public get DatabaseName() {
+        return this.db.name;
     }
 
     public async deleteAll(): Promise<void> {

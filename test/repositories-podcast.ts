@@ -34,6 +34,10 @@ describe('repositories-podcast', function () {
 		await repository.save(p2);
 		
 	});
+
+	it('database name', async () => {
+		assert.strictEqual(repository.DatabaseName, "db_test_podcasts");
+	});
 	
 	describe("findByTitle", async () => {
 		
