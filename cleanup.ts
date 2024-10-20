@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { PodcastIterator } from "./actions/podcastIterator";
+// import { PodcastIterator } from "./actions/podcastIterator";
 
 const shouldDestroy = (podcast: any) => { 
   return podcast.RssUrl === undefined || podcast.RssUrl === null || podcast.RssUrl === "null"; 
@@ -27,6 +27,7 @@ options.preIterationFunction = (podcasts: any) => {
   console.log("Podcasts to destroy: " + podcastsToDestroy.length); 
 };
 
+/*
 new PodcastIterator().iterate(async (podcast: any) => {
 
     if (shouldDestroy(podcast)) {
@@ -37,3 +38,4 @@ new PodcastIterator().iterate(async (podcast: any) => {
         console.log(message);
     }
 }, options);
+*/

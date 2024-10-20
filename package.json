@@ -14,15 +14,15 @@
     "testsingle": "NODE_ENV=test mocha test/podcast-with-episode-read.test.js"
   },
   "bin": {
-    "pch-add-podcast": "./add-podcast.js",
-    "pch-add-subscription": "./add-subscription.js",
-    "pch-cleanup": "./cleanup.js",
-    "pch-destroy-podcast": "./destroy-podcast.js",
-    "pch-export-opml": "./export-opml.js",
-    "pch-import-opml": "./import-opml.js",
+    "pch-add-podcast": "./dist/add-podcast.js",
+    "pch-add-subscription": "./dist/add-subscription.js",
+    "pch-cleanup": "./dist/cleanup.js",
+    "pch-destroy-podcast": "./dist/destroy-podcast.js",
+    "pch-export-opml": "./dist/export-opml.js",
+    "pch-import-opml": "./dist/import-opml.js",
     "pch-list-podcasts": "./dist/list-podcasts.js",
-    "pch-show-podcast": "./show-podcast.js",
-    "pch-update-podcasts": "./update-podcasts.js"
+    "pch-show-podcast": "./dist/show-podcast.js",
+    "pch-update-podcasts": "./dist/update-podcasts.js"
   },
   "repository": {
     "type": "git",

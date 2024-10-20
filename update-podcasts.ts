@@ -27,4 +27,4 @@ new PodcastIterator().iterate(async (podcast: Podcast) => {
   
   logger.info("Updated " + updatedPodcastModel.title + "\t" + podcast.RssUrl);
 
-}, options);
+});

@@ -1,9 +1,17 @@
 #!/usr/bin/env node
 
+import { Podcast } from "../models/podcast";
+import { PodcastRepository } from "../repositories/podcastRepository";
+
 export class PodcastIterator {
   
-  public async iterate(func: any, options: any = {}): Promise<void> {
-    throw new Error("Not Implemented" + func + options);
+  public async iterate(withPodcast: (podcast: Podcast) => void): Promise<void> {
+    
+    const allPodcasts = await new PodcastRepository().loadAll();
+
+    allPodcasts.forEach((podcast) => {
+      withPodcast(podcast);
+    });
   }
 
 }
