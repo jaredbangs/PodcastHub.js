@@ -8,7 +8,7 @@ module.exports = {
 		]);
   },
 
-  down: (queryInterface, Sequelize) => {
+  down: (queryInterface) => {
 		return Promise.all([
 			queryInterface.removeColumn('Episodes', 'shouldDownload'),
 			queryInterface.removeColumn('Episodes', 'downloadedServerPath')
